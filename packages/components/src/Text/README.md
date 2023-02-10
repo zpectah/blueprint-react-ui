@@ -1,11 +1,11 @@
 A basic text component enabling the display of a specific type of text and its respective properties.
 
-## Import
+### Import
 ```jsx static
 import { Text } from '@blueprint-react-ui/components';
 ```
 
-## Basic usage
+### Basic usage
 ```jsx
 <Text>
     Mattis aliquet, odio vehicula volutpat ut ante magna et sollicitudin, 
@@ -14,7 +14,7 @@ import { Text } from '@blueprint-react-ui/components';
 </Text>
 ```
 
-## Usage as headings
+### Usage as headings
 ```jsx { "props": { "className": "checks" } }
 <Text as="h1">H1 heading text</Text>
 <Text as="h2">H2 heading text</Text>
@@ -24,7 +24,7 @@ import { Text } from '@blueprint-react-ui/components';
 <Text as="h6">H6 heading text</Text>
 ```
 
-## Usage with simple text block
+### Usage with simple text block
 ```jsx { "props": { "className": "checks" } }
 <Text>
     Imperdiet vivamus, rhoncus erat mollis ornare lectus quis et condimentum proin, 

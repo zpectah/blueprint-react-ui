@@ -7,6 +7,7 @@ module.exports = {
     title: 'Blueprint React UI',
     version,
     skipComponentsWithoutExample: true,
+    pagePerSection: true,
     theme: path.join(__dirname, 'styleguidist/styleguide.theme.js'),
     styles: path.join(__dirname, 'styleguidist/styleguide.styles.js'),
     ribbon: {
@@ -45,7 +46,6 @@ module.exports = {
             ]
         }
     },
-    pagePerSection: true,
     sections: [
         {
             name: 'Introduction',
@@ -88,7 +88,7 @@ module.exports = {
             content: path.join(__dirname, 'docs/Components.md'),
             components: path.join(__dirname, 'packages/components/src/**/[A-Z]*.{js,jsx,ts,tsx}'),
             sectionDepth: 3,
-            usageMode: 'expand',
+            usageMode: 'collapsed',
             exampleMode: 'expand',
         },
     ],
