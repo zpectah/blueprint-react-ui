@@ -4,14 +4,17 @@ const path = require('path');
 const { version } = require('./package');
 
 module.exports = {
-    theme: {
-        color: {
-            sidebarBackground: 'rgb(250,250,250)',
-        },
-        // fontSize: {}
-    },
+    title: 'Blueprint React UI',
     version,
     skipComponentsWithoutExample: true,
+    theme: path.join(__dirname, 'styleguidist/styleguide.theme.js'),
+    styles: path.join(__dirname, 'styleguidist/styleguide.styles.js'),
+    ribbon: {
+        url: 'https://github.com/zpectah/blueprint-react-ui',
+        text: 'GitHub',
+        color: '#fff',
+        background: '#24292e',
+    },
     ignore: [
         '**/assets/**',
         '**/data/**',
@@ -24,7 +27,7 @@ module.exports = {
     // eslint-disable-next-line @typescript-eslint/no-var-requires
     propsParser: require('react-docgen-typescript').parse,
     styleguideComponents: {
-        Wrapper: path.join(__dirname, 'styleguidist/ThemeWrapper.tsx')
+        Wrapper: path.join(__dirname, 'styleguidist/providers/ThemeProvider.tsx'),
     },
     webpackConfig: {
         module: {
@@ -42,30 +45,51 @@ module.exports = {
             ]
         }
     },
+    pagePerSection: true,
     sections: [
         {
             name: 'Introduction',
             content: path.join(__dirname, 'docs/Introduction.md'),
         },
         {
-            name: 'Foundation',
-            components: path.join(__dirname, 'packages/foundation/**/[A-Z]*.{js,jsx,ts,tsx}'),
-            sectionDepth: 2
+            name: 'Core',
+            content: path.join(__dirname, 'docs/Core.md'),
+            sectionDepth: 2,
         },
         {
-            name: 'Core',
-            components: path.join(__dirname, 'packages/core/**/[A-Z]*.{js,jsx,ts,tsx}'),
-            sectionDepth: 2
+            name: 'Foundation',
+            content: path.join(__dirname, 'docs/Foundation/index.md'),
+            sectionDepth: 3,
+            sections: [
+                {
+                    name: 'Colors',
+                    content: path.join(__dirname, 'docs/Foundation/Colors.md'),
+                },
+                {
+                    name: 'Typography',
+                    content: path.join(__dirname, 'docs/Foundation/Typography.md'),
+                },
+                {
+                    name: 'Icons',
+                    content: path.join(__dirname, 'docs/Foundation/Icons.md'),
+                },
+                {
+                    name: 'Theme',
+                    content: path.join(__dirname, 'docs/Foundation/Theme.md'),
+                },
+                {
+                    name: 'Tokens',
+                    content: path.join(__dirname, 'docs/Foundation/Tokens.md'),
+                },
+            ],
         },
         {
             name: 'Components',
-            components: path.join(__dirname, 'packages/components/**/[A-Z]*.{js,jsx,ts,tsx}'),
-            sectionDepth: 2
-        },
-        {
-            name: 'Icons',
-            components: path.join(__dirname, 'packages/icons/**/[A-Z]*.{js,jsx,ts,tsx}'),
-            sectionDepth: 2
+            content: path.join(__dirname, 'docs/Components.md'),
+            components: path.join(__dirname, 'packages/components/src/**/[A-Z]*.{js,jsx,ts,tsx}'),
+            sectionDepth: 3,
+            usageMode: 'expand',
+            exampleMode: 'expand',
         },
     ],
 };

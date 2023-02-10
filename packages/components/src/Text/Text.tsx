@@ -1,7 +1,7 @@
-import React from 'react';
-import { TextElementType, TextProps } from './types';
+import React, { ElementType } from 'react';
+import { TextProps } from './types';
 
-const Text = <C extends TextElementType = 'p'>({ as, ...restProps }: TextProps<C>) => {
+const Text = <E extends ElementType = 'p'>({ as, ...restProps }: TextProps<E>) => {
     const Component = as || 'p';
 
     return <Component {...restProps} />;

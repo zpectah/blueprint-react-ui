@@ -1,7 +1,7 @@
 import React from 'react';
-import { IconProps } from '../../../core/src/types';
+import { SvgIconProps } from '../../../../core/src/types';
 
-const ArrowForward = ({ size = 16, color = 'currentColor', ...rest }: IconProps) => (
+const ArrowForward = ({ size = 16, color = 'currentColor', ...rest }: SvgIconProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} fill={color} {...rest}>
         <path d="M0 0h24v24H0z" fill="none" />
         <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z" />
