@@ -5,6 +5,9 @@ export type MixedReactHTMLProps = keyof ReactHTML | keyof ReactNode;
 export type BaseElementProps = HTMLProps<HTMLAttributes<HTMLElement>>;
 export type DetailedElementProps = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>;
 
+// export type BaseStyleElementProps = HTMLProps<HTMLAttributes<HTMLStyleElement>>;
+// export type DetailedStyleElementProps = DetailedHTMLProps<HTMLAttributes<HTMLStyleElement>, HTMLStyleElement>;
+
 export type BaseDivElementProps = HTMLProps<HTMLAttributes<HTMLDivElement>>;
 export type DetailedDivElementProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
 

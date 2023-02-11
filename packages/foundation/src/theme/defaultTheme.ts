@@ -8,6 +8,9 @@ const defaultTheme: ThemeProps = {
         fontFamily: {
             base: 'sans-serif',
         },
+        lineHeight: {
+            base: 1.345,
+        },
     },
     spacing: {
         base: '1rem',

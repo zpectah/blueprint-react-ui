@@ -1,33 +1,24 @@
-import { CSSProperties } from 'react';
-import { useClassName, useUniqueStyles } from '../../../core/src';
+import { useClassName, useUniqueStyles, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
 import { useThemeContext } from '../../../foundation/src';
 
-export interface UseButtonStylesProps {
-    style?: CSSProperties;
-    className?: string;
-}
-
-export interface UseButtonStylesReturn {
-    style: CSSProperties;
-    className: string;
-}
+export type UseButtonStylesProps = WithStyleProps;
+export type UseButtonStylesReturn = WithRequiredStyleProps;
 
 export const useButtonStyles = ({ style, className }: UseButtonStylesProps): UseButtonStylesReturn => {
-    const updatedStyles = { ...style };
+    const scope = 'Button';
 
-    const { theme } = useThemeContext();
     const { className: updatedClassName } = useClassName({
         classes: [
-            'Button',
+            scope,
             className,
         ],
-        // className: '',
     });
+    const { theme } = useThemeContext();
 
     useUniqueStyles({
-        id: 'Button',
+        id: scope,
         styles: `
-            .Button {
+            .${scope} {
                 width: auto;
                 height: auto;
                 margin: 0;
@@ -42,18 +33,18 @@ export const useButtonStyles = ({ style, className }: UseButtonStylesProps): Use
                 border-radius: .25rem;
                 font-family: ${theme?.typography?.fontFamily?.base};
                 font-size: 1rem;
-                line-height: 1.345;
+                line-height: ${theme?.typography?.lineHeight?.base};
                 cursor: pointer;            
             }
-            .Button:is(button) {}
-            .Button:is(a) {
+            .${scope}:is(button) {}
+            .${scope}:is(a) {
                 text-decoration: none;
             }            
         `,
     });
 
     return {
-        style: updatedStyles,
+        style: { ...style },
         className: updatedClassName,
     };
 };

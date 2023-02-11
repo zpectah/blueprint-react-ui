@@ -1,13 +1,13 @@
 import { createElement } from 'react';
-import { useThemeContext } from '../../../foundation/src';
 import { TagProps } from './types';
+import { useTagStyles } from './useTagStyles';
 
-const Tag = ({ children, elementProps }: TagProps) => {
-    const { theme } = useThemeContext();
+const Tag = ({ children, elementProps, style, className }: TagProps) => {
+    const { ...styleProps } = useTagStyles({ style, className });
 
     return createElement(
         'span',
-        { ...elementProps },
+        { ...styleProps, ...elementProps },
         children,
     );
 };

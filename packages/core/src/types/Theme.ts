@@ -6,6 +6,9 @@ export interface ThemeProps {
         fontFamily?: {
             base?: string;
         };
+        lineHeight?: {
+            base?: string | number;
+        };
     };
     spacing?: {
         base?: string;

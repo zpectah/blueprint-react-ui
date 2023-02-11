@@ -1,13 +1,13 @@
 import React, { ElementType } from 'react';
-import { useThemeContext } from '../../../foundation/src';
 import { TextProps } from './types';
+import { useTextStyles } from './useTextStyles';
 
-const Text = <E extends ElementType = 'p'>({ as, ...restProps }: TextProps<E>) => {
+const Text = <E extends ElementType = 'p'>({ as, style, className, ...restProps }: TextProps<E>) => {
     const Component = as || 'p';
 
-    const { theme } = useThemeContext();
+    const { ...styleProps } = useTextStyles({ style, className });
 
-    return <Component {...restProps} />;
+    return <Component {...styleProps} {...restProps} />;
 };
 
 export default Text;
