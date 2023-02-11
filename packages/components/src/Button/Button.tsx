@@ -1,14 +1,14 @@
 import React, { ElementType } from 'react';
-import { useThemeContext } from '../../../foundation/src';
 import { ButtonProps } from './types';
+import { useButtonStyles } from './useButtonStyles';
 
-const Button = <E extends ElementType = 'button'>({ as, ...restProps }: ButtonProps<E>) => {
+const Button = <E extends ElementType = 'button'>({ as, style, className, ...restProps }: ButtonProps<E>) => {
     const Component = as || 'button';
 
-    const { theme } = useThemeContext();
+    const { ...styleProps } = useButtonStyles({ style, className });
 
     return (
-        <Component {...restProps} />
+        <Component {...styleProps} {...restProps} />
     );
 };
 

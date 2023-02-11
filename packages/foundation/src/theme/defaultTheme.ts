@@ -1,15 +1,18 @@
 import { ThemeProps } from '../../../core/src/types';
 
-const defaultTheme = {
+const defaultTheme: ThemeProps = {
     colors: {
         base: 'rgb(25,25,25)',
     },
     typography: {
         fontFamily: {
-            base: '"Roboto", "Helvetica", "Arial", sans-serif',
+            base: 'sans-serif',
         },
     },
+    spacing: {
+        base: '1rem',
+    },
     components: {},
-} as ThemeProps;
+};
 
 export default defaultTheme;

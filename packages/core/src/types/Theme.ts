@@ -1,5 +1,14 @@
 export interface ThemeProps {
-    colors: object | undefined;
-    typography: object | undefined;
+    colors?: {
+        base?: string;
+    };
+    typography?: {
+        fontFamily?: {
+            base?: string;
+        };
+    };
+    spacing?: {
+        base?: string;
+    };
     components: object | undefined;
 }
