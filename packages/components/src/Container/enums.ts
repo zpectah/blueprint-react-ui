@@ -1,4 +1,4 @@
-export enum BlockElementTypeKey {
+export enum ContainerElementTypeKey {
     div = 'div',
     section = 'section',
     article = 'article',
@@ -6,7 +6,4 @@ export enum BlockElementTypeKey {
     header = 'header',
     footer = 'footer',
     aside = 'aside',
-    code = 'code',
-    pre = 'pre',
-    span = 'span',
 }
