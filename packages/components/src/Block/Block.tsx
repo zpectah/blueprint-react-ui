@@ -7,8 +7,6 @@ const Block = <E extends ElementType = 'div'>({ as, ...restProps }: BlockProps<E
 
     const { theme } = useThemeContext();
 
-    console.log('theme', theme);
-
     return <Component {...restProps} />;
 };
 

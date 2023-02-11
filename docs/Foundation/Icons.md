@@ -1,14 +1,25 @@
-...
-
-## Import
+### Import
 ```jsx static
-import { ArrowBackIcon } from '@blueprint-react-ui/foundation';
+import { $ } from '@blueprint-react-ui/foundation';
 ```
 
-## Basic usage
-```jsx
+```jsx inisde Markdown
+import { ArrowBackIcon } from '../../packages/foundation/src';
+
 <ArrowBackIcon />
+```
+```jsx inisde Markdown
+import { ArrowDownwardIcon } from '../../packages/foundation/src';
+
 <ArrowDownwardIcon />
+```
+```jsx inisde Markdown
+import { ArrowForwardIcon } from '../../packages/foundation/src';
+
 <ArrowForwardIcon />
+```
+```jsx inisde Markdown
+import { ArrowUpwardIcon } from '../../packages/foundation/src';
+
 <ArrowUpwardIcon />
 ```
