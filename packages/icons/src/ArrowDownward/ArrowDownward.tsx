@@ -1,5 +1,5 @@
 import React from 'react';
-import { SvgIconProps } from '../../../../core/src/types';
+import { SvgIconProps } from '../../../core/src/types';
 
 const ArrowDownward = ({ size = 16, color = 'currentColor', ...rest }: SvgIconProps) => (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={size} height={size} fill={color} {...rest}>

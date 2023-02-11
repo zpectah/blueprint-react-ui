@@ -70,10 +70,6 @@ module.exports = {
                     content: path.join(__dirname, 'docs/Foundation/Typography.md'),
                 },
                 {
-                    name: 'Icons',
-                    content: path.join(__dirname, 'docs/Foundation/Icons.md'),
-                },
-                {
                     name: 'Theme',
                     content: path.join(__dirname, 'docs/Foundation/Theme.md'),
                 },
@@ -82,6 +78,11 @@ module.exports = {
                     content: path.join(__dirname, 'docs/Foundation/Tokens.md'),
                 },
             ],
+        },
+        {
+            name: 'Icons',
+            content: path.join(__dirname, 'docs/Icons.md'),
+            sectionDepth: 2,
         },
         {
             name: 'Components',
