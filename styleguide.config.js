@@ -48,34 +48,45 @@ module.exports = {
     },
     sections: [
         {
-            name: 'Introduction',
+            name: 'Getting started',
             content: path.join(__dirname, 'docs/Introduction.md'),
         },
         {
-            name: 'Core',
-            content: path.join(__dirname, 'docs/Core.md'),
-            sectionDepth: 2,
+            name: 'Customization',
+            content: path.join(__dirname, 'docs/Customization.md'),
         },
         {
-            name: 'Foundation',
-            content: path.join(__dirname, 'docs/Foundation/index.md'),
+            name: 'Core',
+            content: path.join(__dirname, 'docs/Core/index.md'),
             sectionDepth: 3,
             sections: [
                 {
-                    name: 'Colors',
-                    content: path.join(__dirname, 'docs/Foundation/Colors.md'),
+                    name: 'Constants',
+                    content: path.join(__dirname, 'docs/Core/Constants.md'),
                 },
                 {
-                    name: 'Typography',
-                    content: path.join(__dirname, 'docs/Foundation/Typography.md'),
+                    name: 'Enums',
+                    content: path.join(__dirname, 'docs/Core/Enums.md'),
                 },
                 {
                     name: 'Theme',
-                    content: path.join(__dirname, 'docs/Foundation/Theme.md'),
+                    content: path.join(__dirname, 'docs/Core/Theme.md'),
                 },
                 {
-                    name: 'Tokens',
-                    content: path.join(__dirname, 'docs/Foundation/Tokens.md'),
+                    name: 'Hooks',
+                    content: path.join(__dirname, 'docs/Core/Hooks.md'),
+                },
+                {
+                    name: 'Styles',
+                    content: path.join(__dirname, 'docs/Core/Styles.md'),
+                },
+                {
+                    name: 'Types',
+                    content: path.join(__dirname, 'docs/Core/Types.md'),
+                },
+                {
+                    name: 'Utility',
+                    content: path.join(__dirname, 'docs/Core/Utility.md'),
                 },
             ],
         },

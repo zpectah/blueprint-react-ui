@@ -2,7 +2,7 @@
 // @ts-ignore
 import React from 'react';
 import { ThemeProps } from '@blueprint-react-ui/core/src/types';
-import { ThemeProvider as UIThemeProvider } from '@blueprint-react-ui/foundation/src';
+import { ThemeProvider as UIThemeProvider } from '@blueprint-react-ui/core/src';
 
 const ThemeProvider = ({ children }) => {
     const customTheme = {

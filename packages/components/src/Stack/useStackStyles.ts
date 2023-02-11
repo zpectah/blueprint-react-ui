@@ -1,5 +1,4 @@
-import { useClassName, useUniqueStyles, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
-import { useThemeContext } from '../../../foundation/src';
+import { useClassName, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
 
 export type UseStackStylesProps = WithStyleProps;
 export type UseStackStylesReturn = WithRequiredStyleProps;
