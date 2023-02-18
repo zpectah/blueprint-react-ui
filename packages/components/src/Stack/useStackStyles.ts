@@ -1,29 +1,23 @@
 import { useClassName, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
+import { STACK_SCOPE_NAME } from './const';
+import getStackStyles from './styles';
 
 export type UseStackStylesProps = WithStyleProps;
 export type UseStackStylesReturn = WithRequiredStyleProps;
 
 export const useStackStyles = ({ style, className }: UseStackStylesProps): UseStackStylesReturn => {
-    const scope = 'Stack';
-
     const { theme } = useThemeContext();
+
     const { className: updatedClassName } = useClassName({
         classes: [
-            scope,
+            STACK_SCOPE_NAME,
             className,
         ],
     });
 
     useUniqueStyles({
-        id: scope,
-        styles: `
-            .${scope} {
-                font-family: ${theme?.typography?.fontFamily?.base};
-                font-size: 1rem;
-                line-height: ${theme?.typography?.lineHeight?.base};
-                color: inherit;
-            }
-        `,
+        id: STACK_SCOPE_NAME,
+        styles: getStackStyles(theme),
     });
 
     return {

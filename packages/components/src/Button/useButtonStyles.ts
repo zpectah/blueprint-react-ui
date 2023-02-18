@@ -1,4 +1,5 @@
 import { useClassName, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
+import { ButtonBaseProps } from './types';
 import { LOADING_STATE_CLASSNAME, DISABLED_STATE_CLASSNAME } from '../../../core/src';
 import {
     BUTTON_SCOPE_NAME,
@@ -10,7 +11,6 @@ import {
     BUTTON_ICON_AFTER_CLASSNAME,
 } from './const';
 import getButtonStyles from './styles';
-import { ButtonBaseProps } from './types';
 
 export type UseButtonStylesProps = Pick<ButtonBaseProps, 'color' | 'variant' | 'size' | 'loading' | 'disabled' | 'fullWidth'> & WithStyleProps;
 export type UseButtonStylesReturn = {
@@ -37,6 +37,7 @@ export const useButtonStyles = (props: UseButtonStylesProps): UseButtonStylesRet
     const BUTTON_SIZE_CLASSNAME = size !== 'md' ? `${BUTTON_SCOPE_NAME}--${size}` : '';
 
     const { theme } = useThemeContext();
+
     const { className: updatedRootClassName } = useClassName({
         className: BUTTON_SCOPE_NAME,
         classes: [

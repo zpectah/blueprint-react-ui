@@ -1,29 +1,23 @@
 import { useClassName, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
+import { BOX_SCOPE_NAME } from './const';
+import getBoxStyles from './styles';
 
 export type UseBlockStylesProps = WithStyleProps;
 export type UseBlockStylesReturn = WithRequiredStyleProps;
 
 export const useBoxStyles = ({ style, className }: UseBlockStylesProps): UseBlockStylesReturn => {
-    const scope = 'Box';
-
     const { theme } = useThemeContext();
+
     const { className: updatedClassName } = useClassName({
         classes: [
-            scope,
+            BOX_SCOPE_NAME,
             className,
         ],
     });
 
     useUniqueStyles({
-        id: scope,
-        styles: `
-            .${scope} {
-                font-family: ${theme?.typography?.fontFamily?.base};
-                font-size: 1rem;
-                line-height: ${theme?.typography?.lineHeight?.base};
-                color: inherit;
-            }
-        `,
+        id: BOX_SCOPE_NAME,
+        styles: getBoxStyles(theme),
     });
 
     return {
