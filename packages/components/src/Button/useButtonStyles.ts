@@ -1,4 +1,4 @@
-import { useClassName, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
+import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
 import { ButtonBaseProps } from './types';
 import { LOADING_STATE_CLASSNAME, DISABLED_STATE_CLASSNAME } from '../../../core/src';
 import {
@@ -38,30 +38,24 @@ export const useButtonStyles = (props: UseButtonStylesProps): UseButtonStylesRet
 
     const { theme } = useThemeContext();
 
-    const { className: updatedRootClassName } = useClassName({
-        className: BUTTON_SCOPE_NAME,
-        classes: [
-            BUTTON_COLOR_CLASSNAME,
-            BUTTON_VARIANT_CLASSNAME,
-            BUTTON_SIZE_CLASSNAME,
-            fullWidth ? BUTTON_FULLWIDTH_CLASSNAME : '',
-            loading && LOADING_STATE_CLASSNAME,
-            disabled && DISABLED_STATE_CLASSNAME,
-            className,
-        ],
-    });
-    const { className: updatedIconBeforeClassName } = useClassName({
-        classes: [
-            BUTTON_ICON_CLASSNAME,
-            BUTTON_ICON_BEFORE_CLASSNAME,
-        ],
-    });
-    const { className: updatedIconAfterClassName } = useClassName({
-        classes: [
-            BUTTON_ICON_CLASSNAME,
-            BUTTON_ICON_AFTER_CLASSNAME,
-        ],
-    });
+    const updatedRootClassName = classNamesFromList([
+        BUTTON_SCOPE_NAME,
+        BUTTON_COLOR_CLASSNAME,
+        BUTTON_VARIANT_CLASSNAME,
+        BUTTON_SIZE_CLASSNAME,
+        fullWidth ? BUTTON_FULLWIDTH_CLASSNAME : '',
+        loading && LOADING_STATE_CLASSNAME,
+        disabled && DISABLED_STATE_CLASSNAME,
+        className,
+    ]);
+    const updatedIconBeforeClassName = classNamesFromList([
+        BUTTON_ICON_CLASSNAME,
+        BUTTON_ICON_BEFORE_CLASSNAME,
+    ]);
+    const updatedIconAfterClassName = classNamesFromList([
+        BUTTON_ICON_CLASSNAME,
+        BUTTON_ICON_AFTER_CLASSNAME,
+    ]);
 
     useUniqueStyles({
         id: BUTTON_SCOPE_NAME,

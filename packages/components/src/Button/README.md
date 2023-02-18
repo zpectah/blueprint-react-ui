@@ -82,7 +82,7 @@ It can be used as a styled wrapper for `Link` from **ReactRouter**.
 
 | Name                                  | Description                                 |
 | ------------------------------------- | ------------------------------------------- |
-| `.Button`                             | Main button class         |
+| `.Button`                             | Root button class         |
 | `.Button.Button--{size}`              | Button size class         |
 | `.Button.Button--{color}`             | Button color class         |
 | `.Button.Button--{variant}`           | Button variant class         |

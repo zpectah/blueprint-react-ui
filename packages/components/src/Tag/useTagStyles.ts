@@ -1,4 +1,4 @@
-import { useClassName, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
+import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
 import { TAG_SCOPE_NAME } from './const';
 import getTagStyles from './styles';
 
@@ -8,12 +8,10 @@ export type UseTagStylesReturn = WithRequiredStyleProps;
 export const useTagStyles = ({ style, className }: UseTagStylesProps): UseTagStylesReturn => {
     const { theme } = useThemeContext();
 
-    const { className: updatedClassName } = useClassName({
-        classes: [
-            TAG_SCOPE_NAME,
-            className,
-        ],
-    });
+    const updatedClassName = classNamesFromList([
+        TAG_SCOPE_NAME,
+        className,
+    ]);
 
     useUniqueStyles({
         id: TAG_SCOPE_NAME,
