@@ -6,13 +6,13 @@ export type UseContainerStylesReturn = WithRequiredStyleProps;
 export const useContainerStyles = ({ style, className }: UseContainerStylesProps): UseContainerStylesReturn => {
     const scope = 'Container';
 
+    const { theme } = useThemeContext();
     const { className: updatedClassName } = useClassName({
         classes: [
             scope,
             className,
         ],
     });
-    const { theme } = useThemeContext();
 
     useUniqueStyles({
         id: scope,

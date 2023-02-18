@@ -6,13 +6,13 @@ export type UseTextStylesReturn = WithRequiredStyleProps;
 export const useTextStyles = ({ style, className }: UseTextStylesProps): UseTextStylesReturn => {
     const scope = 'Text';
 
+    const { theme } = useThemeContext();
     const { className: updatedClassName } = useClassName({
         classes: [
             scope,
             className,
         ],
     });
-    const { theme } = useThemeContext();
 
     useUniqueStyles({
         id: scope,

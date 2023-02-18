@@ -1,9 +1,26 @@
-import { ElementType } from 'react';
-import {WithChildrenProps, PolymorphicComponentProps } from '../../../core/src/types';
-import { ButtonElementTypeKey } from './enums';
+import { AnchorHTMLAttributes, ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react';
+import { WithChildrenProps, PolymorphicComponentProps, PolymorphicElementType, SizeBaseType } from '../../../core/src/types';
+import { ColorBaseKey } from '../../../core/src';
+import { ButtonElementTypeKey, ButtonVariantKey } from './enums';
 
 export type ButtonElementType = keyof typeof ButtonElementTypeKey;
+export type ButtonVariantType = keyof typeof ButtonVariantKey;
+export type ButtonColorType = keyof typeof ColorBaseKey;
 
-export type ButtonBaseProps = WithChildrenProps;
+export type ButtonIntrinsicElements = {
+    a: DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>;
+    button: DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
+};
 
-export type ButtonProps<E extends ButtonElementType & ElementType> = PolymorphicComponentProps<E, ButtonBaseProps> & ButtonBaseProps;
+export type ButtonBaseProps = {
+    iconBefore?: ReactNode;
+    iconAfter?: ReactNode;
+    loading?: boolean;
+    disabled?: boolean;
+    color?: ButtonColorType;
+    variant?: ButtonVariantType;
+    size?: SizeBaseType;
+    fullWidth?: boolean;
+} & WithChildrenProps;
+
+export type ButtonProps<E extends PolymorphicElementType<ButtonIntrinsicElements> | ButtonElementType> = PolymorphicComponentProps<E, ButtonBaseProps> & ButtonBaseProps;

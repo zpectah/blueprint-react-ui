@@ -6,13 +6,13 @@ export type UseStackStylesReturn = WithRequiredStyleProps;
 export const useStackStyles = ({ style, className }: UseStackStylesProps): UseStackStylesReturn => {
     const scope = 'Stack';
 
+    const { theme } = useThemeContext();
     const { className: updatedClassName } = useClassName({
         classes: [
             scope,
             className,
         ],
     });
-    const { theme } = useThemeContext();
 
     useUniqueStyles({
         id: scope,

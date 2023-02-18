@@ -4,15 +4,15 @@ export type UseBlockStylesProps = WithStyleProps;
 export type UseBlockStylesReturn = WithRequiredStyleProps;
 
 export const useBoxStyles = ({ style, className }: UseBlockStylesProps): UseBlockStylesReturn => {
-    const scope = 'Block';
+    const scope = 'Box';
 
+    const { theme } = useThemeContext();
     const { className: updatedClassName } = useClassName({
         classes: [
             scope,
             className,
         ],
     });
-    const { theme } = useThemeContext();
 
     useUniqueStyles({
         id: scope,

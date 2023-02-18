@@ -6,13 +6,13 @@ export type UseTagStylesReturn = WithRequiredStyleProps;
 export const useTagStyles = ({ style, className }: UseTagStylesProps): UseTagStylesReturn => {
     const scope = 'Tag';
 
+    const { theme } = useThemeContext();
     const { className: updatedClassName } = useClassName({
         classes: [
             scope,
             className,
         ],
     });
-    const { theme } = useThemeContext();
 
     useUniqueStyles({
         id: scope,

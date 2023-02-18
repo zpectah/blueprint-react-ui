@@ -6,13 +6,13 @@ export type UseBlockStylesReturn = WithRequiredStyleProps;
 export const useBlockStyles = ({ style, className }: UseBlockStylesProps): UseBlockStylesReturn => {
     const scope = 'Block';
 
+    const { theme } = useThemeContext();
     const { className: updatedClassName } = useClassName({
         classes: [
             scope,
             className,
         ],
     });
-    const { theme } = useThemeContext();
 
     useUniqueStyles({
         id: scope,
