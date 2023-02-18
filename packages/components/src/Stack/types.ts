@@ -1,12 +1,9 @@
-import { ElementType, ComponentPropsWithRef } from 'react';
-import { WithChildrenProps } from '../../../core/src/types';
+import { ElementType } from 'react';
+import { WithChildrenProps, PolymorphicComponentProps } from '../../../core/src/types';
 import { StackElementTypeKey } from './enums';
 
 export type StackElementType = keyof typeof StackElementTypeKey;
 
-export type StackBaseProps<E extends ElementType = StackElementType> = {
-    /** Stack element type */
-    as?: E;
-} & WithChildrenProps;
+export type StackBaseProps = WithChildrenProps;
 
-export type StackProps<E extends ElementType = StackElementType> = StackBaseProps<E> & Omit<ComponentPropsWithRef<E>, keyof StackBaseProps<E>>;
+export type StackProps<E extends StackElementType & ElementType> = PolymorphicComponentProps<E, StackBaseProps> & StackBaseProps;

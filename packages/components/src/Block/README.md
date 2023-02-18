@@ -1,4 +1,4 @@
-The Block component serves as a basic stylized wrapper for almost any use.
+Block is like a basic building block that can be any HTML element and can be folded for any use.
 
 ### Import
 ```jsx static

@@ -1,12 +1,20 @@
-import { HTMLProps, DetailedHTMLProps, HTMLAttributes, ReactHTML, ReactNode } from 'react';
+import {
+    HTMLProps,
+    DetailedHTMLProps,
+    HTMLAttributes,
+    ReactHTML,
+    ReactNode,
+    ElementType,
+    ComponentPropsWithRef,
+} from 'react';
 
 export type MixedReactHTMLProps = keyof ReactHTML | keyof ReactNode;
 
 export type BaseElementProps = HTMLProps<HTMLAttributes<HTMLElement>>;
 export type DetailedElementProps = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>;
 
-// export type BaseStyleElementProps = HTMLProps<HTMLAttributes<HTMLStyleElement>>;
-// export type DetailedStyleElementProps = DetailedHTMLProps<HTMLAttributes<HTMLStyleElement>, HTMLStyleElement>;
+export type BaseStyleElementProps = HTMLProps<HTMLAttributes<HTMLStyleElement>>;
+export type DetailedStyleElementProps = DetailedHTMLProps<HTMLAttributes<HTMLStyleElement>, HTMLStyleElement>;
 
 export type BaseDivElementProps = HTMLProps<HTMLAttributes<HTMLDivElement>>;
 export type DetailedDivElementProps = DetailedHTMLProps<HTMLAttributes<HTMLDivElement>, HTMLDivElement>;
@@ -19,3 +27,11 @@ export type DetailedButtonElementProps = DetailedHTMLProps<HTMLAttributes<HTMLBu
 
 export type BaseSpanElementProps = HTMLProps<HTMLAttributes<HTMLSpanElement>>;
 export type DetailedSpanElementProps = DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>;
+
+export type AsProps<E extends ElementType> = {
+    as?: E;
+};
+
+export type PropsToOmit<E extends ElementType, P> = keyof (AsProps<E> & P);
+
+export type PolymorphicComponentProps<E extends ElementType, P> = AsProps<E> & Omit<ComponentPropsWithRef<E>, PropsToOmit<E, P>>;

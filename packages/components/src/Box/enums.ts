@@ -1,4 +1,4 @@
-export enum BlockElementTypeKey {
+export enum BoxElementTypeKey {
     div = 'div',
     section = 'section',
     article = 'article',

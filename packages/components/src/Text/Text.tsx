@@ -1,8 +1,8 @@
 import React, { ElementType } from 'react';
-import { TextProps } from './types';
+import { TextProps, TextElementType } from './types';
 import { useTextStyles } from './useTextStyles';
 
-const Text = <E extends ElementType = 'p'>({ as, style, className, ...restProps }: TextProps<E>) => {
+const Text = <E extends TextElementType & ElementType = 'p'>({ as, style, className, ...restProps }: TextProps<E>) => {
     const Component = as || 'p';
 
     const { ...styleProps } = useTextStyles({ style, className });

@@ -1,12 +1,6 @@
-import { ElementType, ComponentPropsWithRef } from 'react';
-import { WithChildrenProps } from '../../../core/src/types';
-import { BlockElementTypeKey } from './enums';
+import { ElementType } from 'react';
+import { WithChildrenProps, PolymorphicComponentProps } from '../../../core/src/types';
 
-export type BlockElementType = keyof typeof BlockElementTypeKey;
+export type BlockBaseProps = WithChildrenProps;
 
-export type BlockBaseProps<E extends ElementType = BlockElementType> = {
-    /** Block element type */
-    as?: E;
-} & WithChildrenProps;
-
-export type BlockProps<E extends ElementType = BlockElementType> = BlockBaseProps<E> & Omit<ComponentPropsWithRef<E>, keyof BlockBaseProps<E>>;
+export type BlockProps<E extends ElementType> = PolymorphicComponentProps<E, BlockBaseProps> & BlockBaseProps;

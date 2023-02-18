@@ -1,7 +1,7 @@
-import { SyntheticEvent, MouseEvent as ReactMouseEvent } from 'react';
+import { SyntheticEvent, MouseEvent } from 'react';
 
 export type BaseEventProps<T extends SyntheticEvent> = T & HTMLElement;
 
 export type ClickEventProps = {
     target: HTMLElement;
-} & BaseEventProps<ReactMouseEvent<HTMLElement>>;
+} & BaseEventProps<MouseEvent<HTMLElement>>;
