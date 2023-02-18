@@ -23,3 +23,8 @@ import { ArrowUpwardIcon } from '../packages/icons/src';
 
 <ArrowUpwardIcon />
 ```
+```jsx inisde Markdown
+import { CloseIcon } from '../packages/icons/src';
+
+<CloseIcon />
+```

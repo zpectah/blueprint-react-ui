@@ -1,9 +1,9 @@
-import React, { useMemo } from 'react';
+import React, {useMemo, forwardRef, ForwardedRef} from 'react';
 import { PolymorphicElementType } from '../../../core/src';
 import { ButtonProps, ButtonElementType, ButtonIntrinsicElements } from './types';
 import { useButtonStyles } from './useButtonStyles';
 
-const Button = <E extends PolymorphicElementType<ButtonIntrinsicElements> | ButtonElementType>(props: ButtonProps<E>) => {
+const Button = forwardRef(<E extends PolymorphicElementType<ButtonIntrinsicElements> | ButtonElementType>(props: ButtonProps<E>, ref: ForwardedRef<HTMLButtonElement & HTMLAnchorElement>) => {
     const {
         as: Component = 'button',
         color = 'primary',
@@ -22,7 +22,7 @@ const Button = <E extends PolymorphicElementType<ButtonIntrinsicElements> | Butt
 
     const {
         root: rootStyleProps,
-        text: textClass,
+        label: textClass,
         preloader: preloaderClass,
         iconBefore: iconBeforeClass,
         iconAfter: iconAfterClass,
@@ -30,24 +30,25 @@ const Button = <E extends PolymorphicElementType<ButtonIntrinsicElements> | Butt
 
     const disabledState = useMemo(() => (loading || disabled), [ loading, disabled ]);
 
-    const childrenNode = useMemo(() => {
-        if (!iconBefore && !iconAfter && !loading) return children;
-
-        return (
-            <>
-                {iconBefore && <span className={iconBeforeClass.className}>{iconBefore}</span>}
-                <span className={textClass.className}>{children}</span>
-                {iconAfter && <span className={iconAfterClass.className}>{iconAfter}</span>}
-                {loading && <span className={preloaderClass.className}>loading...</span>}
-            </>
-        );
-    }, [ children, iconBefore, iconAfter, loading ]);
+    const childrenNode = useMemo(() => (
+        <>
+            {iconBefore && <span className={iconBeforeClass.className}>{iconBefore}</span>}
+            <span className={textClass.className}>{children}</span>
+            {iconAfter && <span className={iconAfterClass.className}>{iconAfter}</span>}
+            {loading && <span className={preloaderClass.className}>loading...</span>}
+        </>
+    ), [ children, iconBefore, iconAfter, loading ]);
 
     return (
-        <Component {...rootStyleProps} {...restProps} disabled={disabledState}>
+        <Component
+            {...rootStyleProps}
+            {...restProps}
+            disabled={disabledState}
+            ref={ref}
+        >
             {childrenNode}
         </Component>
     );
-};
+});
 
 export default Button;

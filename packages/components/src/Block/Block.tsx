@@ -2,8 +2,8 @@ import React, { ElementType } from 'react';
 import { BlockProps } from './types';
 import { useBlockStyles } from './useBlockStyles';
 
-const Block = <E extends ElementType = 'div'>({ as, style, className, ...restProps }: BlockProps<E>) => {
-    const Component = as || 'div';
+const Block = <E extends ElementType = 'div'>(props: BlockProps<E>) => {
+    const { as: Component = 'div', style, className, ...restProps } = props;
 
     const { ...styleProps } = useBlockStyles({ style, className });
 

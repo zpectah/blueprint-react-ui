@@ -4,7 +4,7 @@ import { LOADING_STATE_CLASSNAME, DISABLED_STATE_CLASSNAME } from '../../../core
 import {
     BUTTON_SCOPE_NAME,
     BUTTON_FULLWIDTH_CLASSNAME,
-    BUTTON_TEXT_CLASSNAME,
+    BUTTON_LABEL_CLASSNAME,
     BUTTON_PRELOADER_CLASSNAME,
     BUTTON_ICON_CLASSNAME,
     BUTTON_ICON_BEFORE_CLASSNAME,
@@ -15,7 +15,7 @@ import getButtonStyles from './styles';
 export type UseButtonStylesProps = Pick<ButtonBaseProps, 'color' | 'variant' | 'size' | 'loading' | 'disabled' | 'fullWidth'> & WithStyleProps;
 export type UseButtonStylesReturn = {
     root: WithRequiredStyleProps;
-    text: {
+    label: {
         className: WithRequiredStyleProps['className'];
     };
     preloader: {
@@ -67,8 +67,8 @@ export const useButtonStyles = (props: UseButtonStylesProps): UseButtonStylesRet
             style: { ...style },
             className: updatedRootClassName,
         },
-        text: {
-            className: BUTTON_TEXT_CLASSNAME,
+        label: {
+            className: BUTTON_LABEL_CLASSNAME,
         },
         preloader: {
             className: BUTTON_PRELOADER_CLASSNAME,

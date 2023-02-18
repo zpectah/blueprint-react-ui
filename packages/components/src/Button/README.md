@@ -69,14 +69,15 @@ It can be used as a styled wrapper for `Link` from **ReactRouter**.
 <Button style={{ padding: '1rem' }}>Button example</Button>
 ```
 
-## Structure
+## DOM Structure
 
-- `.Button`
-  - `.Button-icon.Button-icon--before`
-  - `.Button-text`
-  - `.Button-icon.Button-icon--after`
-  - `.Button-preloader`
-  
+``` static
+.Button
+  .Button-icon.Button-icon--before
+  .Button-label
+  .Button-icon.Button-icon--after
+  .Button-preloader
+```
 
 ## Classes
 
@@ -92,6 +93,6 @@ It can be used as a styled wrapper for `Link` from **ReactRouter**.
 | `.Button-icon`                        | Button icon element wrapper class         |
 | `.Button-icon.Button-icon--before`    | Button icon before element wrapper class         |
 | `.Button-icon.Button-icon--after`     | Button icon after element wrapper class         |
-| `.Button-text`                        | Button text node element class         |
+| `.Button-label`                       | Button label node element class         |
 | `.Button-preloader`                   | Button preloader element class         |
 

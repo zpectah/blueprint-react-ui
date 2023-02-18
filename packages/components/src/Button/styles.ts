@@ -2,7 +2,7 @@ import { ThemeProps, LOADING_STATE_CLASSNAME, DISABLED_STATE_CLASSNAME } from '.
 import {
     BUTTON_SCOPE_NAME,
     BUTTON_FULLWIDTH_CLASSNAME,
-    BUTTON_TEXT_CLASSNAME,
+    BUTTON_LABEL_CLASSNAME,
     BUTTON_PRELOADER_CLASSNAME,
     BUTTON_ICON_CLASSNAME,
     BUTTON_ICON_BEFORE_CLASSNAME,
@@ -46,8 +46,8 @@ const getButtonStyles = (theme?: ThemeProps) => {
             cursor: not-allowed;
         }                
     
-        /* Text */
-        .${BUTTON_TEXT_CLASSNAME} {}
+        /* Label */
+        .${BUTTON_LABEL_CLASSNAME} {}
                 
         /* Preloader */ 
         .${BUTTON_PRELOADER_CLASSNAME} {

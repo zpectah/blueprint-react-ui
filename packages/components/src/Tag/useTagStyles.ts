@@ -1,16 +1,33 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
-import { TAG_SCOPE_NAME } from './const';
+import { TagProps } from './types';
+import {
+    TAG_SCOPE_NAME,
+    TAG_LABEL_CLASSNAME,
+    TAG_ACTION_CLASSNAME,
+    TAG_CLICKABLE_CLASSNAME,
+    TAG_DISMISSIBLE_CLASSNAME,
+} from './const';
 import getTagStyles from './styles';
 
-export type UseTagStylesProps = WithStyleProps;
-export type UseTagStylesReturn = WithRequiredStyleProps;
+export type UseTagStylesProps = Pick<TagProps, 'onClick' | 'onDismiss'> & WithStyleProps;
+export type UseTagStylesReturn = {
+    root: WithRequiredStyleProps;
+    label: {
+        className: WithRequiredStyleProps['className'];
+    };
+    action: {
+        className: WithRequiredStyleProps['className'];
+    };
+};
 
-export const useTagStyles = ({ style, className }: UseTagStylesProps): UseTagStylesReturn => {
+export const useTagStyles = ({ style, className, onClick, onDismiss }: UseTagStylesProps): UseTagStylesReturn => {
     const { theme } = useThemeContext();
 
-    const updatedClassName = classNamesFromList([
+    const updatedRootClassName = classNamesFromList([
         TAG_SCOPE_NAME,
         className,
+        onClick && TAG_CLICKABLE_CLASSNAME,
+        onDismiss && TAG_DISMISSIBLE_CLASSNAME,
     ]);
 
     useUniqueStyles({
@@ -19,7 +36,15 @@ export const useTagStyles = ({ style, className }: UseTagStylesProps): UseTagSty
     });
 
     return {
-        style: { ...style },
-        className: updatedClassName,
+        root: {
+            style: { ...style },
+            className: updatedRootClassName,
+        },
+        label: {
+            className: TAG_LABEL_CLASSNAME,
+        },
+        action: {
+            className: TAG_ACTION_CLASSNAME,
+        },
     };
 };

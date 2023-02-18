@@ -5,7 +5,7 @@ import {
     ReactHTML,
     ReactNode,
     ElementType,
-    ComponentPropsWithRef,
+    ComponentPropsWithoutRef,
     ComponentType,
 } from 'react';
 
@@ -35,7 +35,7 @@ export type AsProps<E extends ElementType> = {
 
 export type PropsToOmit<E extends ElementType, P> = keyof (AsProps<E> & P);
 
-export type PolymorphicComponentProps<E extends ElementType, P> = AsProps<E> & Omit<ComponentPropsWithRef<E>, PropsToOmit<E, P>>;
+export type PolymorphicComponentProps<E extends ElementType, P> = AsProps<E> & Omit<ComponentPropsWithoutRef<E>, PropsToOmit<E, P>>;
 
 /**
  * Modifies ElementType to allow you to insert a custom object for JSX.IntrinsicElements.
