@@ -37,7 +37,11 @@ export type PropsToOmit<E extends ElementType, P> = keyof (AsProps<E> & P);
 
 export type PolymorphicComponentProps<E extends ElementType, P> = AsProps<E> & Omit<ComponentPropsWithoutRef<E>, PropsToOmit<E, P>>;
 
-/**
- * Modifies ElementType to allow you to insert a custom object for JSX.IntrinsicElements.
- */
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type PolymorphicElementType<E = JSX.IntrinsicElements, P = any> = { [K in keyof E]: P extends E[K] ? K : never }[keyof E] | ComponentType<P>;
+
+export type DataAttributeKeyType = `data-${string}`;
+
+export type SafeHTMLDataAttributeProps = {
+    [k: DataAttributeKeyType]: string | number;
+}

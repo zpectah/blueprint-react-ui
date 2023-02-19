@@ -2,6 +2,7 @@ import React, { createElement, useMemo, forwardRef } from 'react';
 import { TagProps } from './types';
 import { useTagStyles } from './useTagStyles';
 import { CloseIcon } from '../../../icons/src';
+import { TAG_DEFAULT_ELEMENT_TYPE, TAG_DEFAULT_ELEMENT_ROLE } from './const';
 
 const Tag = forwardRef<HTMLDivElement, TagProps>((props, ref) => {
     const { children, elementProps, style, className, onClick, onDismiss, dismissIcon } = props;
@@ -28,12 +29,12 @@ const Tag = forwardRef<HTMLDivElement, TagProps>((props, ref) => {
     }, [ children, onDismiss ]);
 
     return createElement(
-        'div',
+        TAG_DEFAULT_ELEMENT_TYPE,
         {
             ...rootStyleProps,
             ...elementProps,
             onClick,
-            role: (onClick || onDismiss) && 'button',
+            role: (onClick || onDismiss) && TAG_DEFAULT_ELEMENT_ROLE,
             ref,
         },
         childrenNode,

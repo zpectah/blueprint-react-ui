@@ -9,6 +9,9 @@ import {
     BUTTON_ICON_CLASSNAME,
     BUTTON_ICON_BEFORE_CLASSNAME,
     BUTTON_ICON_AFTER_CLASSNAME,
+    BUTTON_DEFAULT_COLOR,
+    BUTTON_DEFAULT_VARIANT,
+    BUTTON_DEFAULT_SIZE,
 } from './const';
 import getButtonStyles from './styles';
 
@@ -30,11 +33,11 @@ export type UseButtonStylesReturn = {
 };
 
 export const useButtonStyles = (props: UseButtonStylesProps): UseButtonStylesReturn => {
-    const { style, className, color, variant, size, loading, disabled, fullWidth } = props;
+    const { style, className, color = BUTTON_DEFAULT_COLOR, variant = BUTTON_DEFAULT_VARIANT, size = BUTTON_DEFAULT_SIZE, loading, disabled, fullWidth } = props;
 
     const BUTTON_COLOR_CLASSNAME = `${BUTTON_SCOPE_NAME}--${color}`;
     const BUTTON_VARIANT_CLASSNAME = `${BUTTON_SCOPE_NAME}--${variant}`;
-    const BUTTON_SIZE_CLASSNAME = size !== 'md' ? `${BUTTON_SCOPE_NAME}--${size}` : '';
+    const BUTTON_SIZE_CLASSNAME = size !== BUTTON_DEFAULT_SIZE ? `${BUTTON_SCOPE_NAME}--${size}` : '';
 
     const { theme } = useThemeContext();
 

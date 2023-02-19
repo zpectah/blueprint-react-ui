@@ -1,4 +1,10 @@
-import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
+import {
+    classNamesFromList,
+    useUniqueStyles,
+    useThemeContext,
+    WithStyleProps,
+    WithRequiredStyleProps,
+} from '../../../core/src';
 import { BLOCK_SCOPE_NAME } from './const';
 import getBlockStyles from './styles';
 
