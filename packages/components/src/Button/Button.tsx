@@ -1,4 +1,4 @@
-import React, {useMemo, forwardRef, ForwardedRef} from 'react';
+import React, { useMemo, forwardRef, LegacyRef } from 'react';
 import { PolymorphicElementType } from '../../../core/src';
 import { ButtonProps, ButtonElementType, ButtonIntrinsicElements } from './types';
 import { useButtonStyles } from './useButtonStyles';
@@ -9,7 +9,7 @@ import {
     BUTTON_DEFAULT_SIZE,
 } from './const';
 
-const Button = forwardRef(<E extends PolymorphicElementType<ButtonIntrinsicElements> | ButtonElementType>(props: ButtonProps<E>, ref: ForwardedRef<HTMLButtonElement & HTMLAnchorElement>) => {
+const Button = <E extends PolymorphicElementType<ButtonIntrinsicElements> | ButtonElementType>(props: ButtonProps<E>) => {
     const {
         as: Component = BUTTON_DEFAULT_ELEMENT_TYPE,
         color = BUTTON_DEFAULT_COLOR,
@@ -23,6 +23,7 @@ const Button = forwardRef(<E extends PolymorphicElementType<ButtonIntrinsicEleme
         loading,
         disabled,
         fullWidth,
+        ref,
         ...restProps
     } = props;
 
@@ -55,6 +56,6 @@ const Button = forwardRef(<E extends PolymorphicElementType<ButtonIntrinsicEleme
             {childrenNode}
         </Component>
     );
-});
+};
 
 export default Button;

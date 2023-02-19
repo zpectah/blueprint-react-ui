@@ -5,7 +5,7 @@ import {
     ReactHTML,
     ReactNode,
     ElementType,
-    ComponentPropsWithoutRef,
+    ComponentPropsWithRef,
     ComponentType,
 } from 'react';
 
@@ -35,7 +35,7 @@ export type AsProps<E extends ElementType> = {
 
 export type PropsToOmit<E extends ElementType, P> = keyof (AsProps<E> & P);
 
-export type PolymorphicComponentProps<E extends ElementType, P> = AsProps<E> & Omit<ComponentPropsWithoutRef<E>, PropsToOmit<E, P>>;
+export type PolymorphicComponentProps<E extends ElementType, P> = AsProps<E> & Omit<ComponentPropsWithRef<E>, PropsToOmit<E, P>>;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type PolymorphicElementType<E = JSX.IntrinsicElements, P = any> = { [K in keyof E]: P extends E[K] ? K : never }[keyof E] | ComponentType<P>;

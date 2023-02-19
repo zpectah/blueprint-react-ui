@@ -13,6 +13,9 @@ Story.args = {
     size: 'md',
     variant: 'contained',
     color: 'primary',
+    loading: false,
+    disabled: false,
+    fullWidth: false,
 };
 
 export default Story;
