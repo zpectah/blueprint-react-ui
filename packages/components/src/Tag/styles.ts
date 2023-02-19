@@ -7,12 +7,12 @@ import {
     TAG_DISMISSIBLE_CLASSNAME,
 } from './const';
 
-const getTagStyles = (theme?: ThemeProps) => {
+const getTagStyles = (theme: ThemeProps) => {
     return `
             .${TAG_SCOPE_NAME} {
-                font-family: ${theme?.typography?.fontFamily?.base};
+                font-family: ${theme.typography.fontFamily.base};
                 font-size: 1rem;
-                line-height: ${theme?.typography?.lineHeight?.base};
+                line-height: ${theme.typography.lineHeight.base};
                 color: inherit;
                 display: inline-flex;
             }

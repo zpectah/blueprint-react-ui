@@ -9,24 +9,24 @@ import {
     BUTTON_ICON_AFTER_CLASSNAME,
 } from './const';
 
-const getButtonStyles = (theme?: ThemeProps) => {
+const getButtonStyles = (theme: ThemeProps) => {
     return `
         .${BUTTON_SCOPE_NAME} {
             width: auto;
             height: auto;
             margin: 0;
-            padding: calc(${theme?.spacing?.base} / 3) calc(${theme?.spacing?.base} / 2);
+            padding: calc(${theme.spacing.base} / 3) calc(${theme.spacing.base} / 2);
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: .5rem;
             background: none;
-            color: ${theme?.colors?.base};
-            border: 1px solid ${theme?.colors?.base};
-            border-radius: .25rem;
-            font-family: ${theme?.typography?.fontFamily?.base};
+            color: ${theme.palette.text.primary};
+            border: 1px solid ${theme.palette.primary.base};
+            border-radius: calc(${theme.shape.radius} * 0.075rem);
+            font-family: ${theme.typography.fontFamily.base};
             font-size: 1rem;
-            line-height: ${theme?.typography?.lineHeight?.base};
+            line-height: ${theme.typography.lineHeight.base};
             cursor: pointer;            
         }
         

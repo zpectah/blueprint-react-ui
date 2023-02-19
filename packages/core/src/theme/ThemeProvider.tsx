@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { ThemeProps } from '../../../core/src/types';
+import { ThemeProps } from '../types';
 import { ThemeContextProvider } from './ThemeContext';
 import defaultTheme from './defaultTheme';
 
@@ -10,7 +10,7 @@ export interface ThemeProviderProps {
 
 const ThemeProvider = ({ children, theme }: ThemeProviderProps) => {
     const mergedThemes = { ...Object.assign(defaultTheme, theme) };
-
+    console.log('theme', mergedThemes);
     return (
         <ThemeContextProvider value={{ theme: mergedThemes }}>{children}</ThemeContextProvider>
     );

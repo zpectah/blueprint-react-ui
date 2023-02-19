@@ -1,9 +1,9 @@
 import { createContext, useContext } from 'react';
-import { ThemeProps } from '../../../core/src/types';
+import { ThemeProps } from '../types';
 import defaultTheme from './defaultTheme';
 
 export interface ThemeContextProps {
-    theme?: ThemeProps;
+    theme: ThemeProps;
 }
 
 const defaultContext: ThemeContextProps = {

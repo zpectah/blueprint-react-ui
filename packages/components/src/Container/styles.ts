@@ -1,7 +1,7 @@
-import { ThemeProps, BreakpointKey, BREAKPOINTS, CONTAINER_WIDTH } from '../../../core/src';
+import { ThemeProps, BreakpointKey } from '../../../core/src';
 import { CONTAINER_SCOPE_NAME, CONTAINER_FLUID_CLASSNAME } from './const';
 
-const getContainerStyles = (theme?: ThemeProps) => {
+const getContainerStyles = (theme: ThemeProps) => {
     const CONTAINER_XS_CLASSNAME = `${CONTAINER_SCOPE_NAME}--${BreakpointKey.xs}`;
     const CONTAINER_SM_CLASSNAME = `${CONTAINER_SCOPE_NAME}--${BreakpointKey.sm}`;
     const CONTAINER_MD_CLASSNAME = `${CONTAINER_SCOPE_NAME}--${BreakpointKey.md}`;
@@ -16,107 +16,107 @@ const getContainerStyles = (theme?: ThemeProps) => {
                 padding-inline: .5rem;
             }
             
-            @media (max-width: ${(BREAKPOINTS.sm - 1)}px) {
+            @media (max-width: ${(theme.breakpoint.sm - 1)}px) {
                 .${CONTAINER_XS_CLASSNAME}, 
                 .${CONTAINER_SM_CLASSNAME}, 
                 .${CONTAINER_MD_CLASSNAME}, 
                 .${CONTAINER_LG_CLASSNAME}, 
                 .${CONTAINER_XL_CLASSNAME},
                 .${CONTAINER_XXL_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.xs};
+                    max-width: ${theme.container.xs};
                 }                                              
             }
             
-            @media (min-width: ${BREAKPOINTS.sm}px) {
+            @media (min-width: ${theme.breakpoint.sm}px) {
                 .${CONTAINER_XS_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.xs};
+                    max-width: ${theme.container.xs};
                 }
                 .${CONTAINER_SM_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.sm};
+                    max-width: ${theme.container.sm};
                 }
                 .${CONTAINER_MD_CLASSNAME},
                 .${CONTAINER_LG_CLASSNAME},
                 .${CONTAINER_XL_CLASSNAME},
                 .${CONTAINER_XXL_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.xs};
+                    max-width: ${theme.container.xs};
                 }                 
             }
             
-            @media (min-width: ${BREAKPOINTS.md}px) {
+            @media (min-width: ${theme.breakpoint.md}px) {
                 .${CONTAINER_XS_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.xs};
+                    max-width: ${theme.container.xs};
                 }
                 .${CONTAINER_SM_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.sm};
+                    max-width: ${theme.container.sm};
                 }
                 .${CONTAINER_MD_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.md};
+                    max-width: ${theme.container.md};
                 }
                 .${CONTAINER_LG_CLASSNAME},
                 .${CONTAINER_XL_CLASSNAME},
                 .${CONTAINER_XXL_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.xs};
+                    max-width: ${theme.container.xs};
                 }                 
             }
             
-            @media (min-width: ${BREAKPOINTS.lg}px) {
+            @media (min-width: ${theme.breakpoint.lg}px) {
                 .${CONTAINER_XS_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.xs};
+                    max-width: ${theme.container.xs};
                 }
                 .${CONTAINER_SM_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.sm};
+                    max-width: ${theme.container.sm};
                 }
                 .${CONTAINER_MD_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.md};
+                    max-width: ${theme.container.md};
                 }
                 .${CONTAINER_LG_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.lg};
+                    max-width: ${theme.container.lg};
                 }                          
                 .${CONTAINER_XL_CLASSNAME},
                 .${CONTAINER_XXL_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.xs};
+                    max-width: ${theme.container.xs};
                 }                 
             }
             
-            @media (min-width: ${BREAKPOINTS.xl}px) {
+            @media (min-width: ${theme.breakpoint.xl}px) {
                 .${CONTAINER_XS_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.xs};
+                    max-width: ${theme.container.xs};
                 }
                 .${CONTAINER_SM_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.sm};
+                    max-width: ${theme.container.sm};
                 }
                 .${CONTAINER_MD_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.md};
+                    max-width: ${theme.container.md};
                 }
                 .${CONTAINER_LG_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.lg};
+                    max-width: ${theme.container.lg};
                 }                           
                 .${CONTAINER_XL_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.xl};
+                    max-width: ${theme.container.xl};
                 }
                 .${CONTAINER_XXL_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.xs};
+                    max-width: ${theme.container.xs};
                 }                 
             }
             
-            @media (min-width: ${BREAKPOINTS.xxl}px) {
+            @media (min-width: ${theme.breakpoint.xxl}px) {
                 .${CONTAINER_XS_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.xs};
+                    max-width: ${theme.container.xs};
                 }
                 .${CONTAINER_SM_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.sm};
+                    max-width: ${theme.container.sm};
                 }
                 .${CONTAINER_MD_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.md};
+                    max-width: ${theme.container.md};
                 }
                 .${CONTAINER_LG_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.lg};
+                    max-width: ${theme.container.lg};
                 }                           
                 .${CONTAINER_XL_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.xl};
+                    max-width: ${theme.container.xl};
                 }
                 .${CONTAINER_XXL_CLASSNAME} {
-                    max-width: ${CONTAINER_WIDTH.xxl};
+                    max-width: ${theme.container.xxl};
                 }                 
             }                                                            
                      

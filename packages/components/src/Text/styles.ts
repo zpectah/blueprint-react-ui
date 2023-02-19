@@ -1,12 +1,12 @@
 import { ThemeProps } from '../../../core/src';
 import { TEXT_SCOPE_NAME } from './const';
 
-const getTextStyles = (theme?: ThemeProps) => {
+const getTextStyles = (theme: ThemeProps) => {
     return `
         .${TEXT_SCOPE_NAME} {
-            font-family: ${theme?.typography?.fontFamily?.base};
-            line-height: ${theme?.typography?.lineHeight?.base};
-            color: inherit;
+            font-family: ${theme.typography.fontFamily.base};
+            line-height: ${theme.typography.lineHeight.base};
+            color: ${theme.palette.text.primary};
         }
         .${TEXT_SCOPE_NAME}:is(p) {
             font-size: inherit;
