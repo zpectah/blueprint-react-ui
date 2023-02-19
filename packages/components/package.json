@@ -1,6 +1,6 @@
 {
   "name": "@blueprint-react-ui/components",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Tomas Sychra | zpecter.com",
   "type": "commonjs",
   "scripts": {
@@ -25,5 +25,15 @@
     "vite": "^4.1.0",
     "vite-dts": "^1.0.4",
     "vite-plugin-css-injected-by-js": "^2.4.0"
+  },
+  "peerDependencies": {
+    "@blueprint-react-ui/core": "*",
+    "@blueprint-react-ui/icons": "*",
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  },
+  "resolutions": {
+    "@types/react": "18.0.27",
+    "typescript": "4.9.3"
   }
 }

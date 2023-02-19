@@ -1,5 +1,5 @@
 import { ThemeProps, BreakpointKey, BREAKPOINTS, CONTAINER_WIDTH } from '../../../core/src';
-import { CONTAINER_SCOPE_NAME } from './const';
+import { CONTAINER_SCOPE_NAME, CONTAINER_FLUID_CLASSNAME } from './const';
 
 const getContainerStyles = (theme?: ThemeProps) => {
     const CONTAINER_XS_CLASSNAME = `${CONTAINER_SCOPE_NAME}--${BreakpointKey.xs}`;
@@ -120,7 +120,7 @@ const getContainerStyles = (theme?: ThemeProps) => {
                 }                 
             }                                                            
                      
-            .${CONTAINER_SCOPE_NAME}--fluid {
+            .${CONTAINER_FLUID_CLASSNAME} {
                 max-width: 100%;
             }                     
                          
