@@ -57,38 +57,7 @@ module.exports = {
         },
         {
             name: 'Core',
-            content: path.join(__dirname, 'docs/Core/index.md'),
-            sectionDepth: 3,
-            sections: [
-                {
-                    name: 'Constants',
-                    content: path.join(__dirname, 'docs/Core/Constants.md'),
-                },
-                {
-                    name: 'Enums',
-                    content: path.join(__dirname, 'docs/Core/Enums.md'),
-                },
-                {
-                    name: 'Theme',
-                    content: path.join(__dirname, 'docs/Core/Theme.md'),
-                },
-                {
-                    name: 'Hooks',
-                    content: path.join(__dirname, 'docs/Core/Hooks.md'),
-                },
-                {
-                    name: 'Styles',
-                    content: path.join(__dirname, 'docs/Core/Styles.md'),
-                },
-                {
-                    name: 'Types',
-                    content: path.join(__dirname, 'docs/Core/Types.md'),
-                },
-                {
-                    name: 'Utility',
-                    content: path.join(__dirname, 'docs/Core/Utility.md'),
-                },
-            ],
+            content: path.join(__dirname, 'docs/Core.md'),
         },
         {
             name: 'Icons',
