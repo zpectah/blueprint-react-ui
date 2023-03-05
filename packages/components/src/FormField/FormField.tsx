@@ -1,23 +1,41 @@
 import React from 'react';
 import { useFormFieldStyles } from './useFormFieldStyles';
 import { FormFieldProps } from './types';
+import { FieldLabel } from '../FieldLabel';
+import { FieldHelperText } from '../FieldHelperText';
 
 const FormField = (props: FormFieldProps) => {
-    const { style, className, children, ...restProps } = props;
+    const {
+        style,
+        className,
+        children,
+        label,
+        labelPosition = 'vertical',
+        required,
+        helperText,
+        validationMessage,
+        validationState,
+        disableLabelValidationState,
+        ...restProps
+    } = props;
 
-    const { ...styleProps } = useFormFieldStyles({ style, className });
+    const { root: rootStyleProps, label: labelStyleProps, input: inputStyleProps, message: messageStyleProps } = useFormFieldStyles({ style, className, labelPosition, validationState });
 
     return (
-        <>
-            <div>label</div>
-            <div>
-                <div>
-                    {children}
-                </div>
-                <div>helper message</div>
-                <div>validation message</div>
+        <div {...rootStyleProps} {...restProps}>
+            <div className={labelStyleProps.className}>
+                <FieldLabel required={required} validationState={!disableLabelValidationState ? validationState : undefined}>
+                    {label}
+                </FieldLabel>
             </div>
-        </>
+            <div className={inputStyleProps.className}>
+                {children}
+                <div className={messageStyleProps.className}>
+                    {helperText && <FieldHelperText children={helperText} />}
+                    {(validationState && validationMessage) && <FieldHelperText children={validationMessage} validationState={validationState} />}
+                </div>
+            </div>
+        </div>
     );
 };
 

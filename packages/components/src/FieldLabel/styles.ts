@@ -6,6 +6,17 @@ const getFieldLabelStyles = (theme: ThemeProps) => {
             .${FIELD_LABEL_SCOPE_NAME} {
                 margin: 0;
             }
+            
+            .${FIELD_LABEL_SCOPE_NAME}--success {
+                color: green;
+            }
+            .${FIELD_LABEL_SCOPE_NAME}--warning {
+                color: yellow;
+            }
+            .${FIELD_LABEL_SCOPE_NAME}--error {
+                color: red;
+            }            
+            
         `;
 };
 

@@ -3,9 +3,9 @@ import { useFieldLabelStyles } from './useFieldLabelStyles';
 import { FieldLabelProps } from './types';
 
 const FieldLabel = (props: FieldLabelProps) => {
-    const { style, className, required, children, label, ...restProps } = props;
+    const { style, className, required, children, label, validationState, ...restProps } = props;
 
-    const { ...styleProps } = useFieldLabelStyles({ style, className });
+    const { ...styleProps } = useFieldLabelStyles({ style, className, validationState });
 
     return useMemo(() => {
         let node = <label children={children} {...styleProps} {...restProps} />;
@@ -21,7 +21,7 @@ const FieldLabel = (props: FieldLabelProps) => {
         }
 
         return node;
-    }, [ required, children, label ]);
+    }, [ styleProps, required, children, label, restProps ]);
 };
 
 export default FieldLabel;

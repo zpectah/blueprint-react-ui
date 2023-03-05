@@ -1,6 +1,7 @@
 export * from './Block';
 export * from './Button';
 export * from './Container';
+export * from './FieldHelperText';
 export * from './FieldLabel';
 export * from './FormField';
 export * from './Select';

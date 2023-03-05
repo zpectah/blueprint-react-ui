@@ -1,1 +1,4 @@
 export const FORM_FIELD_SCOPE_NAME = 'FormField';
+export const FORM_FIELD_LABEL_CLASSNAME = `${FORM_FIELD_SCOPE_NAME}-label`;
+export const FORM_FIELD_INPUT_CLASSNAME = `${FORM_FIELD_SCOPE_NAME}-input`;
+export const FORM_FIELD_MESSAGE_CLASSNAME = `${FORM_FIELD_SCOPE_NAME}-message`;
