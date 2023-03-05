@@ -29,6 +29,24 @@ export type DetailedButtonElementProps = DetailedHTMLProps<HTMLAttributes<HTMLBu
 export type BaseSpanElementProps = HTMLProps<HTMLAttributes<HTMLSpanElement>>;
 export type DetailedSpanElementProps = DetailedHTMLProps<HTMLAttributes<HTMLSpanElement>, HTMLSpanElement>;
 
+export type BaseLabelElementProps = HTMLProps<HTMLAttributes<HTMLLabelElement>>;
+export type DetailedLabelElementProps = DetailedHTMLProps<HTMLAttributes<HTMLLabelElement>, HTMLLabelElement>;
+
+export type BaseInputElementProps = HTMLProps<HTMLAttributes<HTMLInputElement>>;
+export type DetailedInputElementProps = DetailedHTMLProps<HTMLAttributes<HTMLInputElement>, HTMLInputElement>;
+
+export type BaseTextareaElementProps = HTMLProps<HTMLAttributes<HTMLTextAreaElement>>;
+export type DetailedTextareaElementProps = DetailedHTMLProps<HTMLAttributes<HTMLTextAreaElement>, HTMLTextAreaElement>;
+
+export type BaseSelectElementProps = HTMLProps<HTMLAttributes<HTMLSelectElement>>;
+export type DetailedSelectElementProps = DetailedHTMLProps<HTMLAttributes<HTMLSelectElement>, HTMLSelectElement>;
+
+export type BaseOptionGroupElementProps = HTMLProps<HTMLAttributes<HTMLOptGroupElement>>;
+export type DetailedOptionGroupElementProps = DetailedHTMLProps<HTMLAttributes<HTMLOptGroupElement>, HTMLOptGroupElement>;
+
+export type BaseOptionElementProps = HTMLProps<HTMLAttributes<HTMLOptionElement>>;
+export type DetailedOptionElementProps = DetailedHTMLProps<HTMLAttributes<HTMLOptionElement>, HTMLOptionElement>;
+
 export type AsProps<E extends ElementType> = {
     as?: E;
 };

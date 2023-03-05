@@ -7,9 +7,7 @@ const TextArea = (props: TextAreaProps) => {
 
     const { ...styleProps } = useTextAreaStyles({ style, className });
 
-    return (
-        <>TextArea</>
-    );
+    return <textarea {...styleProps} {...restProps} />;
 };
 
 export default TextArea;

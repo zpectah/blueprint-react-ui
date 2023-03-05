@@ -8,7 +8,8 @@ const Story: ComponentStory<typeof TextArea> = (args: TextAreaProps) => (
 );
 
 Story.args = {
-    children: 'TextArea blank example',
+    defaultValue: 'TextArea blank example',
+    rows: 10,
 };
 
 export default Story;

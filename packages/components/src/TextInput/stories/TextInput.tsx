@@ -8,7 +8,7 @@ const Story: ComponentStory<typeof TextInput> = (args: TextInputProps) => (
 );
 
 Story.args = {
-    children: 'TextInput blank example',
+    defaultValue: 'TextInput blank example',
 };
 
 export default Story;

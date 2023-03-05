@@ -1,6 +1,6 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
 import { SELECT_SCOPE_NAME } from './const';
-import getSelectStyles from './styles';
+import { getSelectStyles } from './styles';
 
 export type UseSelectStylesProps = WithStyleProps;
 export type UseSelectStylesReturn = WithRequiredStyleProps;

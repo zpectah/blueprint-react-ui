@@ -8,3 +8,5 @@ export default {
 } as ComponentMeta<typeof Select>;
 
 export { default as Default } from './stories/Select';
+export { default as SelectWithChildren } from './stories/SelectWithChildren';
+export { default as SelectWithGroup } from './stories/SelectWithGroup';

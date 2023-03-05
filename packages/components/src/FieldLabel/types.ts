@@ -1,5 +1,7 @@
-import { WithChildrenProps, WithStyleProps } from '../../../core/src/types';
+import { WithChildrenProps, WithStyleProps, DetailedLabelElementProps, BaseLabelElementProps } from '../../../core/src/types';
 
-export type FieldLabelBaseProps = WithChildrenProps & WithStyleProps;
+export type FieldLabelElementProps = BaseLabelElementProps & DetailedLabelElementProps;
+
+export type FieldLabelBaseProps = FieldLabelElementProps & WithChildrenProps & WithStyleProps;
 
 export type FieldLabelProps = FieldLabelBaseProps;

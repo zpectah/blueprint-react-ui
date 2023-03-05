@@ -1,5 +1,7 @@
-import { WithChildrenProps, WithStyleProps } from '../../../core/src/types';
+import { WithChildrenProps, WithStyleProps, DetailedTextareaElementProps, BaseTextareaElementProps } from '../../../core/src/types';
 
-export type TextAreaBaseProps = WithChildrenProps & WithStyleProps;
+export type TextAreaElementProps = BaseTextareaElementProps & DetailedTextareaElementProps;
+
+export type TextAreaBaseProps = TextAreaElementProps & WithChildrenProps & WithStyleProps;
 
 export type TextAreaProps = TextAreaBaseProps;

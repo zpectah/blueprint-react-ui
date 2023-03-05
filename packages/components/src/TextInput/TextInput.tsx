@@ -7,9 +7,7 @@ const TextInput = (props: TextInputProps) => {
 
     const { ...styleProps } = useTextInputStyles({ style, className });
 
-    return (
-        <>TextInput</>
-    );
+    return <input {...styleProps} {...restProps} />;
 };
 
 export default TextInput;

@@ -9,6 +9,7 @@ const Story: ComponentStory<typeof FieldLabel> = (args: FieldLabelProps) => (
 
 Story.args = {
     children: 'FieldLabel blank example',
+    required: true,
 };
 
 export default Story;
