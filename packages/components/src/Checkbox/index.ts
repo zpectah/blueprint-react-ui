@@ -4,3 +4,4 @@ export * from './useCheckboxStyles';
 export * from './useCheckboxElementStyles';
 export * from './types';
 export * from './const';
+export * from './styles';

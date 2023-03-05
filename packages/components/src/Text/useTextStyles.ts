@@ -1,6 +1,6 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
 import { TEXT_SCOPE_NAME, TEXT_ROOT_CLASSNAME } from './const';
-import getTextStyles from './styles';
+import { getTextStyles } from './styles';
 
 export type UseTextStylesProps = WithStyleProps;
 export type UseTextStylesReturn = WithRequiredStyleProps;

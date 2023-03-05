@@ -1,7 +1,7 @@
 import { ThemeProps } from '../../../core/src';
 import { SELECT_ROOT_CLASSNAME, OPTION_ITEM_SCOPE_NAME, OPTION_GROUP_SCOPE_NAME } from './const';
 
-const getSelectStyles = (theme: ThemeProps) => {
+export const getSelectStyles = (theme: ThemeProps) => {
     return `
             .${SELECT_ROOT_CLASSNAME} {
                 margin: 0;
@@ -9,7 +9,7 @@ const getSelectStyles = (theme: ThemeProps) => {
         `;
 };
 
-const getOptionItemStyles = (theme: ThemeProps) => {
+export const getOptionItemStyles = (theme: ThemeProps) => {
     return `
             .${OPTION_ITEM_SCOPE_NAME} {
                 margin: 0;
@@ -17,12 +17,10 @@ const getOptionItemStyles = (theme: ThemeProps) => {
         `;
 };
 
-const getOptionGroupStyles = (theme: ThemeProps) => {
+export const getOptionGroupStyles = (theme: ThemeProps) => {
     return `
             .${OPTION_GROUP_SCOPE_NAME} {
                 margin: 0;
             }
         `;
 };
-
-export { getSelectStyles, getOptionItemStyles, getOptionGroupStyles };

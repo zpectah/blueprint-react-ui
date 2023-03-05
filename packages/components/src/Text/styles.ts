@@ -1,7 +1,7 @@
 import { ThemeProps } from '../../../core/src';
 import { TEXT_ROOT_CLASSNAME } from './const';
 
-const getTextStyles = (theme: ThemeProps) => {
+export const getTextStyles = (theme: ThemeProps) => {
     return `
         .${TEXT_ROOT_CLASSNAME} {
             font-family: ${theme.typography.fontFamily.base};
@@ -46,5 +46,3 @@ const getTextStyles = (theme: ThemeProps) => {
         }                                                                     
     `;
 };
-
-export default getTextStyles;

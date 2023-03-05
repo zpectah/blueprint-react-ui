@@ -1,6 +1,6 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
 import { STACK_SCOPE_NAME, STACK_ROOT_CLASSNAME } from './const';
-import getStackStyles from './styles';
+import { getStackStyles } from './styles';
 
 export type UseStackStylesProps = WithStyleProps;
 export type UseStackStylesReturn = WithRequiredStyleProps;

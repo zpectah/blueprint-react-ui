@@ -1,7 +1,7 @@
 import { ThemeProps } from '../../../core/src';
 import { BLOCK_ROOT_CLASSNAME } from './const';
 
-const getBlockStyles = (theme: ThemeProps) => {
+export const getBlockStyles = (theme: ThemeProps) => {
     return `
             .${BLOCK_ROOT_CLASSNAME} {
                 font-family: ${theme.typography.fontFamily.base};
@@ -11,5 +11,3 @@ const getBlockStyles = (theme: ThemeProps) => {
             }
         `;
 };
-
-export default getBlockStyles;

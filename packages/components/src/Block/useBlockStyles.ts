@@ -6,7 +6,7 @@ import {
     WithRequiredStyleProps,
 } from '../../../core/src';
 import { BLOCK_SCOPE_NAME, BLOCK_ROOT_CLASSNAME } from './const';
-import getBlockStyles from './styles';
+import { getBlockStyles } from './styles';
 
 export type UseBlockStylesProps = WithStyleProps;
 export type UseBlockStylesReturn = WithRequiredStyleProps;

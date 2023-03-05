@@ -1,6 +1,6 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
 import { TAG_INPUT_SCOPE_NAME, TAG_INPUT_ROOT_CLASSNAME } from './const';
-import getTagInputStyles from './styles';
+import { getTagInputStyles } from './styles';
 
 export type UseTagInputStylesProps = WithStyleProps;
 export type UseTagInputStylesReturn = WithRequiredStyleProps;

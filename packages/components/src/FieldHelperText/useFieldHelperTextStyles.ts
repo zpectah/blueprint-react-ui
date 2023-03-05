@@ -1,7 +1,7 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
 import { FieldHelperTextProps } from './types';
 import { FIELD_HELPER_TEXT_SCOPE_NAME, FIELD_HELPER_TEXT_ROOT_CLASSNAME } from './const';
-import getFieldHelperTextStyles from './styles';
+import { getFieldHelperTextStyles } from './styles';
 
 export type UseFieldHelperTextStylesProps = Pick<FieldHelperTextProps, 'validationState'> & WithStyleProps;
 export type UseFieldHelperTextStylesReturn = WithRequiredStyleProps;

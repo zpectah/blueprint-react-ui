@@ -11,7 +11,7 @@ import {
     TAG_DEFAULT_VARIANT,
     TAG_DEFAULT_SIZE,
 } from './const';
-import getTagStyles from './styles';
+import { getTagStyles } from './styles';
 
 export type UseTagStylesProps = Pick<TagProps, 'onClick' | 'onDismiss' | 'color' | 'variant' | 'size' | 'disabled'> & WithStyleProps;
 export type UseTagStylesReturn = {

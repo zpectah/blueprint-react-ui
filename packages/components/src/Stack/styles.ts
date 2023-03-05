@@ -1,7 +1,7 @@
 import { ThemeProps } from '../../../core/src';
 import { STACK_ROOT_CLASSNAME } from './const';
 
-const getStackStyles = (theme: ThemeProps) => {
+export const getStackStyles = (theme: ThemeProps) => {
     return `
             .${STACK_ROOT_CLASSNAME} {
                 font-family: ${theme.typography.fontFamily.base};
@@ -11,5 +11,3 @@ const getStackStyles = (theme: ThemeProps) => {
             }
         `;
 };
-
-export default getStackStyles;

@@ -1,7 +1,7 @@
 import { ThemeProps } from '../../../core/src';
 import { BOX_ROOT_CLASSNAME } from './const';
 
-const getBoxStyles = (theme: ThemeProps) => {
+export const getBoxStyles = (theme: ThemeProps) => {
     return `
             .${BOX_ROOT_CLASSNAME} {
                 font-family: ${theme.typography.fontFamily.base};
@@ -11,5 +11,3 @@ const getBoxStyles = (theme: ThemeProps) => {
             }
         `;
 };
-
-export default getBoxStyles;

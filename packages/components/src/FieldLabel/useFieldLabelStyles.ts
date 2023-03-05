@@ -1,7 +1,7 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
 import { FieldLabelProps } from './types';
 import { FIELD_LABEL_SCOPE_NAME, FIELD_LABEL_ROOT_CLASSNAME } from './const';
-import getFieldLabelStyles from './styles';
+import { getFieldLabelStyles } from './styles';
 
 export type UseFieldLabelStylesProps = Pick<FieldLabelProps, 'validationState'> & WithStyleProps;
 export type UseFieldLabelStylesReturn = WithRequiredStyleProps;

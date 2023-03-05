@@ -3,3 +3,4 @@ export * from './useTextStyles';
 export * from './enums';
 export * from './types';
 export * from './const';
+export * from './styles';

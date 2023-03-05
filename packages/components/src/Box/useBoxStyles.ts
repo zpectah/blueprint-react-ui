@@ -1,6 +1,6 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
 import { BOX_SCOPE_NAME, BOX_ROOT_CLASSNAME } from './const';
-import getBoxStyles from './styles';
+import { getBoxStyles } from './styles';
 
 export type UseBlockStylesProps = WithStyleProps;
 export type UseBlockStylesReturn = WithRequiredStyleProps;

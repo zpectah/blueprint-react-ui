@@ -14,7 +14,7 @@ import {
     BUTTON_DEFAULT_VARIANT,
     BUTTON_DEFAULT_SIZE,
 } from './const';
-import getButtonStyles from './styles';
+import { getButtonStyles } from './styles';
 
 export type UseButtonStylesProps = Pick<ButtonBaseProps, 'color' | 'variant' | 'size' | 'loading' | 'disabled' | 'fullWidth'> & WithStyleProps;
 export type UseButtonStylesReturn = {

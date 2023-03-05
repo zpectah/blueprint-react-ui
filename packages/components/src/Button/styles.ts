@@ -9,7 +9,7 @@ import {
     BUTTON_ICON_END_CLASSNAME,
 } from './const';
 
-const getButtonStyles = (theme: ThemeProps) => {
+export const getButtonStyles = (theme: ThemeProps) => {
     return `
         .${BUTTON_ROOT_CLASSNAME} {
             width: auto;
@@ -115,5 +115,3 @@ const getButtonStyles = (theme: ThemeProps) => {
         .${BUTTON_ROOT_CLASSNAME}--error:focus {}                      
     `;
 };
-
-export default getButtonStyles;

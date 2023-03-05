@@ -7,7 +7,7 @@ import {
     TAG_DISMISSIBLE_CLASSNAME,
 } from './const';
 
-const getTagStyles = (theme: ThemeProps) => {
+export const getTagStyles = (theme: ThemeProps) => {
     return `
             .${TAG_ROOT_CLASSNAME} {
                 font-family: ${theme.typography.fontFamily.base};
@@ -74,5 +74,3 @@ const getTagStyles = (theme: ThemeProps) => {
             
         `;
 };
-
-export default getTagStyles;

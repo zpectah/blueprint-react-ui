@@ -1,7 +1,7 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
 import { ContainerBaseProps } from './types';
 import { CONTAINER_SCOPE_NAME, CONTAINER_ROOT_CLASSNAME, CONTAINER_DEFAULT_MAX_WIDTH } from './const';
-import getContainerStyles from './styles';
+import { getContainerStyles } from './styles';
 
 export type UseContainerStylesProps = Pick<ContainerBaseProps, 'maxWidth'> & WithStyleProps;
 export type UseContainerStylesReturn = WithRequiredStyleProps;

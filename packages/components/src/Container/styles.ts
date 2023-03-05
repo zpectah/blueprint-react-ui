@@ -1,7 +1,7 @@
 import { ThemeProps, BreakpointKey } from '../../../core/src';
 import { CONTAINER_ROOT_CLASSNAME, CONTAINER_FLUID_CLASSNAME } from './const';
 
-const getContainerStyles = (theme: ThemeProps) => {
+export const getContainerStyles = (theme: ThemeProps) => {
     const CONTAINER_XS_CLASSNAME = `${CONTAINER_ROOT_CLASSNAME}--${BreakpointKey.xs}`;
     const CONTAINER_SM_CLASSNAME = `${CONTAINER_ROOT_CLASSNAME}--${BreakpointKey.sm}`;
     const CONTAINER_MD_CLASSNAME = `${CONTAINER_ROOT_CLASSNAME}--${BreakpointKey.md}`;
@@ -126,5 +126,3 @@ const getContainerStyles = (theme: ThemeProps) => {
                          
         `;
 };
-
-export default getContainerStyles;

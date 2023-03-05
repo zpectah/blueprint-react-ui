@@ -1,7 +1,7 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
 import { FormFieldProps } from './types';
 import { FORM_FIELD_SCOPE_NAME, FORM_FIELD_ROOT_CLASSNAME, FORM_FIELD_LABEL_CLASSNAME, FORM_FIELD_INPUT_CLASSNAME, FORM_FIELD_MESSAGE_CLASSNAME } from './const';
-import getFormFieldStyles from './styles';
+import { getFormFieldStyles } from './styles';
 
 export type UseFormFieldStylesProps = Pick<FormFieldProps, 'labelPosition' | 'validationState'> & WithStyleProps;
 export type UseFormFieldStylesReturn = {

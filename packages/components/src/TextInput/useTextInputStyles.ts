@@ -1,6 +1,6 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
 import { TEXT_INPUT_SCOPE_NAME, TEXT_INPUT_ROOT_CLASSNAME } from './const';
-import getTextInputStyles from './styles';
+import { getTextInputStyles } from './styles';
 
 export type UseTextInputStylesProps = WithStyleProps;
 export type UseTextInputStylesReturn = WithRequiredStyleProps;

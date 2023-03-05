@@ -1,7 +1,7 @@
 import { ThemeProps } from '../../../core/src';
 import { FIELD_LABEL_ROOT_CLASSNAME } from './const';
 
-const getFieldLabelStyles = (theme: ThemeProps) => {
+export const getFieldLabelStyles = (theme: ThemeProps) => {
     return `
             .${FIELD_LABEL_ROOT_CLASSNAME} {
                 margin: 0;
@@ -19,5 +19,3 @@ const getFieldLabelStyles = (theme: ThemeProps) => {
             
         `;
 };
-
-export default getFieldLabelStyles;
