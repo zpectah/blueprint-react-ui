@@ -1,5 +1,9 @@
 module.exports = {
   stories: [
+    '../docs/GettingStarted.stories.mdx',
+    '../docs/Overview.stories.mdx',
+    '../docs/Usage.stories.mdx',
+    '../docs/Customization.stories.mdx',
     '../docs/**/*.stories.mdx',
     '../packages/**/*.stories.mdx',
     '../packages/**/*.stories.@(js|jsx|ts|tsx)'
