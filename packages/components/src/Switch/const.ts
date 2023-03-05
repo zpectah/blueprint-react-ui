@@ -1,0 +1,4 @@
+export const SWITCH_SCOPE_NAME = 'Switch';
+
+export const SWITCH_ROOT_CLASSNAME = SWITCH_SCOPE_NAME;
+export const SWITCH_LABEL_CLASSNAME = `${SWITCH_SCOPE_NAME}-label`;
