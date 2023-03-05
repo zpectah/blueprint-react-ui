@@ -13,8 +13,8 @@ export type ButtonIntrinsicElements = {
 };
 
 export type ButtonBaseProps = {
-    iconBefore?: ReactNode;
-    iconAfter?: ReactNode;
+    iconStart?: ReactNode;
+    iconEnd?: ReactNode;
     loading?: boolean;
     disabled?: boolean;
     color?: ButtonColorType;

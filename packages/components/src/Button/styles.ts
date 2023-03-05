@@ -5,8 +5,8 @@ import {
     BUTTON_LABEL_CLASSNAME,
     BUTTON_PRELOADER_CLASSNAME,
     BUTTON_ICON_CLASSNAME,
-    BUTTON_ICON_BEFORE_CLASSNAME,
-    BUTTON_ICON_AFTER_CLASSNAME,
+    BUTTON_ICON_START_CLASSNAME,
+    BUTTON_ICON_END_CLASSNAME,
 } from './const';
 
 const getButtonStyles = (theme: ThemeProps) => {
@@ -65,8 +65,8 @@ const getButtonStyles = (theme: ThemeProps) => {
     
         /* Icon */
         .${BUTTON_ICON_CLASSNAME} {}
-        .${BUTTON_ICON_CLASSNAME}.${BUTTON_ICON_BEFORE_CLASSNAME} {}
-        .${BUTTON_ICON_CLASSNAME}.${BUTTON_ICON_AFTER_CLASSNAME} {}
+        .${BUTTON_ICON_START_CLASSNAME} {}
+        .${BUTTON_ICON_END_CLASSNAME} {}
     
         /* Size */
         .${BUTTON_SCOPE_NAME}--sm {

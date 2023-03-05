@@ -39,9 +39,9 @@ It can be used as a styled wrapper for `Link` from **ReactRouter**.
 
 ### Button with icons
 ```jsx spaced
-<Button iconBefore={<span>icon</span>}>Button example</Button>
-<Button iconAfter={<span>icon</span>}>Button example</Button>
-<Button iconBefore={<span>icon</span>} iconAfter={<span>icon</span>}>Button example</Button>
+<Button iconStart={<span>icon</span>}>Button example</Button>
+<Button iconEnd={<span>icon</span>}>Button example</Button>
+<Button iconStart={<span>icon</span>} iconEnd={<span>icon</span>}>Button example</Button>
 ```
 
 ### Full width Button
@@ -73,9 +73,9 @@ It can be used as a styled wrapper for `Link` from **ReactRouter**.
 
 ``` static
 .Button
-  .Button-icon.Button-icon--before
+  .Button-icon.Button-icon-start
   .Button-label
-  .Button-icon.Button-icon--after
+  .Button-icon.Button-icon-end
   .Button-preloader
 ```
 
@@ -91,8 +91,8 @@ It can be used as a styled wrapper for `Link` from **ReactRouter**.
 | `.Button.is-loading`                  | Button with loading state         |
 | `.Button.is-disabled`                 | Button with disabled state. It does not replace, but only complements the disabled state of the element itself.         |
 | `.Button-icon`                        | Button icon element wrapper class         |
-| `.Button-icon.Button-icon--before`    | Button icon before element wrapper class         |
-| `.Button-icon.Button-icon--after`     | Button icon after element wrapper class         |
+| `.Button-icon.Button-icon-start`      | Button icon before element wrapper class         |
+| `.Button-icon.Button-icon-end`        | Button icon after element wrapper class         |
 | `.Button-label`                       | Button label node element class         |
 | `.Button-preloader`                   | Button preloader element class         |
 

@@ -7,8 +7,8 @@ import {
     BUTTON_LABEL_CLASSNAME,
     BUTTON_PRELOADER_CLASSNAME,
     BUTTON_ICON_CLASSNAME,
-    BUTTON_ICON_BEFORE_CLASSNAME,
-    BUTTON_ICON_AFTER_CLASSNAME,
+    BUTTON_ICON_START_CLASSNAME,
+    BUTTON_ICON_END_CLASSNAME,
     BUTTON_DEFAULT_COLOR,
     BUTTON_DEFAULT_VARIANT,
     BUTTON_DEFAULT_SIZE,
@@ -24,10 +24,10 @@ export type UseButtonStylesReturn = {
     preloader: {
         className: WithRequiredStyleProps['className'];
     };
-    iconBefore: {
+    iconStart: {
         className: WithRequiredStyleProps['className'];
     };
-    iconAfter: {
+    iconEnd: {
         className: WithRequiredStyleProps['className'];
     };
 };
@@ -51,13 +51,13 @@ export const useButtonStyles = (props: UseButtonStylesProps): UseButtonStylesRet
         disabled && DISABLED_STATE_CLASSNAME,
         className,
     ]);
-    const updatedIconBeforeClassName = classNamesFromList([
+    const updatedIconStartClassName = classNamesFromList([
         BUTTON_ICON_CLASSNAME,
-        BUTTON_ICON_BEFORE_CLASSNAME,
+        BUTTON_ICON_START_CLASSNAME,
     ]);
-    const updatedIconAfterClassName = classNamesFromList([
+    const updatedIconEndClassName = classNamesFromList([
         BUTTON_ICON_CLASSNAME,
-        BUTTON_ICON_AFTER_CLASSNAME,
+        BUTTON_ICON_END_CLASSNAME,
     ]);
 
     useUniqueStyles({
@@ -76,11 +76,11 @@ export const useButtonStyles = (props: UseButtonStylesProps): UseButtonStylesRet
         preloader: {
             className: BUTTON_PRELOADER_CLASSNAME,
         },
-        iconBefore: {
-            className: updatedIconBeforeClassName,
+        iconStart: {
+            className: updatedIconStartClassName,
         },
-        iconAfter: {
-            className: updatedIconAfterClassName,
+        iconEnd: {
+            className: updatedIconEndClassName,
         },
     };
 };

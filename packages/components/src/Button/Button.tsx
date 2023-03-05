@@ -18,8 +18,8 @@ const Button = <E extends PolymorphicElementType<ButtonIntrinsicElements> | Butt
         style,
         className,
         children,
-        iconBefore,
-        iconAfter,
+        iconStart,
+        iconEnd,
         loading,
         disabled,
         fullWidth,
@@ -31,20 +31,20 @@ const Button = <E extends PolymorphicElementType<ButtonIntrinsicElements> | Butt
         root: rootStyleProps,
         label: textStyleProps,
         preloader: preloaderStyleProps,
-        iconBefore: iconBeforeStyleProps,
-        iconAfter: iconAfterStyleProps,
+        iconStart: iconStartStyleProps,
+        iconEnd: iconEndStyleProps,
     } = useButtonStyles({ style, className, color, variant, size, loading, disabled, fullWidth });
 
     const disabledState = useMemo(() => (loading || disabled), [ loading, disabled ]);
 
     const childrenNode = useMemo(() => (
         <>
-            {iconBefore && <span className={iconBeforeStyleProps.className}>{iconBefore}</span>}
+            {iconStart && <span className={iconStartStyleProps.className}>{iconStart}</span>}
             <span className={textStyleProps.className}>{children}</span>
-            {iconAfter && <span className={iconAfterStyleProps.className}>{iconAfter}</span>}
+            {iconEnd && <span className={iconEndStyleProps.className}>{iconEnd}</span>}
             {loading && <span className={preloaderStyleProps.className}>loading...</span>}
         </>
-    ), [ children, iconBefore, iconAfter, loading ]);
+    ), [ children, iconStart, iconEnd, loading ]);
 
     return (
         <Component
