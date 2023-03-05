@@ -15,7 +15,7 @@ const getButtonStyles = (theme: ThemeProps) => {
             width: auto;
             height: auto;
             margin: 0;
-            padding: calc(${theme.spacing.base} / 3) calc(${theme.spacing.base} / 2);
+            padding: calc(${theme.spacing.base} / 2) calc(${theme.spacing.base} / 1.5);
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -69,8 +69,14 @@ const getButtonStyles = (theme: ThemeProps) => {
         .${BUTTON_ICON_CLASSNAME}.${BUTTON_ICON_AFTER_CLASSNAME} {}
     
         /* Size */
-        .${BUTTON_SCOPE_NAME}--sm {}
-        .${BUTTON_SCOPE_NAME}--lg {}
+        .${BUTTON_SCOPE_NAME}--sm {
+            padding: calc(${theme.spacing.base} / 3.25) calc(${theme.spacing.base} / 2.25);
+            font-size: 85%;
+        }
+        .${BUTTON_SCOPE_NAME}--lg {
+            padding: calc(${theme.spacing.base} / 1.5) ${theme.spacing.base};
+            font-size: 105%;
+        }
             
         /* Variant */
         .${BUTTON_SCOPE_NAME}--contained {}

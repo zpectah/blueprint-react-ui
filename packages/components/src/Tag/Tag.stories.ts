@@ -2,7 +2,7 @@ import { ComponentMeta } from '@storybook/react';
 import Tag from './Tag';
 
 export default {
-    title: 'Components/Tag',
+    title: 'Components/Navigation/Tag',
     component: Tag,
     parameters: {},
 } as ComponentMeta<typeof Tag>;

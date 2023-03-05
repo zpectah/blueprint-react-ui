@@ -10,7 +10,9 @@ export interface ThemeProviderProps {
 
 const ThemeProvider = ({ children, theme }: ThemeProviderProps) => {
     const mergedThemes = { ...Object.assign(defaultTheme, theme) };
+
     console.log('theme', mergedThemes);
+
     return (
         <ThemeContextProvider value={{ theme: mergedThemes }}>{children}</ThemeContextProvider>
     );

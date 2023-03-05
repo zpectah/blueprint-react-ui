@@ -1,4 +1,4 @@
-import React, { useMemo, forwardRef, LegacyRef } from 'react';
+import React, { useMemo } from 'react';
 import { PolymorphicElementType } from '../../../core/src';
 import { ButtonProps, ButtonElementType, ButtonIntrinsicElements } from './types';
 import { useButtonStyles } from './useButtonStyles';

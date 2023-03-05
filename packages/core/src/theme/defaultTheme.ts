@@ -2,8 +2,8 @@ import { ThemeProps } from '../types';
 import { BREAKPOINTS, CONTAINER_WIDTH } from '../constants';
 
 const defaultTheme: ThemeProps = {
-    mode: 'default',
     palette: {
+        mode: 'default',
         primary: {
             base: 'rgb(48,63,159)',
             light: 'rgb(48,63,159)',

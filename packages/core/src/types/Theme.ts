@@ -8,8 +8,8 @@ export type PaletteObjectProps = {
 }
 
 export interface ThemeProps {
-    mode: string,
     palette: {
+        mode: string,
         primary: PaletteObjectProps;
         secondary: PaletteObjectProps;
         info: PaletteObjectProps;
