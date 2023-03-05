@@ -1,3 +1,3 @@
-import { ValidationStateKey } from '../enums';
+import { ColorValidationKey } from '../enums';
 
-export type ValidationStateType = keyof typeof ValidationStateKey;
+export type ValidationStateType = keyof typeof ColorValidationKey;

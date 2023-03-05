@@ -6,12 +6,12 @@ import {
     WithStyleProps,
     DetailedDivElementProps,
     SafeHTMLDataAttributeProps,
-    ColorBaseKey,
+    ColorEmotionKey,
+    TagShapeVariantKeys,
 } from '../../../core/src';
-import { TagVariantKey } from './enums';
 
-export type TagVariantType = keyof typeof TagVariantKey;
-export type TagColorType = keyof typeof ColorBaseKey;
+export type TagVariantType = keyof typeof TagShapeVariantKeys;
+export type TagColorType = keyof typeof ColorEmotionKey;
 export type TagSizeType = SizeBaseType;
 
 export type TagBaseProps = {

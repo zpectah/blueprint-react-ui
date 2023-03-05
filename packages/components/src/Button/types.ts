@@ -1,11 +1,17 @@
 import { AnchorHTMLAttributes, ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react';
-import { WithChildrenProps, PolymorphicComponentProps, PolymorphicElementType, SizeBaseType } from '../../../core/src/types';
-import { ColorBaseKey } from '../../../core/src';
-import { ButtonElementTypeKey, ButtonVariantKey } from './enums';
+import {
+    WithChildrenProps,
+    PolymorphicComponentProps,
+    PolymorphicElementType,
+    SizeBaseType,
+    ColorEmotionKey,
+    ButtonShapeVariantKeys,
+} from '../../../core/src';
+import { ButtonElementTypeKey } from './enums';
 
 export type ButtonElementType = keyof typeof ButtonElementTypeKey;
-export type ButtonVariantType = keyof typeof ButtonVariantKey;
-export type ButtonColorType = keyof typeof ColorBaseKey;
+export type ButtonVariantType = keyof typeof ButtonShapeVariantKeys;
+export type ButtonColorType = keyof typeof ColorEmotionKey;
 
 export type ButtonIntrinsicElements = {
     a: DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>;

@@ -1,4 +1,10 @@
-import { ThemeProps, DISABLED_STATE_CLASSNAME } from '../../../core/src';
+import { 
+    ThemeProps,
+    SizeMinimalKey,
+    TagShapeVariantKeys,
+    ColorEmotionKey,
+    DISABLED_STATE_CLASSNAME,
+} from '../../../core/src';
 import {
     TAG_ROOT_CLASSNAME,
     TAG_LABEL_CLASSNAME,
@@ -34,43 +40,43 @@ export const getTagStyles = (theme: ThemeProps) => {
             }
             
             /* Size */
-            .${TAG_ROOT_CLASSNAME}--sm {}
-            .${TAG_ROOT_CLASSNAME}--lg {}
+            .${TAG_ROOT_CLASSNAME}--${SizeMinimalKey['sm']} {}
+            .${TAG_ROOT_CLASSNAME}--${SizeMinimalKey['lg']} {}
                 
             /* Variant */
-            .${TAG_ROOT_CLASSNAME}--filled {}
-            .${TAG_ROOT_CLASSNAME}--outlined {}
+            .${TAG_ROOT_CLASSNAME}--${TagShapeVariantKeys['filled']} {}
+            .${TAG_ROOT_CLASSNAME}--${TagShapeVariantKeys['outlined']} {}
             
-            /* Color */
-            .${TAG_ROOT_CLASSNAME}--primary {}
-            .${TAG_ROOT_CLASSNAME}--primary:hover {}
-            .${TAG_ROOT_CLASSNAME}--primary:active {}
-            .${TAG_ROOT_CLASSNAME}--primary:focus {}
+            /* Color: Emotion */
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['primary']} {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['primary']}:hover {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['primary']}:active {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['primary']}:focus {}
         
-            .${TAG_ROOT_CLASSNAME}--secondary {}
-            .${TAG_ROOT_CLASSNAME}--secondary:hover {}
-            .${TAG_ROOT_CLASSNAME}--secondary:active {}
-            .${TAG_ROOT_CLASSNAME}--secondary:focus {}                    
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['secondary']} {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['secondary']}:hover {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['secondary']}:active {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['secondary']}:focus {}                    
         
-            .${TAG_ROOT_CLASSNAME}--info {}
-            .${TAG_ROOT_CLASSNAME}--info:hover {}
-            .${TAG_ROOT_CLASSNAME}--info:active {}
-            .${TAG_ROOT_CLASSNAME}--info:focus {}   
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['info']} {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['info']}:hover {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['info']}:active {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['info']}:focus {}   
         
-            .${TAG_ROOT_CLASSNAME}--success {}
-            .${TAG_ROOT_CLASSNAME}--success:hover {}
-            .${TAG_ROOT_CLASSNAME}--success:active {}
-            .${TAG_ROOT_CLASSNAME}--success:focus {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['success']} {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['success']}:hover {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['success']}:active {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['success']}:focus {}
         
-            .${TAG_ROOT_CLASSNAME}--warning {}
-            .${TAG_ROOT_CLASSNAME}--warning:hover {}
-            .${TAG_ROOT_CLASSNAME}--warning:active {}
-            .${TAG_ROOT_CLASSNAME}--warning:focus {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['warning']} {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['warning']}:hover {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['warning']}:active {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['warning']}:focus {}
         
-            .${TAG_ROOT_CLASSNAME}--error {}
-            .${TAG_ROOT_CLASSNAME}--error:hover {}
-            .${TAG_ROOT_CLASSNAME}--error:active {}
-            .${TAG_ROOT_CLASSNAME}--error:focus {} 
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['error']} {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['error']}:hover {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['error']}:active {}
+            .${TAG_ROOT_CLASSNAME}--${ColorEmotionKey['error']}:focus {}
             
         `;
 };
