@@ -3,6 +3,7 @@ import { ButtonBaseProps } from './types';
 import { LOADING_STATE_CLASSNAME, DISABLED_STATE_CLASSNAME } from '../../../core/src';
 import {
     BUTTON_SCOPE_NAME,
+    BUTTON_ROOT_CLASSNAME,
     BUTTON_FULLWIDTH_CLASSNAME,
     BUTTON_LABEL_CLASSNAME,
     BUTTON_PRELOADER_CLASSNAME,
@@ -35,14 +36,14 @@ export type UseButtonStylesReturn = {
 export const useButtonStyles = (props: UseButtonStylesProps): UseButtonStylesReturn => {
     const { style, className, color = BUTTON_DEFAULT_COLOR, variant = BUTTON_DEFAULT_VARIANT, size = BUTTON_DEFAULT_SIZE, loading, disabled, fullWidth } = props;
 
-    const BUTTON_COLOR_CLASSNAME = `${BUTTON_SCOPE_NAME}--${color}`;
-    const BUTTON_VARIANT_CLASSNAME = `${BUTTON_SCOPE_NAME}--${variant}`;
-    const BUTTON_SIZE_CLASSNAME = size !== BUTTON_DEFAULT_SIZE ? `${BUTTON_SCOPE_NAME}--${size}` : '';
+    const BUTTON_COLOR_CLASSNAME = `${BUTTON_ROOT_CLASSNAME}--${color}`;
+    const BUTTON_VARIANT_CLASSNAME = `${BUTTON_ROOT_CLASSNAME}--${variant}`;
+    const BUTTON_SIZE_CLASSNAME = size !== BUTTON_DEFAULT_SIZE ? `${BUTTON_ROOT_CLASSNAME}--${size}` : '';
 
     const { theme } = useThemeContext();
 
     const updatedRootClassName = classNamesFromList([
-        BUTTON_SCOPE_NAME,
+        BUTTON_ROOT_CLASSNAME,
         BUTTON_COLOR_CLASSNAME,
         BUTTON_VARIANT_CLASSNAME,
         BUTTON_SIZE_CLASSNAME,

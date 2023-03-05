@@ -1,5 +1,5 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
-import { STACK_SCOPE_NAME } from './const';
+import { STACK_SCOPE_NAME, STACK_ROOT_CLASSNAME } from './const';
 import getStackStyles from './styles';
 
 export type UseStackStylesProps = WithStyleProps;
@@ -9,7 +9,7 @@ export const useStackStyles = ({ style, className }: UseStackStylesProps): UseSt
     const { theme } = useThemeContext();
 
     const updatedClassName = classNamesFromList([
-        STACK_SCOPE_NAME,
+        STACK_ROOT_CLASSNAME,
         className,
     ]);
 

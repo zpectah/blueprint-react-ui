@@ -1,19 +1,19 @@
 import { ThemeProps } from '../../../core/src';
-import { FIELD_HELPER_TEXT_SCOPE_NAME } from './const';
+import { FIELD_HELPER_TEXT_ROOT_CLASSNAME } from './const';
 
 const getFieldHelperTextStyles = (theme: ThemeProps) => {
     return `
-            .${FIELD_HELPER_TEXT_SCOPE_NAME} {
+            .${FIELD_HELPER_TEXT_ROOT_CLASSNAME} {
                 margin: 0;
             }
             
-            .${FIELD_HELPER_TEXT_SCOPE_NAME}--success {
+            .${FIELD_HELPER_TEXT_ROOT_CLASSNAME}--success {
                 color: green;
             }
-            .${FIELD_HELPER_TEXT_SCOPE_NAME}--warning {
+            .${FIELD_HELPER_TEXT_ROOT_CLASSNAME}--warning {
                 color: yellow;
             }
-            .${FIELD_HELPER_TEXT_SCOPE_NAME}--error {
+            .${FIELD_HELPER_TEXT_ROOT_CLASSNAME}--error {
                 color: red;
             }                                    
         `;

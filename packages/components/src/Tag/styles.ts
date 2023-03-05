@@ -1,6 +1,6 @@
 import { ThemeProps, DISABLED_STATE_CLASSNAME } from '../../../core/src';
 import {
-    TAG_SCOPE_NAME,
+    TAG_ROOT_CLASSNAME,
     TAG_LABEL_CLASSNAME,
     TAG_ACTION_CLASSNAME,
     TAG_CLICKABLE_CLASSNAME,
@@ -9,7 +9,7 @@ import {
 
 const getTagStyles = (theme: ThemeProps) => {
     return `
-            .${TAG_SCOPE_NAME} {
+            .${TAG_ROOT_CLASSNAME} {
                 font-family: ${theme.typography.fontFamily.base};
                 font-size: 1rem;
                 line-height: ${theme.typography.lineHeight.base};
@@ -21,7 +21,7 @@ const getTagStyles = (theme: ThemeProps) => {
             }
             .${TAG_DISMISSIBLE_CLASSNAME} {}            
 
-            .${TAG_SCOPE_NAME}.${DISABLED_STATE_CLASSNAME} {
+            .${TAG_ROOT_CLASSNAME}.${DISABLED_STATE_CLASSNAME} {
                 cursor: not-allowed;
             } 
             
@@ -34,43 +34,43 @@ const getTagStyles = (theme: ThemeProps) => {
             }
             
             /* Size */
-            .${TAG_SCOPE_NAME}--sm {}
-            .${TAG_SCOPE_NAME}--lg {}
+            .${TAG_ROOT_CLASSNAME}--sm {}
+            .${TAG_ROOT_CLASSNAME}--lg {}
                 
             /* Variant */
-            .${TAG_SCOPE_NAME}--filled {}
-            .${TAG_SCOPE_NAME}--outlined {}
+            .${TAG_ROOT_CLASSNAME}--filled {}
+            .${TAG_ROOT_CLASSNAME}--outlined {}
             
             /* Color */
-            .${TAG_SCOPE_NAME}--primary {}
-            .${TAG_SCOPE_NAME}--primary:hover {}
-            .${TAG_SCOPE_NAME}--primary:active {}
-            .${TAG_SCOPE_NAME}--primary:focus {}
+            .${TAG_ROOT_CLASSNAME}--primary {}
+            .${TAG_ROOT_CLASSNAME}--primary:hover {}
+            .${TAG_ROOT_CLASSNAME}--primary:active {}
+            .${TAG_ROOT_CLASSNAME}--primary:focus {}
         
-            .${TAG_SCOPE_NAME}--secondary {}
-            .${TAG_SCOPE_NAME}--secondary:hover {}
-            .${TAG_SCOPE_NAME}--secondary:active {}
-            .${TAG_SCOPE_NAME}--secondary:focus {}                    
+            .${TAG_ROOT_CLASSNAME}--secondary {}
+            .${TAG_ROOT_CLASSNAME}--secondary:hover {}
+            .${TAG_ROOT_CLASSNAME}--secondary:active {}
+            .${TAG_ROOT_CLASSNAME}--secondary:focus {}                    
         
-            .${TAG_SCOPE_NAME}--info {}
-            .${TAG_SCOPE_NAME}--info:hover {}
-            .${TAG_SCOPE_NAME}--info:active {}
-            .${TAG_SCOPE_NAME}--info:focus {}   
+            .${TAG_ROOT_CLASSNAME}--info {}
+            .${TAG_ROOT_CLASSNAME}--info:hover {}
+            .${TAG_ROOT_CLASSNAME}--info:active {}
+            .${TAG_ROOT_CLASSNAME}--info:focus {}   
         
-            .${TAG_SCOPE_NAME}--success {}
-            .${TAG_SCOPE_NAME}--success:hover {}
-            .${TAG_SCOPE_NAME}--success:active {}
-            .${TAG_SCOPE_NAME}--success:focus {}
+            .${TAG_ROOT_CLASSNAME}--success {}
+            .${TAG_ROOT_CLASSNAME}--success:hover {}
+            .${TAG_ROOT_CLASSNAME}--success:active {}
+            .${TAG_ROOT_CLASSNAME}--success:focus {}
         
-            .${TAG_SCOPE_NAME}--warning {}
-            .${TAG_SCOPE_NAME}--warning:hover {}
-            .${TAG_SCOPE_NAME}--warning:active {}
-            .${TAG_SCOPE_NAME}--warning:focus {}
+            .${TAG_ROOT_CLASSNAME}--warning {}
+            .${TAG_ROOT_CLASSNAME}--warning:hover {}
+            .${TAG_ROOT_CLASSNAME}--warning:active {}
+            .${TAG_ROOT_CLASSNAME}--warning:focus {}
         
-            .${TAG_SCOPE_NAME}--error {}
-            .${TAG_SCOPE_NAME}--error:hover {}
-            .${TAG_SCOPE_NAME}--error:active {}
-            .${TAG_SCOPE_NAME}--error:focus {} 
+            .${TAG_ROOT_CLASSNAME}--error {}
+            .${TAG_ROOT_CLASSNAME}--error:hover {}
+            .${TAG_ROOT_CLASSNAME}--error:active {}
+            .${TAG_ROOT_CLASSNAME}--error:focus {} 
             
         `;
 };

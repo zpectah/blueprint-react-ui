@@ -1,5 +1,5 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
-import { TEXT_INPUT_SCOPE_NAME } from './const';
+import { TEXT_INPUT_SCOPE_NAME, TEXT_INPUT_ROOT_CLASSNAME } from './const';
 import getTextInputStyles from './styles';
 
 export type UseTextInputStylesProps = WithStyleProps;
@@ -9,7 +9,7 @@ export const useTextInputStyles = ({ style, className }: UseTextInputStylesProps
     const { theme } = useThemeContext();
 
     const updatedClassName = classNamesFromList([
-        TEXT_INPUT_SCOPE_NAME,
+        TEXT_INPUT_ROOT_CLASSNAME,
         className,
     ]);
 

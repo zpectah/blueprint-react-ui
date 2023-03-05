@@ -2,6 +2,7 @@ import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, W
 import { TagProps } from './types';
 import {
     TAG_SCOPE_NAME,
+    TAG_ROOT_CLASSNAME,
     TAG_LABEL_CLASSNAME,
     TAG_ACTION_CLASSNAME,
     TAG_CLICKABLE_CLASSNAME,
@@ -35,14 +36,14 @@ export const useTagStyles = (props: UseTagStylesProps): UseTagStylesReturn => {
         disabled,
     } = props;
 
-    const TAG_COLOR_CLASSNAME = `${TAG_SCOPE_NAME}--${color}`;
-    const TAG_VARIANT_CLASSNAME = `${TAG_SCOPE_NAME}--${variant}`;
-    const TAG_SIZE_CLASSNAME = size !== TAG_DEFAULT_SIZE ? `${TAG_SCOPE_NAME}--${size}` : '';
+    const TAG_COLOR_CLASSNAME = `${TAG_ROOT_CLASSNAME}--${color}`;
+    const TAG_VARIANT_CLASSNAME = `${TAG_ROOT_CLASSNAME}--${variant}`;
+    const TAG_SIZE_CLASSNAME = size !== TAG_DEFAULT_SIZE ? `${TAG_ROOT_CLASSNAME}--${size}` : '';
 
     const { theme } = useThemeContext();
 
     const updatedRootClassName = classNamesFromList([
-        TAG_SCOPE_NAME,
+        TAG_ROOT_CLASSNAME,
         TAG_COLOR_CLASSNAME,
         TAG_VARIANT_CLASSNAME,
         TAG_SIZE_CLASSNAME,

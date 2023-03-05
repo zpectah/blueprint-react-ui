@@ -1,5 +1,5 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
-import { SELECT_SCOPE_NAME } from './const';
+import { SELECT_SCOPE_NAME, SELECT_ROOT_CLASSNAME } from './const';
 import { getSelectStyles } from './styles';
 
 export type UseSelectStylesProps = WithStyleProps;
@@ -9,7 +9,7 @@ export const useSelectStyles = ({ style, className }: UseSelectStylesProps): Use
     const { theme } = useThemeContext();
 
     const updatedClassName = classNamesFromList([
-        SELECT_SCOPE_NAME,
+        SELECT_ROOT_CLASSNAME,
         className,
     ]);
 

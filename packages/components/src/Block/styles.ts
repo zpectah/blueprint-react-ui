@@ -1,9 +1,9 @@
 import { ThemeProps } from '../../../core/src';
-import { BLOCK_SCOPE_NAME } from './const';
+import { BLOCK_ROOT_CLASSNAME } from './const';
 
 const getBlockStyles = (theme: ThemeProps) => {
     return `
-            .${BLOCK_SCOPE_NAME} {
+            .${BLOCK_ROOT_CLASSNAME} {
                 font-family: ${theme.typography.fontFamily.base};
                 font-size: 1rem;
                 line-height: ${theme.typography.lineHeight.base};

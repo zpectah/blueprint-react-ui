@@ -1,1 +1,5 @@
+import { GLOBALS } from '../../../core/src';
+
 export const FIELD_HELPER_TEXT_SCOPE_NAME = 'FieldHelperText';
+
+export const FIELD_HELPER_TEXT_ROOT_CLASSNAME = `${GLOBALS.COMPONENT_CLASSNAME_PREFIX}${FIELD_HELPER_TEXT_SCOPE_NAME}`;

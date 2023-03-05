@@ -1,9 +1,9 @@
 import { ThemeProps } from '../../../core/src';
-import { TEXT_INPUT_SCOPE_NAME } from './const';
+import { TEXT_INPUT_ROOT_CLASSNAME } from './const';
 
 const getTextInputStyles = (theme: ThemeProps) => {
     return `
-            .${TEXT_INPUT_SCOPE_NAME} {
+            .${TEXT_INPUT_ROOT_CLASSNAME} {
                 margin: 0;
             }
         `;

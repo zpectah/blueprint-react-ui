@@ -1,16 +1,16 @@
 import { ThemeProps, BreakpointKey } from '../../../core/src';
-import { CONTAINER_SCOPE_NAME, CONTAINER_FLUID_CLASSNAME } from './const';
+import { CONTAINER_ROOT_CLASSNAME, CONTAINER_FLUID_CLASSNAME } from './const';
 
 const getContainerStyles = (theme: ThemeProps) => {
-    const CONTAINER_XS_CLASSNAME = `${CONTAINER_SCOPE_NAME}--${BreakpointKey.xs}`;
-    const CONTAINER_SM_CLASSNAME = `${CONTAINER_SCOPE_NAME}--${BreakpointKey.sm}`;
-    const CONTAINER_MD_CLASSNAME = `${CONTAINER_SCOPE_NAME}--${BreakpointKey.md}`;
-    const CONTAINER_LG_CLASSNAME = `${CONTAINER_SCOPE_NAME}--${BreakpointKey.lg}`;
-    const CONTAINER_XL_CLASSNAME = `${CONTAINER_SCOPE_NAME}--${BreakpointKey.xl}`;
-    const CONTAINER_XXL_CLASSNAME = `${CONTAINER_SCOPE_NAME}--${BreakpointKey.xxl}`;
+    const CONTAINER_XS_CLASSNAME = `${CONTAINER_ROOT_CLASSNAME}--${BreakpointKey.xs}`;
+    const CONTAINER_SM_CLASSNAME = `${CONTAINER_ROOT_CLASSNAME}--${BreakpointKey.sm}`;
+    const CONTAINER_MD_CLASSNAME = `${CONTAINER_ROOT_CLASSNAME}--${BreakpointKey.md}`;
+    const CONTAINER_LG_CLASSNAME = `${CONTAINER_ROOT_CLASSNAME}--${BreakpointKey.lg}`;
+    const CONTAINER_XL_CLASSNAME = `${CONTAINER_ROOT_CLASSNAME}--${BreakpointKey.xl}`;
+    const CONTAINER_XXL_CLASSNAME = `${CONTAINER_ROOT_CLASSNAME}--${BreakpointKey.xxl}`;
 
     return `
-            .${CONTAINER_SCOPE_NAME} {
+            .${CONTAINER_ROOT_CLASSNAME} {
                 width: 100%;
                 margin-inline: auto;
                 padding-inline: .5rem;

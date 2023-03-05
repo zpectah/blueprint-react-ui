@@ -1,5 +1,5 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
-import { CHECKBOX_SCOPE_NAME, CHECKBOX_LABEL_CLASSNAME } from './const';
+import { CHECKBOX_SCOPE_NAME, CHECKBOX_ROOT_CLASSNAME, CHECKBOX_LABEL_CLASSNAME } from './const';
 import { getCheckboxStyles } from './styles';
 
 export type UseCheckboxStylesProps = WithStyleProps;
@@ -14,7 +14,7 @@ export const useCheckboxStyles = ({ style, className }: UseCheckboxStylesProps):
     const { theme } = useThemeContext();
 
     const updatedClassName = classNamesFromList([
-        CHECKBOX_SCOPE_NAME,
+        CHECKBOX_ROOT_CLASSNAME,
         className,
     ]);
 

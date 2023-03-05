@@ -1,5 +1,5 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
-import { TEXT_AREA_SCOPE_NAME } from './const';
+import { TEXT_AREA_SCOPE_NAME, TEXT_AREA_ROOT_CLASSNAME } from './const';
 import getTextAreaStyles from './styles';
 
 export type UseTextAreaStylesProps = WithStyleProps;
@@ -9,7 +9,7 @@ export const useTextAreaStyles = ({ style, className }: UseTextAreaStylesProps):
     const { theme } = useThemeContext();
 
     const updatedClassName = classNamesFromList([
-        TEXT_AREA_SCOPE_NAME,
+        TEXT_AREA_ROOT_CLASSNAME,
         className,
     ]);
 

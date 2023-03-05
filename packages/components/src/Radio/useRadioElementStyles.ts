@@ -1,5 +1,5 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
-import { RADIO_ELEMENT_CLASSNAME } from './const';
+import { RADIO_ELEMENT_SCOPE_NAME, RADIO_ELEMENT_CLASSNAME } from './const';
 import { getRadioElementStyles } from './styles';
 
 export type UseRadioElementStylesProps = WithStyleProps;
@@ -14,7 +14,7 @@ export const useRadioElementStyles = ({ style, className }: UseRadioElementStyle
     ]);
 
     useUniqueStyles({
-        id: RADIO_ELEMENT_CLASSNAME,
+        id: RADIO_ELEMENT_SCOPE_NAME,
         styles: getRadioElementStyles(theme),
     });
 

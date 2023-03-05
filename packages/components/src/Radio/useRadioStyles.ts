@@ -1,5 +1,5 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
-import { RADIO_SCOPE_NAME, RADIO_LABEL_CLASSNAME } from './const';
+import { RADIO_SCOPE_NAME, RADIO_ROOT_CLASSNAME, RADIO_LABEL_CLASSNAME } from './const';
 import { getRadioStyles } from './styles';
 
 export type UseRadioStylesProps = WithStyleProps;
@@ -14,7 +14,7 @@ export const useRadioStyles = ({ style, className }: UseRadioStylesProps): UseRa
     const { theme } = useThemeContext();
 
     const updatedClassName = classNamesFromList([
-        RADIO_SCOPE_NAME,
+        RADIO_ROOT_CLASSNAME,
         className,
     ]);
 

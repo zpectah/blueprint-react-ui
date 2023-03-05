@@ -1,5 +1,5 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
-import { TEXT_SCOPE_NAME } from './const';
+import { TEXT_SCOPE_NAME, TEXT_ROOT_CLASSNAME } from './const';
 import getTextStyles from './styles';
 
 export type UseTextStylesProps = WithStyleProps;
@@ -9,7 +9,7 @@ export const useTextStyles = ({ style, className }: UseTextStylesProps): UseText
     const { theme } = useThemeContext();
 
     const updatedClassName = classNamesFromList([
-        TEXT_SCOPE_NAME,
+        TEXT_ROOT_CLASSNAME,
         className,
     ]);
 

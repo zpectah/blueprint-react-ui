@@ -1,5 +1,5 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
-import { CHECKBOX_ELEMENT_CLASSNAME } from './const';
+import { CHECKBOX_ELEMENT_SCOPE_NAME, CHECKBOX_ELEMENT_CLASSNAME } from './const';
 import { getCheckboxElementStyles } from './styles';
 
 export type UseCheckboxElementStylesProps = WithStyleProps;
@@ -14,7 +14,7 @@ export const useCheckboxElementStyles = ({ style, className }: UseCheckboxElemen
     ]);
 
     useUniqueStyles({
-        id: CHECKBOX_ELEMENT_CLASSNAME,
+        id: CHECKBOX_ELEMENT_SCOPE_NAME,
         styles: getCheckboxElementStyles(theme),
     });
 

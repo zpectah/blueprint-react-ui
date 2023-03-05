@@ -1,5 +1,5 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
-import { OPTION_ITEM_SCOPE_NAME } from './const';
+import { OPTION_ITEM_SCOPE_NAME, OPTION_ITEM_ROOT_CLASSNAME } from './const';
 import { getOptionItemStyles } from './styles';
 
 export type UseOptionItemStylesProps = WithStyleProps;
@@ -9,7 +9,7 @@ export const useOptionItemStyles = ({ style, className }: UseOptionItemStylesPro
     const { theme } = useThemeContext();
 
     const updatedClassName = classNamesFromList([
-        OPTION_ITEM_SCOPE_NAME,
+        OPTION_ITEM_ROOT_CLASSNAME,
         className,
     ]);
 

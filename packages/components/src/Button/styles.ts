@@ -1,6 +1,6 @@
 import { ThemeProps, LOADING_STATE_CLASSNAME, DISABLED_STATE_CLASSNAME } from '../../../core/src';
 import {
-    BUTTON_SCOPE_NAME,
+    BUTTON_ROOT_CLASSNAME,
     BUTTON_FULLWIDTH_CLASSNAME,
     BUTTON_LABEL_CLASSNAME,
     BUTTON_PRELOADER_CLASSNAME,
@@ -11,7 +11,7 @@ import {
 
 const getButtonStyles = (theme: ThemeProps) => {
     return `
-        .${BUTTON_SCOPE_NAME} {
+        .${BUTTON_ROOT_CLASSNAME} {
             width: auto;
             height: auto;
             margin: 0;
@@ -30,19 +30,19 @@ const getButtonStyles = (theme: ThemeProps) => {
             cursor: pointer;            
         }
         
-        .${BUTTON_SCOPE_NAME}:is(button) {}
-        .${BUTTON_SCOPE_NAME}:is(a) {
+        .${BUTTON_ROOT_CLASSNAME}:is(button) {}
+        .${BUTTON_ROOT_CLASSNAME}:is(a) {
             text-decoration: none;
         }
         
-        .${BUTTON_SCOPE_NAME}.${BUTTON_FULLWIDTH_CLASSNAME} {
+        .${BUTTON_ROOT_CLASSNAME}.${BUTTON_FULLWIDTH_CLASSNAME} {
             width: 100%;
         } 
-        .${BUTTON_SCOPE_NAME}.${LOADING_STATE_CLASSNAME} {
+        .${BUTTON_ROOT_CLASSNAME}.${LOADING_STATE_CLASSNAME} {
             position: relative;
             overflow: hidden;
         }
-        .${BUTTON_SCOPE_NAME}.${DISABLED_STATE_CLASSNAME} {
+        .${BUTTON_ROOT_CLASSNAME}.${DISABLED_STATE_CLASSNAME} {
             cursor: not-allowed;
         }                
     
@@ -69,50 +69,50 @@ const getButtonStyles = (theme: ThemeProps) => {
         .${BUTTON_ICON_END_CLASSNAME} {}
     
         /* Size */
-        .${BUTTON_SCOPE_NAME}--sm {
+        .${BUTTON_ROOT_CLASSNAME}--sm {
             padding: calc(${theme.spacing.base} / 3.25) calc(${theme.spacing.base} / 2.25);
             font-size: 85%;
         }
-        .${BUTTON_SCOPE_NAME}--lg {
+        .${BUTTON_ROOT_CLASSNAME}--lg {
             padding: calc(${theme.spacing.base} / 1.5) ${theme.spacing.base};
             font-size: 105%;
         }
             
         /* Variant */
-        .${BUTTON_SCOPE_NAME}--contained {}
-        .${BUTTON_SCOPE_NAME}--outlined {}
-        .${BUTTON_SCOPE_NAME}--text {}      
+        .${BUTTON_ROOT_CLASSNAME}--contained {}
+        .${BUTTON_ROOT_CLASSNAME}--outlined {}
+        .${BUTTON_ROOT_CLASSNAME}--text {}      
         
         /* Color */
-        .${BUTTON_SCOPE_NAME}--primary {}
-        .${BUTTON_SCOPE_NAME}--primary:hover {}
-        .${BUTTON_SCOPE_NAME}--primary:active {}
-        .${BUTTON_SCOPE_NAME}--primary:focus {}
+        .${BUTTON_ROOT_CLASSNAME}--primary {}
+        .${BUTTON_ROOT_CLASSNAME}--primary:hover {}
+        .${BUTTON_ROOT_CLASSNAME}--primary:active {}
+        .${BUTTON_ROOT_CLASSNAME}--primary:focus {}
     
-        .${BUTTON_SCOPE_NAME}--secondary {}
-        .${BUTTON_SCOPE_NAME}--secondary:hover {}
-        .${BUTTON_SCOPE_NAME}--secondary:active {}
-        .${BUTTON_SCOPE_NAME}--secondary:focus {}                    
+        .${BUTTON_ROOT_CLASSNAME}--secondary {}
+        .${BUTTON_ROOT_CLASSNAME}--secondary:hover {}
+        .${BUTTON_ROOT_CLASSNAME}--secondary:active {}
+        .${BUTTON_ROOT_CLASSNAME}--secondary:focus {}                    
     
-        .${BUTTON_SCOPE_NAME}--info {}
-        .${BUTTON_SCOPE_NAME}--info:hover {}
-        .${BUTTON_SCOPE_NAME}--info:active {}
-        .${BUTTON_SCOPE_NAME}--info:focus {}   
+        .${BUTTON_ROOT_CLASSNAME}--info {}
+        .${BUTTON_ROOT_CLASSNAME}--info:hover {}
+        .${BUTTON_ROOT_CLASSNAME}--info:active {}
+        .${BUTTON_ROOT_CLASSNAME}--info:focus {}   
     
-        .${BUTTON_SCOPE_NAME}--success {}
-        .${BUTTON_SCOPE_NAME}--success:hover {}
-        .${BUTTON_SCOPE_NAME}--success:active {}
-        .${BUTTON_SCOPE_NAME}--success:focus {}
+        .${BUTTON_ROOT_CLASSNAME}--success {}
+        .${BUTTON_ROOT_CLASSNAME}--success:hover {}
+        .${BUTTON_ROOT_CLASSNAME}--success:active {}
+        .${BUTTON_ROOT_CLASSNAME}--success:focus {}
     
-        .${BUTTON_SCOPE_NAME}--warning {}
-        .${BUTTON_SCOPE_NAME}--warning:hover {}
-        .${BUTTON_SCOPE_NAME}--warning:active {}
-        .${BUTTON_SCOPE_NAME}--warning:focus {}
+        .${BUTTON_ROOT_CLASSNAME}--warning {}
+        .${BUTTON_ROOT_CLASSNAME}--warning:hover {}
+        .${BUTTON_ROOT_CLASSNAME}--warning:active {}
+        .${BUTTON_ROOT_CLASSNAME}--warning:focus {}
     
-        .${BUTTON_SCOPE_NAME}--error {}
-        .${BUTTON_SCOPE_NAME}--error:hover {}
-        .${BUTTON_SCOPE_NAME}--error:active {}
-        .${BUTTON_SCOPE_NAME}--error:focus {}                      
+        .${BUTTON_ROOT_CLASSNAME}--error {}
+        .${BUTTON_ROOT_CLASSNAME}--error:hover {}
+        .${BUTTON_ROOT_CLASSNAME}--error:active {}
+        .${BUTTON_ROOT_CLASSNAME}--error:focus {}                      
     `;
 };
 

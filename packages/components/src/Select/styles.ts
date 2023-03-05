@@ -1,9 +1,9 @@
 import { ThemeProps } from '../../../core/src';
-import { SELECT_SCOPE_NAME, OPTION_ITEM_SCOPE_NAME, OPTION_GROUP_SCOPE_NAME } from './const';
+import { SELECT_ROOT_CLASSNAME, OPTION_ITEM_SCOPE_NAME, OPTION_GROUP_SCOPE_NAME } from './const';
 
 const getSelectStyles = (theme: ThemeProps) => {
     return `
-            .${SELECT_SCOPE_NAME} {
+            .${SELECT_ROOT_CLASSNAME} {
                 margin: 0;
             }
         `;

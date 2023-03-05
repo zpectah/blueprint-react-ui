@@ -1,5 +1,5 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
-import { OPTION_GROUP_SCOPE_NAME } from './const';
+import { OPTION_GROUP_SCOPE_NAME, OPTION_GROUP_ROOT_CLASSNAME } from './const';
 import { getOptionGroupStyles } from './styles';
 
 export type UseOptionGroupStylesProps = WithStyleProps;
@@ -9,7 +9,7 @@ export const useOptionGroupStyles = ({ style, className }: UseOptionGroupStylesP
     const { theme } = useThemeContext();
 
     const updatedClassName = classNamesFromList([
-        OPTION_GROUP_SCOPE_NAME,
+        OPTION_GROUP_ROOT_CLASSNAME,
         className,
     ]);
 

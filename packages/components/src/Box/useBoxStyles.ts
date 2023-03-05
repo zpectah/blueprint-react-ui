@@ -1,5 +1,5 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
-import { BOX_SCOPE_NAME } from './const';
+import { BOX_SCOPE_NAME, BOX_ROOT_CLASSNAME } from './const';
 import getBoxStyles from './styles';
 
 export type UseBlockStylesProps = WithStyleProps;
@@ -9,7 +9,7 @@ export const useBoxStyles = ({ style, className }: UseBlockStylesProps): UseBloc
     const { theme } = useThemeContext();
 
     const updatedClassName = classNamesFromList([
-        BOX_SCOPE_NAME,
+        BOX_ROOT_CLASSNAME,
         className,
     ]);
 
