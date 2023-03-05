@@ -5,8 +5,8 @@ import {
     BUTTON_LABEL_CLASSNAME,
     BUTTON_PRELOADER_CLASSNAME,
     BUTTON_ICON_CLASSNAME,
-    BUTTON_ICON_BEFORE_CLASSNAME,
-    BUTTON_ICON_AFTER_CLASSNAME,
+    BUTTON_ICON_START_CLASSNAME,
+    BUTTON_ICON_END_CLASSNAME,
     BUTTON_DEFAULT_COLOR,
     BUTTON_DEFAULT_VARIANT,
 } from '../const';
@@ -22,8 +22,8 @@ describe('useButtonStyles', () => {
         expect(result.current.root.className).toBe(`${BUTTON_SCOPE_NAME} ${BUTTON_COLOR_CLASSNAME} ${BUTTON_VARIANT_CLASSNAME}`);
         expect(result.current.label.className).toBe(BUTTON_LABEL_CLASSNAME);
         expect(result.current.preloader.className).toBe(BUTTON_PRELOADER_CLASSNAME);
-        expect(result.current.iconBefore.className).toBe(`${BUTTON_ICON_CLASSNAME} ${BUTTON_ICON_BEFORE_CLASSNAME}`);
-        expect(result.current.iconAfter.className).toBe(`${BUTTON_ICON_CLASSNAME} ${BUTTON_ICON_AFTER_CLASSNAME}`);
+        expect(result.current.iconStart.className).toBe(`${BUTTON_ICON_CLASSNAME} ${BUTTON_ICON_START_CLASSNAME}`);
+        expect(result.current.iconEnd.className).toBe(`${BUTTON_ICON_CLASSNAME} ${BUTTON_ICON_END_CLASSNAME}`);
     });
 
 });
