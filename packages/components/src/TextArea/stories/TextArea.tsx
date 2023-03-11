@@ -10,6 +10,7 @@ const Story: ComponentStory<typeof TextArea> = (args: TextAreaProps) => (
 Story.args = {
     defaultValue: 'TextArea blank example',
     rows: 10,
+    disabled: false,
 };
 
 export default Story;

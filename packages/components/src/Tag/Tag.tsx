@@ -1,4 +1,4 @@
-import React, { createElement, useMemo, forwardRef, useCallback, useRef } from 'react';
+import React, {createElement, useMemo, forwardRef, useCallback, useRef, ElementType} from 'react';
 import { ClickEventProps } from '../../../core/src';
 import { TagProps } from './types';
 import { useTagStyles } from './useTagStyles';
@@ -28,6 +28,7 @@ const Tag = forwardRef<HTMLDivElement, TagProps>((props, ref) => {
         disabled,
     } = props;
 
+    const ComponentElement: ElementType = TAG_DEFAULT_ELEMENT_TYPE;
     const rootElementRef = useRef(ref);
 
     const {
@@ -59,7 +60,7 @@ const Tag = forwardRef<HTMLDivElement, TagProps>((props, ref) => {
     }, [ children, onDismiss ]);
 
     return createElement(
-        TAG_DEFAULT_ELEMENT_TYPE,
+        ComponentElement,
         {
             ...rootStyleProps,
             ...elementProps,

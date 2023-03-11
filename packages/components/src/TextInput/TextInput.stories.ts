@@ -8,3 +8,4 @@ export default {
 } as ComponentMeta<typeof TextInput>;
 
 export { default as Default } from './stories/TextInput';
+export { default as Multiline } from './stories/TextInputMultiline';
