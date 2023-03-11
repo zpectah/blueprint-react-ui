@@ -1,15 +1,14 @@
-import React, {ElementType} from 'react';
+import React from 'react';
 import { useTextInputStyles } from './useTextInputStyles';
 import { TextInputProps } from './types';
+import TextInputElement from './TextInputElement';
 
 const TextInput = (props: TextInputProps) => {
-    const { style, className, validationState, multiline, ...restProps } = props;
+    const { style, className, validationState, ...restProps } = props;
 
-    const Element: ElementType = multiline ? 'textarea' : 'input';
+    const { ...styleProps } = useTextInputStyles({ style, className, validationState });
 
-    const { ...styleProps } = useTextInputStyles({ style, className, validationState, multiline });
-
-    return <Element {...styleProps} {...restProps} />;
+    return <TextInputElement validationState={validationState} {...styleProps} {...restProps} />;
 };
 
 export default TextInput;

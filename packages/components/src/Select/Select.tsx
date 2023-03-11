@@ -1,6 +1,7 @@
-import React, {useMemo} from 'react';
+import React, { useMemo } from 'react';
 import { useSelectStyles } from './useSelectStyles';
 import { SelectProps } from './types';
+import SelectNative from './SelectNative';
 import OptionItem from './OptionItem';
 
 const Select = (props: SelectProps) => {
@@ -9,15 +10,15 @@ const Select = (props: SelectProps) => {
     const { ...styleProps } = useSelectStyles({ style, className, validationState });
 
     return useMemo(() => {
-        let node = <select children={children} {...styleProps} {...restProps} />;
+        let node = <SelectNative children={children} {...styleProps} {...restProps} />;
 
         if (options.length > 0) node = (
-            <select {...styleProps} {...restProps}>
+            <SelectNative {...styleProps} {...restProps}>
                 {children}
                 {options.map((item) => (
                     <OptionItem {...item} />
                 ))}
-            </select>
+            </SelectNative>
         );
 
         return node;

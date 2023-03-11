@@ -1,9 +1,11 @@
 import { WithChildrenProps, WithStyleProps, DetailedInputElementProps, BaseInputElementProps, DetailedTextareaElementProps, BaseTextareaElementProps, WithValidationState } from '../../../core/src';
 
-export type TextInputElementProps = (BaseInputElementProps & DetailedInputElementProps) & (BaseTextareaElementProps & DetailedTextareaElementProps);
-
-export interface TextInputBaseProps extends TextInputElementProps, WithChildrenProps, WithStyleProps, WithValidationState {
+export interface WithTextInputMultiline {
     multiline?: boolean;
 }
+
+export type TextInputElementProps = (BaseInputElementProps & DetailedInputElementProps) & (BaseTextareaElementProps & DetailedTextareaElementProps) & WithValidationState & WithTextInputMultiline;
+
+export interface TextInputBaseProps extends TextInputElementProps, WithChildrenProps, WithStyleProps {}
 
 export type TextInputProps = TextInputBaseProps;
