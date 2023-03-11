@@ -1,6 +1,6 @@
 import {
     ThemeProps,
-    SizeMinimalKey,
+    SizeBaseKey,
     ButtonShapeVariantKeys,
     ColorEmotionKey,
     LOADING_STATE_CLASSNAME,
@@ -76,49 +76,49 @@ export const getButtonStyles = (theme: ThemeProps) => {
         .${BUTTON_ICON_END_CLASSNAME} {}
     
         /* Size */
-        .${BUTTON_ROOT_CLASSNAME}--${SizeMinimalKey['sm']} {
+        .${BUTTON_ROOT_CLASSNAME}--${SizeBaseKey.sm} {
             padding: calc(${theme.spacing.base} / 3.25) calc(${theme.spacing.base} / 2.25);
             font-size: 85%;
         }
-        .${BUTTON_ROOT_CLASSNAME}--${SizeMinimalKey['lg']} {
+        .${BUTTON_ROOT_CLASSNAME}--${SizeBaseKey.lg} {
             padding: calc(${theme.spacing.base} / 1.5) ${theme.spacing.base};
             font-size: 105%;
         }
             
         /* Variant */
-        .${BUTTON_ROOT_CLASSNAME}--${ButtonShapeVariantKeys['contained']} {}
-        .${BUTTON_ROOT_CLASSNAME}--${ButtonShapeVariantKeys['outlined']} {}
-        .${BUTTON_ROOT_CLASSNAME}--${ButtonShapeVariantKeys['text']} {}      
+        .${BUTTON_ROOT_CLASSNAME}--${ButtonShapeVariantKeys.contained} {}
+        .${BUTTON_ROOT_CLASSNAME}--${ButtonShapeVariantKeys.outlined} {}
+        .${BUTTON_ROOT_CLASSNAME}--${ButtonShapeVariantKeys.text} {}      
         
         /* Color: Emotion */
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['primary']} {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['primary']}:hover {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['primary']}:active {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['primary']}:focus {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.primary} {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.primary}:hover {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.primary}:active {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.primary}:focus {}
     
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['secondary']} {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['secondary']}:hover {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['secondary']}:active {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['secondary']}:focus {}                    
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.secondary} {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.secondary}:hover {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.secondary}:active {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.secondary}:focus {}                    
     
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['info']} {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['info']}:hover {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['info']}:active {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['info']}:focus {}   
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.info} {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.info}:hover {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.info}:active {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.info}:focus {}   
     
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['success']} {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['success']}:hover {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['success']}:active {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['success']}:focus {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.success} {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.success}:hover {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.success}:active {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.success}:focus {}
     
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['warning']} {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['warning']}:hover {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['warning']}:active {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['warning']}:focus {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.warning} {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.warning}:hover {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.warning}:active {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.warning}:focus {}
     
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['error']} {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['error']}:hover {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['error']}:active {}
-        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey['error']}:focus {}                      
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.error} {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.error}:hover {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.error}:active {}
+        .${BUTTON_ROOT_CLASSNAME}--${ColorEmotionKey.error}:focus {}                      
     `;
 };

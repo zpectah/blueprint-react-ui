@@ -1,4 +1,5 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
+import { BadgeBaseProps } from './types';
 import {
     BADGE_SCOPE_NAME,
     BADGE_ROOT_CLASSNAME,
@@ -6,10 +7,12 @@ import {
     BADGE_ICON_CLASSNAME,
     BADGE_ICON_START_CLASSNAME,
     BADGE_ICON_END_CLASSNAME,
+    BADGE_DEFAULT_COLOR,
+    BADGE_DEFAULT_SIZE,
 } from './const';
 import { getBadgeElementStyles } from './styles';
 
-export type UseBadgeStylesProps = WithStyleProps;
+export type UseBadgeStylesProps = Pick<BadgeBaseProps, 'color' | 'size'> & WithStyleProps;
 export type UseBadgeStylesReturn = {
     root: WithRequiredStyleProps;
     label: {
@@ -23,11 +26,16 @@ export type UseBadgeStylesReturn = {
     };
 };
 
-export const useBadgeStyles = ({ style, className }: UseBadgeStylesProps): UseBadgeStylesReturn => {
+export const useBadgeStyles = ({ style, className, color = BADGE_DEFAULT_COLOR, size = BADGE_DEFAULT_SIZE }: UseBadgeStylesProps): UseBadgeStylesReturn => {
     const { theme } = useThemeContext();
+
+    const BUTTON_COLOR_CLASSNAME = `${BADGE_ROOT_CLASSNAME}--${color}`;
+    const BUTTON_SIZE_CLASSNAME = size !== BADGE_DEFAULT_SIZE ? `${BADGE_ROOT_CLASSNAME}--${size}` : '';
 
     const updatedClassName = classNamesFromList([
         BADGE_ROOT_CLASSNAME,
+        BUTTON_COLOR_CLASSNAME,
+        BUTTON_SIZE_CLASSNAME,
         className,
     ]);
     const updatedIconStartClassName = classNamesFromList([

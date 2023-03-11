@@ -18,7 +18,7 @@ export type ButtonIntrinsicElements = {
     button: DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>;
 };
 
-export type ButtonBaseProps = {
+export interface ButtonBaseProps extends WithChildrenProps {
     iconStart?: ReactNode;
     iconEnd?: ReactNode;
     loading?: boolean;
@@ -27,6 +27,6 @@ export type ButtonBaseProps = {
     variant?: ButtonVariantType;
     size?: SizeBaseType;
     fullWidth?: boolean;
-} & WithChildrenProps;
+}
 
 export type ButtonProps<E extends PolymorphicElementType<ButtonIntrinsicElements> | ButtonElementType> = PolymorphicComponentProps<E, ButtonBaseProps> & ButtonBaseProps;

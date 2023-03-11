@@ -7,3 +7,6 @@ export const BADGE_LABEL_CLASSNAME = `${BADGE_ROOT_CLASSNAME}-label`;
 export const BADGE_ICON_CLASSNAME = `${BADGE_ROOT_CLASSNAME}-icon`;
 export const BADGE_ICON_START_CLASSNAME = `${BADGE_ICON_CLASSNAME}-start`;
 export const BADGE_ICON_END_CLASSNAME = `${BADGE_ICON_CLASSNAME}-end`;
+
+export const BADGE_DEFAULT_COLOR = 'primary';
+export const BADGE_DEFAULT_SIZE = 'md';
