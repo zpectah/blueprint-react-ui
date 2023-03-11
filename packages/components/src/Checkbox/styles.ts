@@ -1,4 +1,4 @@
-import { ThemeProps, ColorValidationKey, STATE_CLASSNAME_PREFIX } from '../../../core/src';
+import { ThemeProps, ValidationStateKey, STATE_CLASSNAME_PREFIX } from '../../../core/src';
 import { CHECKBOX_ROOT_CLASSNAME, CHECKBOX_ELEMENT_CLASSNAME } from './const';
 
 export const getCheckboxElementStyles = (theme: ThemeProps) => {
@@ -8,9 +8,9 @@ export const getCheckboxElementStyles = (theme: ThemeProps) => {
             }
             
             /* Validation states */
-            .${CHECKBOX_ELEMENT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ColorValidationKey.success} {}
-            .${CHECKBOX_ELEMENT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ColorValidationKey.warning} {}
-            .${CHECKBOX_ELEMENT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ColorValidationKey.error} {}            
+            .${CHECKBOX_ELEMENT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.success} {}
+            .${CHECKBOX_ELEMENT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.warning} {}
+            .${CHECKBOX_ELEMENT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.error} {}            
         `;
 };
 
@@ -24,8 +24,8 @@ export const getCheckboxStyles = (theme: ThemeProps) => {
             }   
             
             /* Validation states */
-            .${CHECKBOX_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ColorValidationKey.success} {}
-            .${CHECKBOX_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ColorValidationKey.warning} {}
-            .${CHECKBOX_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ColorValidationKey.error} {}                      
+            .${CHECKBOX_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.success} {}
+            .${CHECKBOX_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.warning} {}
+            .${CHECKBOX_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.error} {}                      
         `;
 };

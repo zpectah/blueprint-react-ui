@@ -1,4 +1,4 @@
-import { ThemeProps, ColorValidationKey, STATE_CLASSNAME_PREFIX } from '../../../core/src';
+import { ThemeProps, ValidationStateKey, STATE_CLASSNAME_PREFIX } from '../../../core/src';
 import { FIELD_HELPER_TEXT_ROOT_CLASSNAME } from './const';
 
 export const getFieldHelperTextStyles = (theme: ThemeProps) => {
@@ -8,13 +8,13 @@ export const getFieldHelperTextStyles = (theme: ThemeProps) => {
             }
             
             /* Validation states */
-            .${FIELD_HELPER_TEXT_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ColorValidationKey.success} {
+            .${FIELD_HELPER_TEXT_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.success} {
                 color: ${theme.palette.success.dark};
             }
-            .${FIELD_HELPER_TEXT_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ColorValidationKey.warning} {
+            .${FIELD_HELPER_TEXT_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.warning} {
                 color: ${theme.palette.warning.dark};
             }
-            .${FIELD_HELPER_TEXT_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ColorValidationKey.error} {
+            .${FIELD_HELPER_TEXT_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.error} {
                 color: ${theme.palette.error.dark};
             }                                     
         `;

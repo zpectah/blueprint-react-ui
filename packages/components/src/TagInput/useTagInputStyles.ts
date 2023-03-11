@@ -1,19 +1,16 @@
-import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps, STATE_CLASSNAME_PREFIX } from '../../../core/src';
-import { TagInputBaseProps } from './types';
+import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps, WithValidationState, getValidationClassName } from '../../../core/src';
 import { TAG_INPUT_SCOPE_NAME, TAG_INPUT_ROOT_CLASSNAME } from './const';
 import { getTagInputStyles } from './styles';
 
-export type UseTagInputStylesProps = Pick<TagInputBaseProps, 'validationState'> & WithStyleProps;
+export type UseTagInputStylesProps = WithValidationState & WithStyleProps;
 export type UseTagInputStylesReturn = WithRequiredStyleProps;
 
 export const useTagInputStyles = ({ style, className, validationState }: UseTagInputStylesProps): UseTagInputStylesReturn => {
     const { theme } = useThemeContext();
 
-    const VALIDATION_STATE_CLASSNAME = validationState ? `${STATE_CLASSNAME_PREFIX}${validationState}` : '';
-
     const updatedClassName = classNamesFromList([
         TAG_INPUT_ROOT_CLASSNAME,
-        validationState && VALIDATION_STATE_CLASSNAME,
+        getValidationClassName(validationState),
         className,
     ]);
 

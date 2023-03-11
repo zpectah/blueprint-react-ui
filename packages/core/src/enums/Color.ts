@@ -6,9 +6,3 @@ export enum ColorEmotionKey {
     warning = 'warning',
     error = 'error',
 }
-
-export enum ColorValidationKey {
-    success = 'success',
-    warning = 'warning',
-    error = 'error',
-}
