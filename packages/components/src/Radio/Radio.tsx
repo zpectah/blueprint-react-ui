@@ -4,9 +4,9 @@ import { RadioProps } from './types';
 import RadioElement from './RadioElement';
 
 const Radio = (props: RadioProps) => {
-    const { style, className, label, ...restProps } = props;
+    const { style, className, label, validationState, ...restProps } = props;
 
-    const { root: rootStyleProps, label: labelStyleProps } = useRadioStyles({ style, className });
+    const { root: rootStyleProps, label: labelStyleProps } = useRadioStyles({ style, className, validationState });
 
     return (
         <label {...rootStyleProps}>

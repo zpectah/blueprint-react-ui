@@ -1,4 +1,4 @@
-import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps } from '../../../core/src';
+import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps, STATE_CLASSNAME_PREFIX } from '../../../core/src';
 import { FormFieldProps } from './types';
 import { FORM_FIELD_SCOPE_NAME, FORM_FIELD_ROOT_CLASSNAME, FORM_FIELD_LABEL_CLASSNAME, FORM_FIELD_INPUT_CLASSNAME, FORM_FIELD_MESSAGE_CLASSNAME } from './const';
 import { getFormFieldStyles } from './styles';
@@ -21,12 +21,12 @@ export const useFormFieldStyles = ({ style, className, labelPosition, validation
     const { theme } = useThemeContext();
 
     const FORM_FIELD_LABEL_POSITION_CLASSNAME = `${FORM_FIELD_ROOT_CLASSNAME}--${labelPosition}`;
-    const FORM_FIELD_VALIDATION_SATE_CLASSNAME = `${FORM_FIELD_ROOT_CLASSNAME}--${validationState}`;
+    const VALIDATION_STATE_CLASSNAME = `${STATE_CLASSNAME_PREFIX}${validationState}`;
 
     const updatedClassName = classNamesFromList([
         FORM_FIELD_ROOT_CLASSNAME,
         FORM_FIELD_LABEL_POSITION_CLASSNAME,
-        validationState && FORM_FIELD_VALIDATION_SATE_CLASSNAME,
+        validationState && VALIDATION_STATE_CLASSNAME,
         className,
     ]);
 

@@ -1,5 +1,5 @@
-import { WithChildrenProps, WithStyleProps } from '../../../core/src/types';
+import { WithChildrenProps, WithStyleProps, WithValidationState } from '../../../core/src';
 
-export type TagInputBaseProps = WithChildrenProps & WithStyleProps;
+export interface TagInputBaseProps extends WithChildrenProps, WithStyleProps, WithValidationState {}
 
 export type TagInputProps = TagInputBaseProps;

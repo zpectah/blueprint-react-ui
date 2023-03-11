@@ -1,5 +1,6 @@
 export * from './Element';
 export * from './Events';
+export * from './Form';
 export * from './Size';
 export * from './SvgIcon';
 export * from './Theme';

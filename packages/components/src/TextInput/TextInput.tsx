@@ -3,9 +3,9 @@ import { useTextInputStyles } from './useTextInputStyles';
 import { TextInputProps } from './types';
 
 const TextInput = (props: TextInputProps) => {
-    const { style, className, ...restProps } = props;
+    const { style, className, validationState, ...restProps } = props;
 
-    const { ...styleProps } = useTextInputStyles({ style, className });
+    const { ...styleProps } = useTextInputStyles({ style, className, validationState });
 
     return <input {...styleProps} {...restProps} />;
 };

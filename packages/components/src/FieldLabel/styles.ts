@@ -1,4 +1,4 @@
-import { ThemeProps, ColorValidationKey } from '../../../core/src';
+import { ThemeProps, ColorValidationKey, STATE_CLASSNAME_PREFIX } from '../../../core/src';
 import { FIELD_LABEL_ROOT_CLASSNAME } from './const';
 
 export const getFieldLabelStyles = (theme: ThemeProps) => {
@@ -7,13 +7,14 @@ export const getFieldLabelStyles = (theme: ThemeProps) => {
                 margin: 0;
             }
             
-            .${FIELD_LABEL_ROOT_CLASSNAME}--${ColorValidationKey['success']} {
+            /* Validation states */            
+            .${FIELD_LABEL_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ColorValidationKey.success} {
                 color: ${theme.palette.success.dark};
             }
-            .${FIELD_LABEL_ROOT_CLASSNAME}--${ColorValidationKey['warning']} {
+            .${FIELD_LABEL_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ColorValidationKey.warning} {
                 color: ${theme.palette.warning.dark};
             }
-            .${FIELD_LABEL_ROOT_CLASSNAME}--${ColorValidationKey['error']} {
+            .${FIELD_LABEL_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ColorValidationKey.error} {
                 color: ${theme.palette.error.dark};
             }            
             

@@ -1,7 +1,5 @@
-import { WithChildrenProps, WithStyleProps, ValidationStateType } from '../../../core/src/types';
+import { WithChildrenProps, WithStyleProps, WithValidationState } from '../../../core/src/types';
 
-export type FieldHelperTextBaseProps = WithChildrenProps & WithStyleProps & {
-    validationState?: ValidationStateType;
-};
+export interface FieldHelperTextBaseProps extends WithChildrenProps, WithStyleProps, WithValidationState {}
 
 export type FieldHelperTextProps = FieldHelperTextBaseProps;

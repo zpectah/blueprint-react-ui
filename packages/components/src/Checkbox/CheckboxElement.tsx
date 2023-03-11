@@ -3,9 +3,9 @@ import { useCheckboxElementStyles } from './useCheckboxElementStyles';
 import { CheckboxElementProps } from './types';
 
 const CheckboxElement = (props: CheckboxElementProps) => {
-    const { style, className, ...restProps } = props;
+    const { style, className, validationState, ...restProps } = props;
 
-    const { ...styleProps } = useCheckboxElementStyles({ style, className });
+    const { ...styleProps } = useCheckboxElementStyles({ style, className, validationState });
 
     return <input type="checkbox" {...styleProps} {...restProps} />;
 };

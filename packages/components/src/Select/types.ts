@@ -7,7 +7,8 @@ import {
     BaseOptionElementProps,
     DetailedOptionGroupElementProps,
     BaseOptionGroupElementProps,
-} from '../../../core/src/types';
+    WithValidationState,
+} from '../../../core/src';
 
 export type OptionItemElementProps = BaseOptionElementProps & DetailedOptionElementProps;
 export type OptionItemBaseProps = OptionItemElementProps & WithStyleProps;
@@ -18,7 +19,8 @@ export type OptionGroupBaseProps = OptionGroupElementProps & WithStyleProps;
 export type OptionGroupProps = OptionGroupBaseProps;
 
 export type SelectElementProps = BaseSelectElementProps & DetailedSelectElementProps;
-export type SelectBaseProps = SelectElementProps & WithChildrenProps & WithStyleProps & {
+export interface SelectBaseProps extends SelectElementProps, WithChildrenProps, WithStyleProps, WithValidationState {
     options?: OptionItemProps[];
-};
+}
+
 export type SelectProps = SelectBaseProps;

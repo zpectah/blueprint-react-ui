@@ -4,9 +4,9 @@ import { SelectProps } from './types';
 import OptionItem from './OptionItem';
 
 const Select = (props: SelectProps) => {
-    const { style, className, options = [], children, ...restProps } = props;
+    const { style, className, options = [], children, validationState, ...restProps } = props;
 
-    const { ...styleProps } = useSelectStyles({ style, className });
+    const { ...styleProps } = useSelectStyles({ style, className, validationState });
 
     return useMemo(() => {
         let node = <select children={children} {...styleProps} {...restProps} />;

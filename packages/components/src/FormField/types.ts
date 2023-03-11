@@ -1,13 +1,10 @@
-import { WithChildrenProps, WithStyleProps, ValidationStateType } from '../../../core/src/types';
+import { WithChildrenProps, WithStyleProps, WithValidationState, WithValidationMessage, WithHelperText } from '../../../core/src';
 
-export type FormFieldBaseProps = WithChildrenProps & WithStyleProps & {
+export interface FormFieldBaseProps extends WithChildrenProps, WithStyleProps, WithValidationState, WithValidationMessage, WithHelperText {
     label?: string;
     labelPosition?: 'horizontal' | 'vertical';
     required?: boolean;
-    helperText?: string;
-    validationMessage?: string;
-    validationState?: ValidationStateType;
     disableLabelValidationState?: boolean;
-};
+}
 
 export type FormFieldProps = FormFieldBaseProps;

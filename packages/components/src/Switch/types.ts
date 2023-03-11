@@ -1,8 +1,8 @@
-import { WithChildrenProps, WithStyleProps } from '../../../core/src/types';
+import { WithChildrenProps, WithStyleProps, WithValidationState } from '../../../core/src';
 import { CheckboxElementProps } from '../Checkbox';
 
-export type SwitchBaseProps = CheckboxElementProps & WithStyleProps;
-
-export type SwitchProps = SwitchBaseProps & WithChildrenProps & {
+export interface SwitchBaseProps extends CheckboxElementProps, WithStyleProps, WithValidationState {
     label?: string;
-};
+}
+
+export type SwitchProps = SwitchBaseProps & WithChildrenProps;

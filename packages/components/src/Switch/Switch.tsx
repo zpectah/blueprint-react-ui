@@ -4,9 +4,9 @@ import { SwitchProps } from './types';
 import { CheckboxElement } from '../Checkbox';
 
 const Switch = (props: SwitchProps) => {
-    const { style, className, label, ...restProps } = props;
+    const { style, className, label, validationState, ...restProps } = props;
 
-    const { root: rootStyleProps, label: labelStyleProps } = useSwitchStyles({ style, className });
+    const { root: rootStyleProps, label: labelStyleProps } = useSwitchStyles({ style, className, validationState });
 
     return (
         <label {...rootStyleProps}>

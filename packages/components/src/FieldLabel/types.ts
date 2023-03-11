@@ -1,9 +1,7 @@
-import { WithChildrenProps, WithStyleProps, DetailedLabelElementProps, BaseLabelElementProps, ValidationStateType } from '../../../core/src/types';
+import { WithChildrenProps, WithStyleProps, DetailedLabelElementProps, BaseLabelElementProps, WithValidationState } from '../../../core/src/types';
 
 export type FieldLabelElementProps = BaseLabelElementProps & DetailedLabelElementProps;
 
-export type FieldLabelBaseProps = FieldLabelElementProps & WithChildrenProps & WithStyleProps & {
-    validationState?: ValidationStateType;
-};
+export interface FieldLabelBaseProps extends FieldLabelElementProps, WithChildrenProps, WithStyleProps, WithValidationState {}
 
 export type FieldLabelProps = FieldLabelBaseProps;
