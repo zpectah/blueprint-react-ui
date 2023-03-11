@@ -1,16 +1,22 @@
 import { ThemeProps, ValidationStateKey, STATE_CLASSNAME_PREFIX, getFieldGroupLabelMixin } from '../../../core/src';
-import { CHECKBOX_ROOT_CLASSNAME, CHECKBOX_ELEMENT_CLASSNAME, CHECKBOX_GROUP_CLASSNAME, CHECKBOX_GROUP_LABEL_CLASSNAME, CHECKBOX_GROUP_BODY_CLASSNAME } from './const';
+import {
+    CHECKBOX_ROOT_CLASSNAME,
+    CHECKBOX_BASE_CLASSNAME,
+    CHECKBOX_GROUP_CLASSNAME,
+    CHECKBOX_GROUP_LABEL_CLASSNAME,
+    CHECKBOX_GROUP_BODY_CLASSNAME,
+} from './const';
 
-export const getCheckboxElementStyles = (theme: ThemeProps) => {
+export const getCheckboxBaseStyles = (theme: ThemeProps) => {
     return `
-            .${CHECKBOX_ELEMENT_CLASSNAME} {
+            .${CHECKBOX_BASE_CLASSNAME} {
                 margin: 0;
             }
             
             /* Validation states */
-            .${CHECKBOX_ELEMENT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.success} {}
-            .${CHECKBOX_ELEMENT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.warning} {}
-            .${CHECKBOX_ELEMENT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.error} {}            
+            .${CHECKBOX_BASE_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.success} {}
+            .${CHECKBOX_BASE_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.warning} {}
+            .${CHECKBOX_BASE_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.error} {}            
         `;
 };
 

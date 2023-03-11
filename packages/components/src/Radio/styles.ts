@@ -1,16 +1,22 @@
 import { ThemeProps, ValidationStateKey, STATE_CLASSNAME_PREFIX, getFieldGroupLabelMixin } from '../../../core/src';
-import { RADIO_ROOT_CLASSNAME, RADIO_ELEMENT_CLASSNAME, RADIO_GROUP_CLASSNAME, RADIO_GROUP_LABEL_CLASSNAME, RADIO_GROUP_BODY_CLASSNAME } from './const';
+import {
+    RADIO_ROOT_CLASSNAME,
+    RADIO_BASE_CLASSNAME,
+    RADIO_GROUP_CLASSNAME,
+    RADIO_GROUP_LABEL_CLASSNAME,
+    RADIO_GROUP_BODY_CLASSNAME,
+} from './const';
 
-export const getRadioElementStyles = (theme: ThemeProps) => {
+export const getRadioBaseStyles = (theme: ThemeProps) => {
     return `
-            .${RADIO_ELEMENT_CLASSNAME} {
+            .${RADIO_BASE_CLASSNAME} {
                 margin: 0;
             }
             
             /* Validation states */
-            .${RADIO_ELEMENT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.success} {}
-            .${RADIO_ELEMENT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.warning} {}
-            .${RADIO_ELEMENT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.error} {}             
+            .${RADIO_BASE_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.success} {}
+            .${RADIO_BASE_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.warning} {}
+            .${RADIO_BASE_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.error} {}             
         `;
 };
 

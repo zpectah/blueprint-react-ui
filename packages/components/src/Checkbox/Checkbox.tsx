@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCheckboxStyles } from './useCheckboxStyles';
 import { CheckboxProps } from './types';
-import CheckboxElement from './CheckboxElement';
+import CheckboxBase from './CheckboxBase';
 
 const Checkbox = (props: CheckboxProps) => {
     const { style, className, label, validationState, ...restProps } = props;
@@ -10,7 +10,7 @@ const Checkbox = (props: CheckboxProps) => {
 
     return (
         <label {...rootStyleProps}>
-            <CheckboxElement {...restProps} />
+            <CheckboxBase {...restProps} />
             {label && (
                 <span className={labelStyleProps.className}>
                     {label}

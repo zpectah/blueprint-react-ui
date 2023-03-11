@@ -1,10 +1,10 @@
 import { ComponentMeta } from '@storybook/react';
-import RadioElement from './RadioElement';
+import RadioBase from './RadioBase';
 import { ValidationStateKey } from '../../../core/src';
 
 export default {
     title: 'Components/Form/Radio',
-    component: RadioElement,
+    component: RadioBase,
     parameters: {},
     argTypes: {
         validationState: {
@@ -15,6 +15,6 @@ export default {
             defaultValue: undefined,
         },
     },
-} as ComponentMeta<typeof RadioElement>;
+} as ComponentMeta<typeof RadioBase>;
 
-export { default as Element } from './stories/RadioElement';
+export { default as Base } from './stories/RadioBase';

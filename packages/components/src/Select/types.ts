@@ -20,8 +20,6 @@ export type OptionGroupProps = OptionGroupBaseProps;
 
 export type SelectElementProps = BaseSelectElementProps & DetailedSelectElementProps;
 
-export type SelectNativeProps = SelectElementProps;
-
 export interface SelectBaseProps extends SelectElementProps, WithChildrenProps, WithStyleProps, WithValidationState {
     options?: OptionItemProps[];
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useRadioStyles } from './useRadioStyles';
 import { RadioProps } from './types';
-import RadioElement from './RadioElement';
+import RadioBase from './RadioBase';
 
 const Radio = (props: RadioProps) => {
     const { style, className, label, validationState, ...restProps } = props;
@@ -10,7 +10,7 @@ const Radio = (props: RadioProps) => {
 
     return (
         <label {...rootStyleProps}>
-            <RadioElement {...restProps} />
+            <RadioBase {...restProps} />
             {label && (
                 <span className={labelStyleProps.className}>
                     {label}

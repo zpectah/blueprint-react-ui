@@ -1,10 +1,10 @@
 import React from 'react';
 import { ComponentStory } from '@storybook/react';
 import { RadioElementProps } from '../types';
-import RadioElement from '../RadioElement';
+import RadioBase from '../RadioBase';
 
-const Story: ComponentStory<typeof RadioElement> = (args: RadioElementProps) => (
-    <RadioElement {...args} />
+const Story: ComponentStory<typeof RadioBase> = (args: RadioElementProps) => (
+    <RadioBase {...args} />
 );
 
 Story.args = {};
