@@ -1,10 +1,10 @@
 import { ComponentMeta } from '@storybook/react';
-import CheckboxElement from './CheckboxElement';
+import CheckboxGroup from './CheckboxGroup';
 import { ValidationStateKey } from '../../../core/src';
 
 export default {
     title: 'Components/Form/Checkbox',
-    component: CheckboxElement,
+    component: CheckboxGroup,
     parameters: {},
     argTypes: {
         validationState: {
@@ -15,6 +15,6 @@ export default {
             defaultValue: undefined,
         },
     },
-} as ComponentMeta<typeof CheckboxElement>;
+} as ComponentMeta<typeof CheckboxGroup>;
 
-export { default as Element } from './stories/CheckboxElement';
+export { default as Group } from './stories/CheckboxGroup';
