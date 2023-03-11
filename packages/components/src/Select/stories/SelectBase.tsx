@@ -1,11 +1,11 @@
 import React from 'react';
 import { ComponentStory } from '@storybook/react';
-import { SelectProps } from '../types';
-import Select from '../Select';
+import { SelectBaseProps } from '../types';
+import SelectBase from '../SelectBase';
 import OptionItem from '../OptionItem';
 
-const Story: ComponentStory<typeof Select> = (args: SelectProps) => (
-    <Select {...args} />
+const Story: ComponentStory<typeof SelectBase> = (args: SelectBaseProps) => (
+    <SelectBase {...args} />
 );
 
 Story.args = {

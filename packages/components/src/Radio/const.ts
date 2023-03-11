@@ -1,7 +1,7 @@
 import { GLOBALS } from '../../../core/src';
 
 export const RADIO_SCOPE_NAME = 'Radio';
-export const RADIO_BASE_SCOPE_NAME = `${RADIO_SCOPE_NAME}Element`;
+export const RADIO_BASE_SCOPE_NAME = `${RADIO_SCOPE_NAME}Base`;
 export const RADIO_GROUP_SCOPE_NAME = `${RADIO_SCOPE_NAME}Group`;
 
 export const RADIO_ROOT_CLASSNAME = `${GLOBALS.COMPONENT_CLASSNAME_PREFIX}${RADIO_SCOPE_NAME}`;

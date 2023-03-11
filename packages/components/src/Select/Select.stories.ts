@@ -7,6 +7,6 @@ export default {
     parameters: {},
 } as ComponentMeta<typeof Select>;
 
+export { default as Base } from './stories/SelectBase';
 export { default as Default } from './stories/Select';
-export { default as SelectWithChildren } from './stories/SelectWithChildren';
 export { default as SelectWithGroup } from './stories/SelectWithGroup';

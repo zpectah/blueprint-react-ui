@@ -7,5 +7,6 @@ export default {
     parameters: {},
 } as ComponentMeta<typeof TextInput>;
 
+export { default as Base } from './stories/TextInputBase';
 export { default as Default } from './stories/TextInput';
 export { default as Multiline } from './stories/TextInputMultiline';

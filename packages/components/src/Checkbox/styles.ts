@@ -1,10 +1,11 @@
-import { ThemeProps, ValidationStateKey, STATE_CLASSNAME_PREFIX, getFieldGroupLabelMixin } from '../../../core/src';
+import { ThemeProps, ValidationStateKey, STATE_CLASSNAME_PREFIX, mixin__FieldGroupLabel } from '../../../core/src';
 import {
     CHECKBOX_ROOT_CLASSNAME,
     CHECKBOX_BASE_CLASSNAME,
     CHECKBOX_GROUP_CLASSNAME,
     CHECKBOX_GROUP_LABEL_CLASSNAME,
     CHECKBOX_GROUP_BODY_CLASSNAME,
+    CHECKBOX_LABEL_CLASSNAME,
 } from './const';
 
 export const getCheckboxBaseStyles = (theme: ThemeProps) => {
@@ -25,14 +26,21 @@ export const getCheckboxStyles = (theme: ThemeProps) => {
             .${CHECKBOX_ROOT_CLASSNAME} {
                 margin: 0;
             }
-            .${CHECKBOX_ROOT_CLASSNAME}-label {
-                ${getFieldGroupLabelMixin(theme)}
-            }   
             
-            /* Validation states */
-            .${CHECKBOX_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.success} {}
-            .${CHECKBOX_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.warning} {}
-            .${CHECKBOX_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.error} {}                      
+            /* Label */
+            .${CHECKBOX_LABEL_CLASSNAME} {
+                ${mixin__FieldGroupLabel(theme)}
+            }   
+            /* Label Validation states */
+            .${CHECKBOX_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.success} .${CHECKBOX_LABEL_CLASSNAME} {
+                color: ${theme.palette.success.dark};
+            }
+            .${CHECKBOX_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.warning} .${CHECKBOX_LABEL_CLASSNAME} {
+                color: ${theme.palette.warning.dark};
+            }
+            .${CHECKBOX_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.error} .${CHECKBOX_LABEL_CLASSNAME} {
+                color: ${theme.palette.error.dark};
+            }                    
         `;
 };
 
@@ -43,7 +51,7 @@ export const getCheckboxGroupStyles = (theme: ThemeProps) => {
             }
             
             .${CHECKBOX_GROUP_LABEL_CLASSNAME} {
-                ${getFieldGroupLabelMixin(theme)}
+                ${mixin__FieldGroupLabel(theme)}
             }
             
             .${CHECKBOX_GROUP_BODY_CLASSNAME} {

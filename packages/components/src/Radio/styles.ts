@@ -1,10 +1,11 @@
-import { ThemeProps, ValidationStateKey, STATE_CLASSNAME_PREFIX, getFieldGroupLabelMixin } from '../../../core/src';
+import { ThemeProps, ValidationStateKey, STATE_CLASSNAME_PREFIX, mixin__FieldGroupLabel } from '../../../core/src';
 import {
     RADIO_ROOT_CLASSNAME,
     RADIO_BASE_CLASSNAME,
     RADIO_GROUP_CLASSNAME,
     RADIO_GROUP_LABEL_CLASSNAME,
     RADIO_GROUP_BODY_CLASSNAME,
+    RADIO_LABEL_CLASSNAME,
 } from './const';
 
 export const getRadioBaseStyles = (theme: ThemeProps) => {
@@ -25,14 +26,21 @@ export const getRadioStyles = (theme: ThemeProps) => {
             .${RADIO_ROOT_CLASSNAME} {
                 margin: 0;
             }
-            .${RADIO_ROOT_CLASSNAME}-label {
-                ${getFieldGroupLabelMixin(theme)}
-            }
             
-            /* Validation states */
-            .${RADIO_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.success} {}
-            .${RADIO_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.warning} {}
-            .${RADIO_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.error} {}                      
+            /* Label */
+            .${RADIO_LABEL_CLASSNAME} {
+                ${mixin__FieldGroupLabel(theme)}
+            }
+            /* Label Validation states */
+            .${RADIO_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.success} .${RADIO_LABEL_CLASSNAME} {
+                color: ${theme.palette.success.dark};
+            }
+            .${RADIO_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.warning} .${RADIO_LABEL_CLASSNAME} {
+                color: ${theme.palette.warning.dark};
+            }
+            .${RADIO_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.error} .${RADIO_LABEL_CLASSNAME} {
+                color: ${theme.palette.error.dark};
+            }                      
         `;
 };
 
@@ -43,7 +51,7 @@ export const getRadioGroupStyles = (theme: ThemeProps) => {
             }
             
             .${RADIO_GROUP_LABEL_CLASSNAME} {
-                ${getFieldGroupLabelMixin(theme)}
+                ${mixin__FieldGroupLabel(theme)}
             }
             
             .${RADIO_GROUP_BODY_CLASSNAME} {
