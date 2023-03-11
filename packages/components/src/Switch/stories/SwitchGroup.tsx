@@ -1,15 +1,15 @@
 import React from 'react';
 import { ComponentStory } from '@storybook/react';
-import { CheckboxGroupProps } from '../types';
-import CheckboxGroup from '../CheckboxGroup';
+import { SwitchGroupProps } from '../types';
+import SwitchGroup from '../SwitchGroup';
 
-const Story: ComponentStory<typeof CheckboxGroup> = (args: CheckboxGroupProps) => (
-    <CheckboxGroup {...args} />
+const Story: ComponentStory<typeof SwitchGroup> = (args: SwitchGroupProps) => (
+    <SwitchGroup {...args} />
 );
 
 Story.args = {
     label: 'Group label',
-    name: 'checkboxGroupExample',
+    name: 'switchGroupExample',
     items: [
         {
             key: 0,

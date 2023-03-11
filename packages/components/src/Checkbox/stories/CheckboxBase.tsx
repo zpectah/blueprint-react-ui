@@ -1,9 +1,9 @@
 import React from 'react';
 import { ComponentStory } from '@storybook/react';
-import { CheckboxElementProps } from '../types';
+import { CheckboxBaseProps } from '../types';
 import CheckboxBase from '../CheckboxBase';
 
-const Story: ComponentStory<typeof CheckboxBase> = (args: CheckboxElementProps) => (
+const Story: ComponentStory<typeof CheckboxBase> = (args: CheckboxBaseProps) => (
     <CheckboxBase {...args} />
 );
 

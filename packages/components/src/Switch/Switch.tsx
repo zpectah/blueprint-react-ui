@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSwitchStyles } from './useSwitchStyles';
 import { SwitchProps } from './types';
-import { CheckboxElement } from '../Checkbox';
+import { CheckboxBase } from '../Checkbox';
 
 const Switch = (props: SwitchProps) => {
     const { style, className, label, validationState, ...restProps } = props;
@@ -10,7 +10,7 @@ const Switch = (props: SwitchProps) => {
 
     return (
         <label {...rootStyleProps}>
-            <CheckboxElement {...restProps} />
+            <CheckboxBase {...restProps} />
             {label && (
                 <span className={labelStyleProps.className}>
                     {label}

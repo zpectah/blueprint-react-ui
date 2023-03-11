@@ -8,3 +8,4 @@ export default {
 } as ComponentMeta<typeof Switch>;
 
 export { default as Default } from './stories/Switch';
+export { default as SwitchGroup } from './stories/SwitchGroup';

@@ -1,9 +1,9 @@
 import React from 'react';
 import { ComponentStory } from '@storybook/react';
-import { RadioElementProps } from '../types';
+import { RadioGroupProps } from '../types';
 import RadioGroup from '../RadioGroup';
 
-const Story: ComponentStory<typeof RadioGroup> = (args: RadioElementProps) => (
+const Story: ComponentStory<typeof RadioGroup> = (args: RadioGroupProps) => (
     <RadioGroup {...args} />
 );
 

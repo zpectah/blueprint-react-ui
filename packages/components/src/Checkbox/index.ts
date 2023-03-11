@@ -4,6 +4,7 @@ export { default as CheckboxGroup } from './CheckboxGroup';
 export * from './useCheckboxBaseStyles';
 export * from './useCheckboxStyles';
 export * from './useCheckboxGroupStyles';
+export * from './CheckboxGroupContext';
 export * from './types';
 export * from './const';
 export * from './styles';
