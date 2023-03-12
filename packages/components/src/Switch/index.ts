@@ -1,5 +1,7 @@
+export { default as SwitchBase } from './SwitchBase';
 export { default as Switch } from './Switch';
 export { default as SwitchGroup } from './SwitchGroup';
+export * from './useSwitchBaseStyles';
 export * from './useSwitchStyles';
 export * from './useSwitchGroupStyles';
 export * from './SwitchGroupContext';

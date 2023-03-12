@@ -7,5 +7,6 @@ export default {
     parameters: {},
 } as ComponentMeta<typeof Switch>;
 
+export { default as Base } from './stories/SwitchBase';
 export { default as Default } from './stories/Switch';
-export { default as SwitchGroup } from './stories/SwitchGroup';
+export { default as Group } from './stories/SwitchGroup';

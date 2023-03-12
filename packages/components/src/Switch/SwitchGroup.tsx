@@ -21,7 +21,7 @@ const SwitchGroup = (props: SwitchGroupProps) => {
 
     const {
         root: rootStyleProps,
-        label: labelStyleProps,
+        legend: legendStyleProps,
         body: bodyStyleProps,
     } = useSwitchGroupStyles({ style, className, validationState });
 
@@ -30,11 +30,8 @@ const SwitchGroup = (props: SwitchGroupProps) => {
     };
 
     return (
-        <div {...rootStyleProps} {...restProps}>
+        <fieldset {...rootStyleProps} {...restProps}>
             <SwitchGroupContextProvider value={contextValue}>
-                {label && (
-                    <span {...labelStyleProps}>{label}</span>
-                )}
                 <div {...bodyStyleProps}>
                     {children && children}
                     {items.length > 0 && items.map((item, index) => (
@@ -43,8 +40,9 @@ const SwitchGroup = (props: SwitchGroupProps) => {
                 </div>
                 {helperText && <FieldHelperText children={helperText} />}
                 {(validationState && validationMessage) && <FieldHelperText children={validationMessage} validationState={validationState} />}
+                {label && <legend {...legendStyleProps}>{label}</legend>}
             </SwitchGroupContextProvider>
-        </div>
+        </fieldset>
     );
 };
 

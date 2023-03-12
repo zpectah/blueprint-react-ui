@@ -9,7 +9,7 @@ import {
 } from '../../../core/src';
 import { TextInputBaseProps } from './types';
 import { TEXT_INPUT_BASE_SCOPE_NAME, TEXT_INPUT_BASE_CLASSNAME, TEXT_INPUT_BASE_MULTILINE_CLASSNAME } from './const';
-import { getTextInputNativeStyles } from './styles';
+import { getTextInputBaseStyles } from './styles';
 
 export type UseTextInputNativeStylesProps = WithValidationState & WithStyleProps & Pick<TextInputBaseProps, 'multiline'>;
 export type UseTextInputNativeStylesReturn = WithRequiredStyleProps;
@@ -26,7 +26,7 @@ export const useTextInputBaseStyles = ({ style, className, validationState, mult
 
     useUniqueStyles({
         id: TEXT_INPUT_BASE_SCOPE_NAME,
-        styles: getTextInputNativeStyles(theme),
+        styles: getTextInputBaseStyles(theme),
     });
 
     return {

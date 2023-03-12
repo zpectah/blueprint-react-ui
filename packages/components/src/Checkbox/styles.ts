@@ -1,9 +1,9 @@
-import { ThemeProps, ValidationStateKey, STATE_CLASSNAME_PREFIX, mixin__FieldGroupLabel } from '../../../core/src';
+import { ThemeProps, ValidationStateKey, STATE_CLASSNAME_PREFIX, mixin__FieldLabel, mixin__FieldsetGroup, mixin__FieldsetGroupLegend } from '../../../core/src';
 import {
     CHECKBOX_ROOT_CLASSNAME,
     CHECKBOX_BASE_CLASSNAME,
     CHECKBOX_GROUP_CLASSNAME,
-    CHECKBOX_GROUP_LABEL_CLASSNAME,
+    CHECKBOX_GROUP_LEGEND_CLASSNAME,
     CHECKBOX_GROUP_BODY_CLASSNAME,
     CHECKBOX_LABEL_CLASSNAME,
 } from './const';
@@ -29,7 +29,7 @@ export const getCheckboxStyles = (theme: ThemeProps) => {
             
             /* Label */
             .${CHECKBOX_LABEL_CLASSNAME} {
-                ${mixin__FieldGroupLabel(theme)}
+                ${mixin__FieldLabel(theme)}
             }   
             /* Label Validation states */
             .${CHECKBOX_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.success} .${CHECKBOX_LABEL_CLASSNAME} {
@@ -47,11 +47,11 @@ export const getCheckboxStyles = (theme: ThemeProps) => {
 export const getCheckboxGroupStyles = (theme: ThemeProps) => {
     return `
             .${CHECKBOX_GROUP_CLASSNAME} {
-                margin: 0;
+                ${mixin__FieldsetGroup(theme)}
             }
             
-            .${CHECKBOX_GROUP_LABEL_CLASSNAME} {
-                ${mixin__FieldGroupLabel(theme)}
+            .${CHECKBOX_GROUP_LEGEND_CLASSNAME} {
+                ${mixin__FieldsetGroupLegend(theme)}
             }
             
             .${CHECKBOX_GROUP_BODY_CLASSNAME} {

@@ -1,17 +1,19 @@
 import {
+    CombinedInputElementProps,
     WithChildrenProps,
     WithHelperText,
     WithStyleProps,
     WithValidationMessage,
     WithValidationState
 } from '../../../core/src';
-import { CheckboxElementProps } from '../Checkbox';
 
-export interface SwitchBaseProps extends CheckboxElementProps, WithStyleProps, WithValidationState {
+export type CheckboxElementProps = Omit<CombinedInputElementProps, 'type'>;
+
+export interface SwitchBaseProps extends CheckboxElementProps, WithStyleProps, WithValidationState {}
+
+export type SwitchProps = SwitchBaseProps & WithChildrenProps & {
     label?: string;
-}
-
-export type SwitchProps = SwitchBaseProps & WithChildrenProps;
+};
 
 export interface SwitchGroupBaseProps extends WithChildrenProps, WithStyleProps, WithValidationState, WithValidationMessage, WithHelperText {
     label?: string;

@@ -1,7 +1,11 @@
-import { WithChildrenProps, WithStyleProps, DetailedTextareaElementProps, BaseTextareaElementProps, WithValidationState } from '../../../core/src';
+import {
+    WithStyleProps,
+    CombinedTextareaElementProps,
+    WithValidationState,
+} from '../../../core/src';
 
-export type TextAreaElementProps = BaseTextareaElementProps & DetailedTextareaElementProps;
+export type TextAreaElementProps = CombinedTextareaElementProps;
 
-export interface TextAreaBaseProps extends TextAreaElementProps, WithChildrenProps, WithStyleProps, WithValidationState {}
+export interface TextAreaBaseProps extends TextAreaElementProps, WithStyleProps, WithValidationState {}
 
 export type TextAreaProps = TextAreaBaseProps;

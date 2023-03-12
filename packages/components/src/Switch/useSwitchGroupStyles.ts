@@ -2,7 +2,7 @@ import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, W
 import {
     SWITCH_GROUP_SCOPE_NAME,
     SWITCH_GROUP_CLASSNAME,
-    SWITCH_GROUP_LABEL_CLASSNAME,
+    SWITCH_GROUP_LEGEND_CLASSNAME,
     SWITCH_GROUP_BODY_CLASSNAME,
 } from './const';
 import { getSwitchGroupStyles } from './styles';
@@ -10,7 +10,7 @@ import { getSwitchGroupStyles } from './styles';
 export type UseSwitchGroupStylesProps = WithValidationState & WithStyleProps;
 export type UseSwitchGroupStylesReturn = {
     root: WithRequiredStyleProps;
-    label: {
+    legend: {
         className: WithRequiredStyleProps['className'];
     };
     body: {
@@ -37,8 +37,8 @@ export const useSwitchGroupStyles = ({ style, className, validationState }: UseS
             style: { ...style },
             className: updatedClassName,
         },
-        label: {
-            className: SWITCH_GROUP_LABEL_CLASSNAME,
+        legend: {
+            className: SWITCH_GROUP_LEGEND_CLASSNAME,
         },
         body: {
             className: SWITCH_GROUP_BODY_CLASSNAME,

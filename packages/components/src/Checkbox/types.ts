@@ -1,6 +1,13 @@
-import { WithChildrenProps, WithStyleProps, DetailedInputElementProps, BaseInputElementProps, WithValidationState, WithValidationMessage, WithHelperText } from '../../../core/src';
+import {
+    WithChildrenProps,
+    WithStyleProps,
+    CombinedInputElementProps,
+    WithValidationState,
+    WithValidationMessage,
+    WithHelperText,
+} from '../../../core/src';
 
-export type CheckboxElementProps = Omit<(BaseInputElementProps & DetailedInputElementProps), 'type'>;
+export type CheckboxElementProps = Omit<CombinedInputElementProps, 'type'>;
 
 export interface CheckboxBaseProps extends CheckboxElementProps, WithStyleProps, WithValidationState {}
 

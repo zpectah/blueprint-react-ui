@@ -1,14 +1,13 @@
 import {
     WithChildrenProps,
     WithStyleProps,
-    DetailedInputElementProps,
-    BaseInputElementProps,
+    CombinedInputElementProps,
     WithValidationState,
     WithValidationMessage,
     WithHelperText,
 } from '../../../core/src';
 
-export type RadioElementProps = Omit<(BaseInputElementProps & DetailedInputElementProps), 'type'>;
+export type RadioElementProps = Omit<CombinedInputElementProps, 'type'>;
 
 export interface RadioBaseProps extends RadioElementProps, WithStyleProps, WithValidationState {}
 

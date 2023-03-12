@@ -1,11 +1,11 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps, WithValidationState, getValidationClassName } from '../../../core/src';
-import { CHECKBOX_GROUP_SCOPE_NAME, CHECKBOX_GROUP_CLASSNAME, CHECKBOX_GROUP_LABEL_CLASSNAME, CHECKBOX_GROUP_BODY_CLASSNAME } from './const';
+import { CHECKBOX_GROUP_SCOPE_NAME, CHECKBOX_GROUP_CLASSNAME, CHECKBOX_GROUP_LEGEND_CLASSNAME, CHECKBOX_GROUP_BODY_CLASSNAME } from './const';
 import { getCheckboxGroupStyles } from './styles';
 
 export type UseCheckboxGroupStylesProps = WithValidationState & WithStyleProps;
 export type UseCheckboxGroupStylesReturn = {
     root: WithRequiredStyleProps;
-    label: {
+    legend: {
         className: WithRequiredStyleProps['className'];
     };
     body: {
@@ -32,8 +32,8 @@ export const useCheckboxGroupStyles = ({ style, className, validationState }: Us
             style: { ...style },
             className: updatedClassName,
         },
-        label: {
-            className: CHECKBOX_GROUP_LABEL_CLASSNAME,
+        legend: {
+            className: CHECKBOX_GROUP_LEGEND_CLASSNAME,
         },
         body: {
             className: CHECKBOX_GROUP_BODY_CLASSNAME,

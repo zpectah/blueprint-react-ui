@@ -21,7 +21,7 @@ const CheckboxGroup = (props: CheckboxGroupProps) => {
 
     const {
         root: rootStyleProps,
-        label: labelStyleProps,
+        legend: legendStyleProps,
         body: bodyStyleProps,
     } = useCheckboxGroupStyles({ style, className, validationState });
 
@@ -30,11 +30,8 @@ const CheckboxGroup = (props: CheckboxGroupProps) => {
     };
 
     return (
-        <div {...rootStyleProps} {...restProps}>
+        <fieldset {...rootStyleProps} {...restProps}>
             <CheckboxGroupContextProvider value={contextValue}>
-                {label && (
-                    <span {...labelStyleProps}>{label}</span>
-                )}
                 <div {...bodyStyleProps}>
                     {children && children}
                     {items.length > 0 && items.map((item, index) => (
@@ -43,8 +40,9 @@ const CheckboxGroup = (props: CheckboxGroupProps) => {
                 </div>
                 {helperText && <FieldHelperText children={helperText} />}
                 {(validationState && validationMessage) && <FieldHelperText children={validationMessage} validationState={validationState} />}
+                {label && <legend {...legendStyleProps}>{label}</legend>}
             </CheckboxGroupContextProvider>
-        </div>
+        </fieldset>
     );
 };
 

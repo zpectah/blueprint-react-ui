@@ -2,7 +2,7 @@ import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, W
 import {
     RADIO_GROUP_SCOPE_NAME,
     RADIO_GROUP_CLASSNAME,
-    RADIO_GROUP_LABEL_CLASSNAME,
+    RADIO_GROUP_LEGEND_CLASSNAME,
     RADIO_GROUP_BODY_CLASSNAME,
 } from './const';
 import { getRadioGroupStyles } from './styles';
@@ -10,7 +10,7 @@ import { getRadioGroupStyles } from './styles';
 export type UseRadioGroupStylesProps = WithValidationState & WithStyleProps;
 export type UseRadioGroupStylesReturn = {
     root: WithRequiredStyleProps;
-    label: {
+    legend: {
         className: WithRequiredStyleProps['className'];
     };
     body: {
@@ -37,8 +37,8 @@ export const useRadioGroupStyles = ({ style, className, validationState }: UseRa
             style: { ...style },
             className: updatedClassName,
         },
-        label: {
-            className: RADIO_GROUP_LABEL_CLASSNAME,
+        legend: {
+            className: RADIO_GROUP_LEGEND_CLASSNAME,
         },
         body: {
             className: RADIO_GROUP_BODY_CLASSNAME,

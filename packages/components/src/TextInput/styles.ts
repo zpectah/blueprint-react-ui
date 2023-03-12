@@ -5,7 +5,7 @@ import {
     TEXT_INPUT_BASE_CLASSNAME,
 } from './const';
 
-export const getTextInputNativeStyles = (theme: ThemeProps) => {
+export const getTextInputBaseStyles = (theme: ThemeProps) => {
     return `
             .${TEXT_INPUT_BASE_CLASSNAME} {
                 margin: 0;

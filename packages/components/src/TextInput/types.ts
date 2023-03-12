@@ -1,11 +1,17 @@
-import { WithChildrenProps, WithStyleProps, DetailedInputElementProps, BaseInputElementProps, DetailedTextareaElementProps, BaseTextareaElementProps, WithValidationState } from '../../../core/src';
+import { ReactNode } from 'react';
+import {
+    WithStyleProps,
+    CombinedInputElementProps,
+    CombinedTextareaElementProps,
+    WithValidationState,
+} from '../../../core/src';
 
-export interface WithTextInputMultiline {
+export type TextInputElementProps = CombinedInputElementProps & CombinedTextareaElementProps;
+
+export interface TextInputBaseProps extends TextInputElementProps, WithStyleProps, WithValidationState {
     multiline?: boolean;
+    startAdornment?: ReactNode;
+    endAdornment?: ReactNode;
 }
-
-export type TextInputElementProps = (BaseInputElementProps & DetailedInputElementProps) & (BaseTextareaElementProps & DetailedTextareaElementProps);
-
-export interface TextInputBaseProps extends TextInputElementProps, WithChildrenProps, WithStyleProps, WithValidationState, WithTextInputMultiline {}
 
 export type TextInputProps = TextInputBaseProps;

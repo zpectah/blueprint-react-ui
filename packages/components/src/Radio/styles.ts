@@ -1,9 +1,9 @@
-import { ThemeProps, ValidationStateKey, STATE_CLASSNAME_PREFIX, mixin__FieldGroupLabel } from '../../../core/src';
+import { ThemeProps, ValidationStateKey, STATE_CLASSNAME_PREFIX, mixin__FieldLabel, mixin__FieldsetGroup, mixin__FieldsetGroupLegend } from '../../../core/src';
 import {
     RADIO_ROOT_CLASSNAME,
     RADIO_BASE_CLASSNAME,
     RADIO_GROUP_CLASSNAME,
-    RADIO_GROUP_LABEL_CLASSNAME,
+    RADIO_GROUP_LEGEND_CLASSNAME,
     RADIO_GROUP_BODY_CLASSNAME,
     RADIO_LABEL_CLASSNAME,
 } from './const';
@@ -29,7 +29,7 @@ export const getRadioStyles = (theme: ThemeProps) => {
             
             /* Label */
             .${RADIO_LABEL_CLASSNAME} {
-                ${mixin__FieldGroupLabel(theme)}
+                ${mixin__FieldLabel(theme)}
             }
             /* Label Validation states */
             .${RADIO_ROOT_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.success} .${RADIO_LABEL_CLASSNAME} {
@@ -47,11 +47,11 @@ export const getRadioStyles = (theme: ThemeProps) => {
 export const getRadioGroupStyles = (theme: ThemeProps) => {
     return `
             .${RADIO_GROUP_CLASSNAME} {
-                margin: 0;
+                ${mixin__FieldsetGroup(theme)}
             }
             
-            .${RADIO_GROUP_LABEL_CLASSNAME} {
-                ${mixin__FieldGroupLabel(theme)}
+            .${RADIO_GROUP_LEGEND_CLASSNAME} {
+                ${mixin__FieldsetGroupLegend(theme)}
             }
             
             .${RADIO_GROUP_BODY_CLASSNAME} {

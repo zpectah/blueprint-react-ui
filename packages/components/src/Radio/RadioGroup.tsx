@@ -21,7 +21,7 @@ const CheckboxGroup = (props: RadioGroupProps) => {
 
     const {
         root: rootStyleProps,
-        label: labelStyleProps,
+        legend: legendStyleProps,
         body: bodyStyleProps,
     } = useRadioGroupStyles({ style, className, validationState });
 
@@ -30,11 +30,8 @@ const CheckboxGroup = (props: RadioGroupProps) => {
     };
 
     return (
-        <div {...rootStyleProps} {...restProps}>
+        <fieldset {...rootStyleProps} {...restProps}>
             <RadioGroupContextProvider value={contextValue}>
-                {label && (
-                    <span {...labelStyleProps}>{label}</span>
-                )}
                 <div {...bodyStyleProps}>
                     {children && children}
                     {items.length > 0 && items.map((item, index) => (
@@ -43,8 +40,9 @@ const CheckboxGroup = (props: RadioGroupProps) => {
                 </div>
                 {helperText && <FieldHelperText children={helperText} />}
                 {(validationState && validationMessage) && <FieldHelperText children={validationMessage} validationState={validationState} />}
+                {label && <legend {...legendStyleProps}>{label}</legend>}
             </RadioGroupContextProvider>
-        </div>
+        </fieldset>
     );
 };
 

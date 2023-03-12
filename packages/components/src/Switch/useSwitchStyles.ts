@@ -1,6 +1,6 @@
 import { classNamesFromList, useUniqueStyles, useThemeContext, WithStyleProps, WithRequiredStyleProps, WithValidationState, getValidationClassName } from '../../../core/src';
 import { SWITCH_SCOPE_NAME, SWITCH_ROOT_CLASSNAME, SWITCH_LABEL_CLASSNAME } from './const';
-import { getSwitchElementStyles } from './styles';
+import { getSwitchStyles } from './styles';
 
 export type UseSwitchStylesProps = WithValidationState & WithStyleProps;
 export type UseSwitchStylesReturn = {
@@ -21,7 +21,7 @@ export const useSwitchStyles = ({ style, className, validationState }: UseSwitch
 
     useUniqueStyles({
         id: SWITCH_SCOPE_NAME,
-        styles: getSwitchElementStyles(theme),
+        styles: getSwitchStyles(theme),
     });
 
     return {
