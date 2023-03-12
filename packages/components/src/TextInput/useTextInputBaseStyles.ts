@@ -15,10 +15,10 @@ import {
 } from './const';
 import { getTextInputBaseStyles } from './styles';
 
-export type UseTextInputNativeStylesProps = WithValidationState & WithStyleProps & Pick<TextInputBaseProps, 'multiline'>;
-export type UseTextInputNativeStylesReturn = WithRequiredStyleProps;
+export type UseTextInputBaseStylesProps = WithValidationState & WithStyleProps & Pick<TextInputBaseProps, 'multiline'>;
+export type UseTextInputBaseStylesReturn = WithRequiredStyleProps;
 
-export const useTextInputBaseStyles = ({ style, className, validationState, multiline }: UseTextInputNativeStylesProps): UseTextInputNativeStylesReturn => {
+export const useTextInputBaseStyles = ({ style, className, validationState, multiline }: UseTextInputBaseStylesProps): UseTextInputBaseStylesReturn => {
     const { theme } = useThemeContext();
 
     const updatedClassName = classNamesFromList([

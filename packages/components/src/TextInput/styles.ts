@@ -53,9 +53,13 @@ export const getTextInputStyles = (theme: ThemeProps) => {
             .${TEXT_INPUT_CONTROL_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.success} {}
             .${TEXT_INPUT_CONTROL_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.warning} {}
             .${TEXT_INPUT_CONTROL_CLASSNAME}.${STATE_CLASSNAME_PREFIX}${ValidationStateKey.error} {}
-            
+        `;
+};
+
+export const getTextInputAdornmentStyles = (theme: ThemeProps) => {
+    return `
             .${TEXT_INPUT_ADORNMENT_CLASSNAME} {}
             .${TEXT_INPUT_ADORNMENT_START_CLASSNAME} {} 
-            .${TEXT_INPUT_ADORNMENT_END_CLASSNAME} {}                                                
+            .${TEXT_INPUT_ADORNMENT_END_CLASSNAME} {}           
         `;
 };

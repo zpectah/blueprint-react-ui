@@ -5,7 +5,7 @@ import {
     ClickEventProps,
     WithStyleProps,
     DetailedDivElementProps,
-    SafeHTMLDataAttributeProps,
+    WithSafeDataAttributeProps,
     ColorEmotionKey,
     TagShapeVariantKeys,
 } from '../../../core/src';
@@ -18,7 +18,7 @@ export type TagBaseProps = {
     size?: TagSizeType;
     variant?: TagVariantType;
     color?: TagColorType;
-    elementProps?: Omit<DetailedDivElementProps & SafeHTMLDataAttributeProps, 'onClick' | 'style' | 'className'>;
+    elementProps?: Omit<DetailedDivElementProps & WithSafeDataAttributeProps, 'onClick' | 'style' | 'className'>;
     onClick?: (event: ClickEventProps) => void;
     onDismiss?: (event: ClickEventProps, rootRef: MutableRefObject<ForwardedRef<HTMLDivElement>>) => void;
     dismissIcon?: ReactNode;

@@ -2,6 +2,7 @@ import React from 'react';
 import { ComponentStory } from '@storybook/react';
 import { TextInputProps } from '../types';
 import TextInput from '../TextInput';
+import TextInputAdornment from '../TextInputAdornment';
 
 const Story: ComponentStory<typeof TextInput> = (args: TextInputProps) => (
     <TextInput {...args} />
@@ -10,10 +11,10 @@ const Story: ComponentStory<typeof TextInput> = (args: TextInputProps) => (
 Story.args = {
     defaultValue: 'TextInput blank example',
     startAdornment: (
-        <>start</>
+        <TextInputAdornment position="start">start</TextInputAdornment>
     ),
     endAdornment: (
-        <>end</>
+        <TextInputAdornment position="end">end</TextInputAdornment>
     ),
 };
 

@@ -1,7 +1,10 @@
 export { default as TextInputBase } from './TextInputBase';
 export { default as TextInput } from './TextInput';
+export { default as TextInputAdornment } from './TextInputAdornment';
 export * from './useTextInputBaseStyles';
 export * from './useTextInputStyles';
+export * from './useTextInputAdornmentStyles';
+export * from './enums';
 export * from './types';
 export * from './const';
 export * from './styles';

@@ -6,7 +6,7 @@ import {
     ReactNode,
     ElementType,
     ComponentPropsWithRef,
-    ComponentType,
+    ComponentType, AriaAttributes,
 } from 'react';
 
 export type BaseProps<E> = HTMLProps<HTMLAttributes<E>>;
@@ -84,6 +84,8 @@ export type PolymorphicElementType<E = JSX.IntrinsicElements, P = any> = { [K in
 
 export type DataAttributeKeyType = `data-${string}`;
 
-export type SafeHTMLDataAttributeProps = {
+export type WithSafeDataAttributeProps = {
     [k: DataAttributeKeyType]: string | number;
 }
+
+export type WithAriaProps = AriaAttributes;

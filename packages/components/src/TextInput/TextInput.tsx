@@ -16,8 +16,6 @@ const TextInput = (props: TextInputProps) => {
     const {
         root: rootStyleProps,
         control: controlStyleProps,
-        adornmentStart: adornmentStartStyles,
-        adornmentEnd: adornmentEndStyles,
     } = useTextInputStyles({
         style,
         className,
@@ -28,13 +26,9 @@ const TextInput = (props: TextInputProps) => {
 
     return (
         <div {...controlStyleProps}>
-            {startAdornment && (
-                <div {...adornmentStartStyles}>{startAdornment}</div>
-            )}
+            {startAdornment && startAdornment}
             <TextInputBase validationState={validationState} {...rootStyleProps} {...restProps} />
-            {endAdornment && (
-                <div {...adornmentEndStyles}>{endAdornment}</div>
-            )}
+            {endAdornment && endAdornment}
         </div>
     );
 };
