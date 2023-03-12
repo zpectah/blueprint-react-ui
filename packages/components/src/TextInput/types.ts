@@ -11,19 +11,25 @@ import {
 import { TextInputAdornmentPositionKeys } from './enums';
 
 export type TextInputAdornmentPositionType = keyof typeof TextInputAdornmentPositionKeys;
+export type TextInputElementProps = Omit<(CombinedInputElementProps & CombinedTextareaElementProps), 'ref'>;
+export type InputCoreProps = TextInputElementProps & WithStyleProps & WithValidationState;
 
-export type TextInputElementProps = CombinedInputElementProps & CombinedTextareaElementProps;
-
-export interface TextInputBaseProps extends TextInputElementProps, WithStyleProps, WithValidationState {
+export interface TextInputBaseProps extends InputCoreProps {
     multiline?: boolean;
-    startAdornment?: ReactNode;
-    endAdornment?: ReactNode;
 }
 
-export type TextInputProps = TextInputBaseProps;
+export type TextInputProps = TextInputBaseProps & {
+    startAdornment?: ReactNode;
+    endAdornment?: ReactNode;
+};
 
 export interface TextInputAdornmentBaseProps extends WithChildrenProps, WithStyleProps, WithSafeDataAttributeProps, WithAriaProps {
     position: TextInputAdornmentPositionType;
 }
 
 export type TextInputAdornmentProps = TextInputAdornmentBaseProps;
+
+
+export type NumberInputBaseProps = InputCoreProps;
+
+export type NumberInputProps = NumberInputBaseProps;

@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { ForwardedRef, forwardRef } from 'react';
 import { TextInputProps } from './types';
 import { useTextInputStyles } from './useTextInputStyles';
 import TextInputBase from './TextInputBase';
 
-const TextInput = (props: TextInputProps) => {
+const TextInput = (props: TextInputProps, ref: ForwardedRef<HTMLInputElement & HTMLTextAreaElement>) => {
     const {
         style,
         className,
@@ -27,10 +27,10 @@ const TextInput = (props: TextInputProps) => {
     return (
         <div {...controlStyleProps}>
             {startAdornment && startAdornment}
-            <TextInputBase validationState={validationState} {...rootStyleProps} {...restProps} />
+            <TextInputBase ref={ref} validationState={validationState} {...rootStyleProps} {...restProps} />
             {endAdornment && endAdornment}
         </div>
     );
 };
 
-export default TextInput;
+export default forwardRef(TextInput);

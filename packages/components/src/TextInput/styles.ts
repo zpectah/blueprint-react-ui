@@ -13,6 +13,7 @@ import {
     TEXT_INPUT_ADORNMENT_END_CLASSNAME,
     TEXT_INPUT_WITH_ADORNMENT_START_CLASSNAME,
     TEXT_INPUT_WITH_ADORNMENT_END_CLASSNAME,
+    NUMBER_INPUT_CLASSNAME,
 } from './const';
 
 export const getTextInputBaseStyles = (theme: ThemeProps) => {
@@ -61,5 +62,18 @@ export const getTextInputAdornmentStyles = (theme: ThemeProps) => {
             .${TEXT_INPUT_ADORNMENT_CLASSNAME} {}
             .${TEXT_INPUT_ADORNMENT_START_CLASSNAME} {} 
             .${TEXT_INPUT_ADORNMENT_END_CLASSNAME} {}           
+        `;
+};
+
+export const getNumberInputStyles = (theme: ThemeProps) => {
+    return `
+            .${NUMBER_INPUT_CLASSNAME} {
+                -moz-appearance: textfield;
+            }
+            .${NUMBER_INPUT_CLASSNAME}::-webkit-outer-spin-button,
+            .${NUMBER_INPUT_CLASSNAME}::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }                     
         `;
 };
