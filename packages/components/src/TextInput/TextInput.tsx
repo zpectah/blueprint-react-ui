@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React from 'react';
 import { TextInputProps } from './types';
 import { useTextInputStyles } from './useTextInputStyles';
 import TextInputBase from './TextInputBase';
@@ -13,27 +13,30 @@ const TextInput = (props: TextInputProps) => {
         ...restProps
     } = props;
 
-    const { ...styleProps } = useTextInputStyles({ style, className });
+    const {
+        root: rootStyleProps,
+        control: controlStyleProps,
+        adornmentStart: adornmentStartStyles,
+        adornmentEnd: adornmentEndStyles,
+    } = useTextInputStyles({
+        style,
+        className,
+        validationState,
+        isStartAdornment: !!startAdornment,
+        isEndAdornment: !!endAdornment,
+    });
 
-    return useMemo(() => {
-        let node = <TextInputBase validationState={validationState} {...styleProps} {...restProps} />;
-
-        if (startAdornment || endAdornment) {
-            node = (
-                <div>
-                    {startAdornment && (
-                        <>startAdornment</>
-                    )}
-                    <TextInputBase validationState={validationState} {...styleProps} {...restProps} />
-                    {endAdornment && (
-                        <>endAdornment</>
-                    )}
-                </div>
-            );
-        }
-
-        return node;
-    }, [ startAdornment, endAdornment ]);
+    return (
+        <div {...controlStyleProps}>
+            {startAdornment && (
+                <div {...adornmentStartStyles}>{startAdornment}</div>
+            )}
+            <TextInputBase validationState={validationState} {...rootStyleProps} {...restProps} />
+            {endAdornment && (
+                <div {...adornmentEndStyles}>{endAdornment}</div>
+            )}
+        </div>
+    );
 };
 
 export default TextInput;

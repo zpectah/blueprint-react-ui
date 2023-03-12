@@ -20,3 +20,4 @@ export default {
 export { default as Base } from './stories/TextInputBase';
 export { default as Default } from './stories/TextInput';
 export { default as Multiline } from './stories/TextInputMultiline';
+export { default as Adornments } from './stories/TextInputAdornments';

@@ -8,7 +8,11 @@ import {
     getValidationClassName,
 } from '../../../core/src';
 import { TextInputBaseProps } from './types';
-import { TEXT_INPUT_BASE_SCOPE_NAME, TEXT_INPUT_BASE_CLASSNAME, TEXT_INPUT_BASE_MULTILINE_CLASSNAME } from './const';
+import {
+    TEXT_INPUT_BASE_SCOPE_NAME,
+    TEXT_INPUT_BASE_CLASSNAME,
+    TEXT_INPUT_BASE_MULTILINE_CLASSNAME,
+} from './const';
 import { getTextInputBaseStyles } from './styles';
 
 export type UseTextInputNativeStylesProps = WithValidationState & WithStyleProps & Pick<TextInputBaseProps, 'multiline'>;
@@ -20,7 +24,7 @@ export const useTextInputBaseStyles = ({ style, className, validationState, mult
     const updatedClassName = classNamesFromList([
         TEXT_INPUT_BASE_CLASSNAME,
         getValidationClassName(validationState),
-        multiline && TEXT_INPUT_BASE_MULTILINE_CLASSNAME,
+        multiline ? TEXT_INPUT_BASE_MULTILINE_CLASSNAME : '',
         className,
     ]);
 
