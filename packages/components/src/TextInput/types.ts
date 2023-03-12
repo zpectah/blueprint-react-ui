@@ -1,4 +1,4 @@
-import { ReactNode } from 'react';
+import { ReactNode, FormEventHandler, HTMLAttributes } from 'react';
 import {
     WithStyleProps,
     CombinedInputElementProps,
@@ -11,7 +11,9 @@ import {
 import { TextInputAdornmentPositionKeys } from './enums';
 
 export type TextInputAdornmentPositionType = keyof typeof TextInputAdornmentPositionKeys;
-export type TextInputElementProps = Omit<(CombinedInputElementProps & CombinedTextareaElementProps), 'ref'>;
+export type TextInputElementProps = Omit<(CombinedInputElementProps & CombinedTextareaElementProps), 'ref' | 'onChange'> & {
+    onChange?: FormEventHandler<HTMLAttributes<HTMLInputElement | HTMLTextAreaElement>>;
+};
 export type InputCoreProps = TextInputElementProps & WithStyleProps & WithValidationState;
 
 export interface TextInputBaseProps extends InputCoreProps {

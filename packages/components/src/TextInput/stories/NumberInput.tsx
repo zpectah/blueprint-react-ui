@@ -6,9 +6,10 @@ import NumberInput from '../NumberInput';
 const Story: ComponentStory<typeof NumberInput> = (args: NumberInputProps) => <NumberInput {...args} />;
 
 Story.args = {
-    defaultValue: 250,
+    value: 250,
     step: 10,
-    onChange: (e) => console.log('e', e),
+    max: 280,
+    min: 200,
 };
 
 export default Story;

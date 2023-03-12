@@ -33,4 +33,4 @@ const TextInput = (props: TextInputProps, ref: ForwardedRef<HTMLInputElement & H
     );
 };
 
-export default forwardRef(TextInput);
+export default forwardRef<(HTMLInputElement & HTMLTextAreaElement), TextInputProps>(TextInput);

@@ -11,15 +11,16 @@ const NumberInput = (props: NumberInputProps, ref: ForwardedRef<HTMLInputElement
         style,
         className,
         value = 0,
-        defaultValue = 0,
+        defaultValue,
         step,
         min,
         max,
+        onChange,
         ...restProps
     } = props;
 
     const { ...styleProps } = useNumberInputStyles({ style, className });
-    const { onIncrement, onDecrement, ...valueProps } = useNumberInput({ value, defaultValue, step, min, max });
+    const { onIncrement, onDecrement, onValueChange, ...valueProps } = useNumberInput({ value, defaultValue, step, min, max, onChange });
 
     const elementReference = (ref || createRef()) as MutableRefObject<HTMLInputElement & HTMLTextAreaElement>;
 
@@ -37,6 +38,7 @@ const NumberInput = (props: NumberInputProps, ref: ForwardedRef<HTMLInputElement
                     <Button onClick={onIncrement}>+</Button>
                 </TextInputAdornment>
             }
+            onChange={onValueChange}
             {...valueProps}
             {...styleProps}
             {...restProps}
